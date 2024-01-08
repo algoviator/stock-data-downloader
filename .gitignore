@@ -1,15 +1,20 @@
 # --------------------------------------- HEADER -------------------------------------------
 # -*- coding: utf-8 -*-
-# Author: Roma Usoltsev
+# Copyright (c) 2024 Roma Usoltsev
 # https://www.linkedin.com/in/algoviator/
-
-# The file ".gitignore" is used to specify exceptions (files and folders) when synchronizing with Git.
 #
-# Templates from the GitHub repository were used to create this file. The full list
-# of the sources avalible here:
-# https://github.com/github/gitignore
-
-
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
 # --------------------------------------- SETUP -------------------------------------------
 
 # Environments
