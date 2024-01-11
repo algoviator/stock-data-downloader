@@ -38,7 +38,6 @@ from utils.cached_limiter_session import CachedLimiterSession
 # Import custom classes from the current dir
 from your_module import CachedLimiterSession, QuotesDownloader
 
-
 # --------------------------------------- MAIN SCRIPT -----------------------------------------------
 
 def main():
