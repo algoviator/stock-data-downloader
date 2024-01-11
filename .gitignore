@@ -6,7 +6,6 @@ yfinance.cache
 # PyCharm
 .idea/
 
-
 # Jupyter Notebook
 .ipynb_checkpoints
 
