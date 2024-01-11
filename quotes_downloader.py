@@ -33,7 +33,7 @@ import numpy as np
 import pandas as pd
 import yfinance as yf  # price datasets
 
-# Requests rate limiter libs (needed to protect to be blocked)
+# Requests rate limiter
 from requests import Session
 from requests_cache import CacheMixin, SQLiteCache
 from requests_ratelimiter import LimiterMixin, MemoryQueueBucket
@@ -87,10 +87,7 @@ class QuotesDownloader:
         'accept-language': 'en-US,en;q=0.9',
     }
 
-    def __init__(self, tickers_file='data/tickers.csv', quotes_dir='data/quotes/'):
-
-        # CSV file with the list of all tickers
-        self.tickers_file = tickers_file
+    def __init__(self, quotes_dir='data/quotes/'):
 
         # Directory of files with tickers quotes
         self.quotes_dir = quotes_dir
@@ -98,15 +95,20 @@ class QuotesDownloader:
         # Session with requests rate limiter (to protect to be blocked)
         self.session = self.initialize_session()
 
-        # """
-        # NASDAQ Stock Screener:
-        # Download all tickers traded at NYSE, NASDAQ, and AMEX exchanges
-        tickers = self.download_ticker_list()
-        self.cleaned_tickers = self.clean_ticker_list(tickers)
-        self.added_tickers = self.save_ticker_list(self.cleaned_tickers)
-        # """
 
-        # YAHOO stocks
+    def create_ticker_list(self, tickers_file='data/tickers.csv'):
+
+        # CSV file with the list of all tickers
+        self.tickers_file = tickers_file
+
+        # Download from NASDAQ all tickers traded at NYSE, NASDAQ, and AMEX exchanges
+        tickers = self.download_ticker_list()
+
+        # Clean and save base ticker list into file
+        cleaned_tickers = self.clean_ticker_list(tickers)
+        self.added_tickers = self.save_ticker_list(cleaned_tickers)
+
+        # Download necessary info for every ticker from Yahoo
         self.update_ticker_data()
 
     @staticmethod
@@ -292,5 +294,6 @@ class QuotesDownloader:
 
 
 q = QuotesDownloader()
+q.create_ticker_list(tickers_file='data/tickers.csv')
 
 
