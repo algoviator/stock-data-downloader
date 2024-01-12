@@ -25,23 +25,23 @@ filter:
 
 # Update tickers dataframe columns
 tickers_df_columns:
-    delete:                             # Delete columns from the downloaded dataframe
+    delete:                     # Delete columns from the downloaded dataframe
         - netchange
         - pctchange
         - url
-    rename:                             # Rename columns using standard rules
+    rename:                     # Rename columns using standard rules
         lastsale: price
         ipoyear: ipoYear
-    add:                                # Add columns with default value None (will be updated later)
+    add:                        # Add columns with default value None (will be updated later)
         - pe
         - beta
         - shortRatio
         - isin
-    add_datetype_cols:                  # Add datetime columns with default value NaT (will be updated later)
+    add_datetype_cols:          # Add datetime columns with default value NaT (will be updated later)
         - quotesStarted
         - quotesUpdated
         - rowUpdated
-    types:                              # Column types
+    types:                      # Column types
         symbol: 'string'
         isin: 'string'
         name: 'string'
@@ -58,7 +58,7 @@ tickers_df_columns:
         quotesStarted: 'datetime64[ns]'
         quotesUpdated: 'datetime64[ns]'
         rowUpdated: 'datetime64[ns]'
-    order:                              # Reorder columns before saving the dataframe to a file
+    order:                      # Reorder columns before saving the dataframe to a file
         - symbol
         - isin
         - name
@@ -78,9 +78,9 @@ tickers_df_columns:
 
 # Update quotes dataframe columns
 quotes_df_columns:
-    delete:                             # Delete columns from the downloaded dataframe
+    delete:                     # Delete columns from the downloaded dataframe
         - 'Adj Close'
-    rename:                             # Rename columns using standard rules
+    rename:                     # Rename columns using standard rules
         Open: open
         High: high
         Low: low
@@ -88,7 +88,7 @@ quotes_df_columns:
         Volume: volume
         Dividends: dividends
         Stock Splits: splits
-    types:                              # Column types
+    types:                      # Column types
         open: float
         high: float
         low: float
