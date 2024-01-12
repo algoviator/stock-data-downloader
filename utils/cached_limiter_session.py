@@ -29,4 +29,14 @@ class CachedLimiterSession(CacheMixin, LimiterMixin, Session):
     """
     Requests rate limiter session with caching capabilities.
     """
-    pass
+    @staticmethod
+    def initialize_session():
+        """
+        Session with requests rate limiter (to protect to be blocked)
+        """
+        return CachedLimiterSession(
+            limiter=Limiter(RequestRate(1, Duration.SECOND * 2)),
+            bucket_class=MemoryQueueBucket,
+            backend=SQLiteCache("yfinance.cache"),
+        )
+

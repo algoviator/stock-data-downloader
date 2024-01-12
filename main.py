@@ -31,14 +31,27 @@ import requests
 import numpy as np
 import pandas as pd
 import yfinance as yf  # price datasets
+import yaml
 
 # Import custom class from utils
 from utils.cached_limiter_session import CachedLimiterSession
 
 # Import custom classes from the current dir
-from your_module import CachedLimiterSession, QuotesDownloader
+from tickers_downloader import TickersDownloader
+from quotes_downloader import QuotesDownloader
 
 # --------------------------------------- MAIN SCRIPT -----------------------------------------------
+
+def load_config(file_path='config.yaml'):
+    with open(file_path, 'r') as file:
+        config = yaml.safe_load(file)
+    return config
+
+# Пример использования
+config_data = load_config()
+api_key = config_data['api_key']
+data_directory = config_data['data_directory']
+
 
 def main():
     # Set up any configuration or initialization code here

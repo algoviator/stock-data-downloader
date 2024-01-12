@@ -1,49 +1,113 @@
-# Configuration file for the project
+#
+# -------------------- CONFIG FOR DOWNLOAD_TICKERS AND DOWNLOAD_QUOTES ---------------------
 
-# API keys and tokens
-api_keys:
-  nasdaq: YOUR_NASDAQ_API_KEY
-  yfinance: YOUR_YFINANCE_API_KEY
+# File paths to save downloaded files
+local_path:
+  tickers: data/tickers.csv     # File with all tickers (all symbols) of shares
+  quotes: data/quotes/          # Directory to save files with quotes of shares. Filename format: {SYMBOL}.csv
 
-# Directories
-directories:
-  tickers: data/tickers.csv
-  quotes: data/quotes/
+# Date format to show in the date columns of dataframes
+date_format: '%Y-%m-%d'
 
-# Date formats
-date_formats:
-  default: '%Y-%m-%d'
-
-# Download parameters
-download_parameters:
-  max_ipo_year: 3
-  ticker_expiration_days: 90
-  quotes_expiration_days: 30
-  start_date: '1980-01-01'
-  min_cap: 500000000  # minimum company capitalization, USD
-  min_price: 3  # minimum price of one share, USD
-  max_price: 10000  # maximum price of one share, USD
-  name_stop_words:
+# Filter the main parameters
+filter:
+  min_years_from_ipo: 3         # Minimum number of years since the company's IPO to consider
+  ticker_expiration_days: 90    # Update ticker info every {x} days
+  quotes_expiration_days: 30    # Update quotes for the ticker every {x} days
+  min_price: 3                  # Minimum price of one share, USD
+  max_price: 10000              # Maximum price of one share, USD
+  stop_words:                   # List of stop-words in the company name to filter out
     - Notes
     - Subordinated
     - Fixed
     - '%'
     - Convertible
-  download_batch_size: 30
+
+# Update tickers dataframe columns
+tickers_df_columns:
+    delete:                             # Delete columns from the downloaded dataframe
+        - netchange
+        - pctchange
+        - url
+    rename:                             # Rename columns using standard rules
+        lastsale: price
+        ipoyear: ipoYear
+    add:                                # Add columns with default value None (will be updated later)
+        - pe
+        - beta
+        - shortRatio
+        - isin
+    add_datetype_cols:                  # Add datetime columns with default value NaT (will be updated later)
+        - quotesStarted
+        - quotesUpdated
+        - rowUpdated
+    types:                              # Column types
+        symbol: 'string'
+        isin: 'string'
+        name: 'string'
+        price: 'float'
+        volume: 'int'
+        marketCap: 'int'
+        ipoYear: 'int'
+        pe: 'float'
+        beta: 'float'
+        shortRatio: 'float'
+        country: 'string'
+        sector: 'string'
+        industry: 'string'
+        quotesStarted: 'datetime64[ns]'
+        quotesUpdated: 'datetime64[ns]'
+        rowUpdated: 'datetime64[ns]'
+    order:                              # Reorder columns before saving the dataframe to a file
+        - symbol
+        - isin
+        - name
+        - price
+        - volume
+        - marketCap
+        - ipoYear
+        - pe
+        - beta
+        - shortRatio
+        - country
+        - sector
+        - industry
+        - quotesStarted
+        - quotesUpdated
+        - rowUpdated
+
+# Update quotes dataframe columns
+quotes_df_columns:
+    delete:                             # Delete columns from the downloaded dataframe
+        - 'Adj Close'
+    rename:                             # Rename columns using standard rules
+        Open: open
+        High: high
+        Low: low
+        Close: close
+        Volume: volume
+        Dividends: dividends
+        Stock Splits: splits
+    types:                              # Column types
+        open: float
+        high: float
+        low: float
+        close: float
+        volume: int
+        dividends: float
+        splits: float
 
 # Headers for API requests
-api_headers:
-  nasdaq:
-    authority: api.nasdaq.com
-    accept: 'application/json, text/plain, */*'
-    user-agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
-    origin: 'https://www.nasdaq.com'
-    sec-fetch-site: 'same-site'
-    sec-fetch-mode: 'cors'
-    sec-fetch-dest: 'empty'
-    referer: 'https://www.nasdaq.com/'
-    accept-language: 'en-US,en;q=0.9'
-  # Add headers for other APIs as needed
-
-# Other configurations
-# ...
+download:
+    batch_size: 30                                      # Batch size for downloading data at one time
+    params: (('letter', '0'), ('download', 'true'))     # API params for downloading
+    headers:                                            # Request headers for downloading
+        authority: api.nasdaq.com
+        accept: 'application/json, text/plain, */*'
+        user-agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+        origin: 'https://www.nasdaq.com'
+        sec-fetch-site: 'same-site'
+        sec-fetch-mode: 'cors'
+        sec-fetch-dest: 'empty'
+        referer: 'https://www.nasdaq.com/'
+        accept-language: 'en-US,en;q=0.9'
