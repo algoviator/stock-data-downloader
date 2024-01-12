@@ -23,7 +23,7 @@ from requests_cache import CacheMixin, SQLiteCache
 from requests_ratelimiter import LimiterMixin, MemoryQueueBucket
 from pyrate_limiter import Duration, RequestRate, Limiter
 
-# --------------------------------------- CACHED LIMITER SESSION CLASS ---------------------------------
+# --------------------------------------- CACHED LIMITER SESSION CLASS --------------------------------
 
 class CachedLimiterSession(CacheMixin, LimiterMixin, Session):
     """
