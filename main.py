@@ -33,32 +33,25 @@ import pandas as pd
 import yfinance as yf  # price datasets
 import yaml
 
-# Import custom class from utils
-from utils.cached_limiter_session import CachedLimiterSession
 
 # Import custom classes from the current dir
 from tickers_downloader import TickersDownloader
-from quotes_downloader import QuotesDownloader
-
+#from quotes_downloader import QuotesDownloader
+from utils.load_config import Config
 # --------------------------------------- MAIN SCRIPT -----------------------------------------------
+#print(os.path.splitext(os.path.basename(__file__))[0])
 
-def load_config(file_path='quotes_downloader.yaml'):
-    with open(file_path, 'r') as file:
-        config = yaml.safe_load(file)
-    return config
-
-# Пример использования
-config_data = load_config()
-api_key = config_data['api_key']
-data_directory = config_data['data_directory']
-
-
+#print(__name__)
+"""
 def main():
+
     # Set up any configuration or initialization code here
 
-    # Create an instance of QuotesDownloader
-    downloader = QuotesDownloader()
 
+    # Create an instance of QuotesDownloader
+    tickers = TickersDownloader()
+
+    # quotes_downloader = QuotesDownloader()
     # Create or update the list of tickers
     downloader.create_ticker_list()
 
@@ -71,4 +64,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    pass
+    #main()
+"""

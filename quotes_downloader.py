@@ -290,10 +290,3 @@ class QuotesDownloader:
             # Save the updated DataFrame to the same CSV file
             df.to_csv(self.tickers_file, index=False)
             time.sleep(3)
-
-
-
-q = QuotesDownloader()
-q.create_ticker_list(tickers_file='data/tickers.csv')
-
-

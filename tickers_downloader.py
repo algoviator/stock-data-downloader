@@ -27,20 +27,16 @@ import time
 from datetime import datetime, timedelta
 
 # Related third-party imports
-import yaml
 import requests
 import numpy as np
 import pandas as pd
 import yfinance as yf  # price datasets
+import yaml
 
-# Custom classes (local dir)
-# Requests rate limiter
+# Import custom class from utils
 from utils.cached_limiter_session import CachedLimiterSession
 
-
 # ----------------------------------------- CLASSES & FUNCTIONS --------------------------------------
-
-
 
 class TickersDownloader:
     TODAY = datetime.now()
@@ -92,18 +88,24 @@ class TickersDownloader:
 
     def __init__(self, tickers_file='data/tickers.csv', quotes_dir='data/quotes/'):
 
-        # Load settings from quotes_downloader.yaml
-        with open('quotes_downloader.yaml', 'r') as config_file:
-            self.config = yaml.safe_load(config_file)
-
         # CSV file with the list of all tickers
         self.tickers_file = tickers_file
 
-        # Dir for store files with ticker quotes
+        # Directory of files with tickers quotes
         self.quotes_dir = quotes_dir
 
         # Session with requests rate limiter (to protect to be blocked)
-        self.session = CachedLimiterSession.initialize_session()
+        self.session = self.initialize_session()
+
+    print(os.path.splitext(os.path.basename(__file__))[0])
+
+    def load_config(file_path='tickers_downloader.yaml'):
+        with open(file_path, 'r') as file:
+            config = yaml.safe_load(file)
+        return config
+
+    # Пример использования
+    config = load_config()
 
     def create_ticker_list(self):
 
@@ -291,140 +293,3 @@ class TickersDownloader:
             # Save the updated DataFrame to the same CSV file
             df.to_csv(self.tickers_file, index=False)
             time.sleep(3)
-
-    def download_quotes(self):
-        """Downloads"""
-
-        # Download by using limited batches of data
-        batch_size = self.DOWNLOAD_BATCH_SIZE
-
-        # Create a folder (if not exist) to store stock quotes files
-        os.makedirs(self.quotes_dir, exist_ok=True)
-
-        # DataFrame from the CSV file
-        try:
-            df = pd.read_csv(self.tickers_file)
-        except FileNotFoundError:
-            print(f'File \'{self.tickers_file}\' not found.')
-            return None
-
-        # Change type of columns
-        df = df.astype(self.COLS_TYPES)
-
-        # counter - удалить при реальной работе
-        counter = 0
-        while True & counter < 1:
-            counter += 1
-
-            # !!!!!!!!!!!!!!
-            # Mask - оставить только первый фильтр после закачки основных
-            # поправить срез с 3 на batch_size
-            mask = (
-                    (
-                            (pd.isna(df['quotesUpdated'])) | (
-                                df['quotesUpdated'] < pd.to_datetime(self.QUOTES_EXPIRATION))
-                    ) &
-                    (
-                            (df['ipoYear'] < 1990) &
-                            (df['price'] > 3) &
-                            (df['price'] < 5000) &
-                            (df['volume'] * df['price'] > 100 * 10 ** 6)  # Daily average trade volume > $100M
-                    )
-            )
-            """
-                XOM
-                JNJ
-                PG
-                MRK
-                CVX
-                KO
-                DIS
-            """
-            mask = df['ipoYear'] == ''
-            # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            # subset = df[mask].head(batch_size)
-
-            subset = df[mask][0:1]  # .head(1)
-
-            # If no quotes to download than break from infinity cycle
-            if subset.empty: return df
-
-            symbol_list = subset['symbol'].to_list()
-            try:
-                all_quotes = yf.download(symbol_list, period="max", interval="1d", auto_adjust=False, rounding=False,
-                                         actions=True, group_by='ticker', threads=True, session=self.session)
-
-                for index, row in subset.iterrows():
-                    symbol = row['symbol']
-                    print(symbol)
-                    # Если в all_quotes была всего одна акция, то структура массива возвращаемого
-                    # функцией библиотеки yfinance меняется. Отлавливаем это как ошибку и меняем
-                    # структуру запроса
-                    try:
-                        quotes_subset = pd.DataFrame(all_quotes[symbol].dropna())
-
-                    except Exception as e:
-                        quotes_subset = pd.DataFrame(all_quotes.dropna())
-
-                    quotes_subset = self.update_quotes_columns(quotes_subset)
-
-                    return quotes_subset
-
-            except Exception as e:
-                print(f"Failed to download stock quotes for the batch. \n",
-                      f"Error: {e}")
-
-        return None
-
-    def get_filtered_quotes(self, _subset):
-
-        """
-        Returns filtered stock quotes.
-
-        Returns will be started from the date when all prices are greater than 0
-        and average daily trading volume is more than $1M.
-
-        :param _subset:
-        :return:
-        """
-        # Find the las index (last date) of the rows where one of OHLC <= 0 or
-        # daily trading volume < 1,000,000
-        mask = (
-
-                (df['open'] <= 0) |
-                (df['high'] <= 0) |
-                (df['low'] <= 0) |
-                (df['close'] <= 0) |
-                (np.min([
-                    (df['volume'] * df['open']).rolling(window=14).mean(),
-                    (df['volume'] * df['high']).rolling(window=14).mean(),
-                    (df['volume'] * df['low']).rolling(window=14).mean(),
-                    (df['volume'] * df['close']).rolling(window=14).mean()
-                ]) < 1 * 10 ** 6)
-        )
-        last_excluded_date = _subset[mask].index[-1]
-
-        # Exclude from _subset all rows older or equal the last date of excluded rows
-        _subset = _subset.loc[_subset.index > last_excluded_date]
-
-        # Функция для проверки пропущенных дней
-        def check_missing_days(df):
-            # Создаем список с датами, в которые биржа должна быть открыта (рабочие дни)
-            expected_dates = pd.date_range(start=df.index.min(), end=df.index.max(), freq='B')
-
-            # Находим разницу между ожидаемыми датами и датами в датафрейме
-            missing_days = expected_dates.difference(df.index)
-
-            # Возвращает True, если нет пропущенных дней, иначе False
-            return len(missing_days) == 0
-
-    def update_quotes_columns(self, _df):
-
-        # Delete unused and rename other columns
-        _df = _df.drop(columns=self.QUOTES_DELETE).rename(columns=self.QUOTES_RENAME)
-
-        # Update types of columns
-        _df = _df.astype(self.QUOTES_TYPES)
-
-        return _df
-

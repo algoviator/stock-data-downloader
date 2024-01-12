@@ -74,9 +74,13 @@ columns:
 
 # Headers for API requests
 download:
-    batch_size: 30                                      # Batch size for downloading data at one time
-    params: (('letter', '0'), ('download', 'true'))     # API params for downloading
-    headers:                                            # Request headers for downloading
+    batch_size: 30              # Batch size for downloading data at one time
+    params:                     # API params for downloading
+        - - letter
+          - '0'
+        - - download
+          - 'true'
+    headers:                    # Request headers for downloading
         authority: api.nasdaq.com
         accept: 'application/json, text/plain, */*'
         user-agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
