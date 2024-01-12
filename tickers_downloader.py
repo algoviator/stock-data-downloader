@@ -92,8 +92,8 @@ class TickersDownloader:
 
     def __init__(self, tickers_file='data/tickers.csv', quotes_dir='data/quotes/'):
 
-        # Load settings from config.yaml
-        with open('config.yaml', 'r') as config_file:
+        # Load settings from quotes_downloader.yaml
+        with open('quotes_downloader.yaml', 'r') as config_file:
             self.config = yaml.safe_load(config_file)
 
         # CSV file with the list of all tickers
