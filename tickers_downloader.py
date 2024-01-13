@@ -100,6 +100,23 @@ class TickersDownloader:
         # File path to save the result of downloading
         self.PATH = self.config['path']
 
+    def get_tickers_from_nasdaq(self):
+        """
+        Download list of shares from NASDAQ Stock Screener.
+
+        Note:
+            Get DataFrame of all tickers traded at NYSE, NASDAQ, and AMEX exchanges.
+
+        :return: DataFrame with headers:
+            symbol, name, lastsale, netchange, pctchange, marketCap, country, ipoyear, volume, sector, industry, url
+        """
+        r = requests.get(
+            'https://api.nasdaq.com/api/screener/stocks',
+            headers=self.DOWNLOAD_HEADERS,
+            params=self.DOWNLOAD_PARAMS)
+        data = r.json()['data']
+
+        return pd.DataFrame(data['rows'], columns=data['headers'])
 
     @staticmethod
     def get_current_filename():
@@ -122,23 +139,6 @@ class TickersDownloader:
         self.update_ticker_data()
 
 
-    def download_ticker_list(self):
-        """
-        Download list of shares from NASDAQ Stock Screener.
-
-        Note:
-            Get DataFrame of all tickers traded at NYSE, NASDAQ, and AMEX exchanges.
-
-        :return: DataFrame with headers:
-            symbol, name, lastsale, netchange, pctchange, marketCap, country, ipoyear, volume, sector, industry, url
-        """
-        r = requests.get(
-            'https://api.nasdaq.com/api/screener/stocks',
-            headers=self.DOWNLOAD_HEADERS,
-            params=self.DOWNLOAD_PARAMS)
-        data = r.json()['data']
-
-        return pd.DataFrame(data['rows'], columns=data['headers'])
 
     def update_tickers_columns(self, df):
 

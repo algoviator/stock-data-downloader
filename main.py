@@ -39,8 +39,7 @@ def main():
     # Set up any configuration or initialization code here
 
 
-    # Create an instance of QuotesDownloader
-    tickers = TickersDownloader()
+    pass
     """
     # quotes_downloader = QuotesDownloader()
     # Create or update the list of tickers
@@ -58,3 +57,7 @@ def main():
 if __name__ == "__main__":
     main()
 
+# Create an instance of QuotesDownloader
+tickers = TickersDownloader()
+
+print(tickers.get_tickers_from_nasdaq())
