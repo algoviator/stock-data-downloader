@@ -18,7 +18,6 @@
 # ---------------------------------- IMPORT LIBRARIES --------------------------------------
 
 import yaml
-import os
 
 # ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
 
@@ -34,23 +33,10 @@ class LoadConfig(object):
         filename (str): The configuration filename.
         data (dict or None): The loaded configuration data or None if the file is not found.
     """
-    def __init__(self):
+    def __init__(self, module_name=''):
 
-        # Initialize the class by setting the configuration filename
-        # and loading the configuration data
-        self.filename = self.get_config_filename()
-        self.data = self.load_config(file_path=f'../{self.filename}')
-
-    @staticmethod
-    def get_config_filename():
-        """
-        Get the configuration filename based on the calling module's name.
-
-        Returns:
-            str: The configuration filename.
-        """
-        calling_module_name = os.path.splitext(os.path.basename(__import__('__main__').__file__))[0]
-        return calling_module_name + '.yaml'
+        # Initialize the class by loading the configuration data
+        self.data = self.load_config(file_path=f'{module_name}.yaml')
 
     @staticmethod
     def load_config(file_path=''):

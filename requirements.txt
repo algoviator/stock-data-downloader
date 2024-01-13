@@ -5,3 +5,4 @@ yfinance==0.2.35
 requests_cache==1.1.1
 requests_ratelimiter==0.4.2
 pyrate_limiter==2.10.0
+PyYAML==6.0.1

@@ -26,23 +26,14 @@ import os
 import time
 from datetime import datetime, timedelta
 
-# Related third-party imports
-import requests
-import numpy as np
-import pandas as pd
-import yfinance as yf  # price datasets
-import yaml
-
 
 # Import custom classes from the current dir
 from tickers_downloader import TickersDownloader
 #from quotes_downloader import QuotesDownloader
-from utils.load_config import Config
-# --------------------------------------- MAIN SCRIPT -----------------------------------------------
-#print(os.path.splitext(os.path.basename(__file__))[0])
 
-#print(__name__)
-"""
+# --------------------------------------- MAIN SCRIPT -----------------------------------------------
+
+
 def main():
 
     # Set up any configuration or initialization code here
@@ -50,7 +41,7 @@ def main():
 
     # Create an instance of QuotesDownloader
     tickers = TickersDownloader()
-
+    """
     # quotes_downloader = QuotesDownloader()
     # Create or update the list of tickers
     downloader.create_ticker_list()
@@ -61,9 +52,9 @@ def main():
     if quotes_df is not None:
         # Process the downloaded quotes DataFrame as needed
         print(quotes_df)
+    #"""
 
 
 if __name__ == "__main__":
-    pass
-    #main()
-"""
+    main()
+

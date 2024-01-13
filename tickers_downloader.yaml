@@ -8,7 +8,7 @@ date_format: '%Y-%m-%d'
 
 # Filter the main parameters
 filter:
-  min_years_from_ipo: 3         # Minimum number of years since the company's IPO to consider
+  years_from_ipo: 3             # Minimum number of years since the company's IPO to consider
   expiration_days: 90           # Update ticker info every {x} days
   min_price: 3                  # Minimum price of one share, USD
   max_price: 10000              # Maximum price of one share, USD
@@ -33,11 +33,11 @@ columns:
         - beta
         - shortRatio
         - isin
-    add_datetype_cols:          # Add datetime columns with default value NaT (will be updated later)
+    add_datetype:               # Add datetime columns with default value NaT (will be updated later)
         - quotesStarted
         - quotesUpdated
         - rowUpdated
-    types:                      # Column types
+    apply_types:                # Column types
         symbol: 'string'
         isin: 'string'
         name: 'string'
@@ -54,7 +54,7 @@ columns:
         quotesStarted: 'datetime64[ns]'
         quotesUpdated: 'datetime64[ns]'
         rowUpdated: 'datetime64[ns]'
-    order:                      # Reorder columns before saving the dataframe to a file
+    new_order:                      # Reorder columns before saving the dataframe to a file
         - symbol
         - isin
         - name
@@ -72,7 +72,7 @@ columns:
         - quotesUpdated
         - rowUpdated
 
-# Headers for API requests
+# NASDAQ API configuration and web requests params
 download:
     batch_size: 30              # Batch size for downloading data at one time
     params:                     # API params for downloading

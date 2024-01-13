@@ -15,7 +15,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# --------------------------------------- IMPORT LIBRARIES -------------------------------------------
+# ------------------------------------ IMPORT LIBRARIES ------------------------------------
 
 # Prevent warning messages
 import warnings
@@ -31,81 +31,83 @@ import requests
 import numpy as np
 import pandas as pd
 import yfinance as yf  # price datasets
-import yaml
 
 # Import custom class from utils
+from utils.load_config import LoadConfig
 from utils.cached_limiter_session import CachedLimiterSession
 
-# ----------------------------------------- CLASSES & FUNCTIONS --------------------------------------
+# ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
 
 class TickersDownloader:
-    TODAY = datetime.now()
+
+    # Date format to show in the date columns of dataframes
     DATE_FORMAT = '%Y-%m-%d'
 
-    MAX_IPO_YEAR = TODAY.year - 3  # Don't use quotes first 3 years after company's IPO
-    TICKER_EXPIRATION = TODAY - timedelta(days=90)  # Expiration date of tickers info. Update needed.
-    QUOTES_EXPIRATION = TODAY - timedelta(days=30)  # Expiration date of quotes files. Update needed.
+    # Current day date
+    TODAY = datetime.now()
 
-    START_DATE = '1980-01-01'  # The earliest date to start quotes downloading  #datetime(2000, 1, 1)
-    MIN_CAP = 500 * 10 ** 6  # minimum of company capitalisation, USD
-    MIN_PRICE = 3  # minimum price of one share, USD
-    MAX_PRICE = 10 * 10 ** 3  # maximum price of one share, USD
+    def __init__(self):
+        """
+        Initializes the configuration parameters for downloading tickers data and sets up API and file-related settings.
 
-    # Improve columns in the new dataframe made from downloading data
-    COLS_DELETE = ['netchange', 'pctchange', 'url']
-    COLS_RENAME = {'lastsale': 'price', 'ipoyear': 'ipoYear'}
-    COLS_ADD = ['pe', 'beta', 'shortRatio', 'isin']
-    COLS_DT_ADD = ['quotesStarted', 'quotesUpdated', 'rowUpdated']
-    COLS_TYPES = {'symbol': 'string', 'isin': 'string', 'name': 'string', 'price': 'float', 'volume': 'int',
-                  'marketCap': 'int', 'ipoYear': 'int', 'pe': 'float', 'beta': 'float', 'shortRatio': 'float',
-                  'country': 'string', 'sector': 'string', 'industry': 'string', 'quotesStarted': 'datetime64[ns]',
-                  'quotesUpdated': 'datetime64[ns]', 'rowUpdated': 'datetime64[ns]'}
-    COLS_ORDER = ['symbol', 'isin', 'name', 'price', 'volume', 'marketCap', 'ipoYear', 'pe', 'beta',
-                  'shortRatio', 'country', 'sector', 'industry', 'quotesStarted', 'quotesUpdated', 'rowUpdated']
-    QUOTES_DELETE = ['Adj Close']
-    QUOTES_RENAME = {'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume',
-                     'Dividends': 'dividends', 'Stock Splits': 'splits'}
-    QUOTES_TYPES = {'open': 'float', 'high': 'float', 'low': 'float', 'close': 'float', 'volume': 'int',
-                    'dividends': 'float', 'splits': 'float'}
+        The function loads configuration from a YAML file and sets up various parameters for filtering tickers data,
+        updating dataframe columns, and configuring API requests.
+        """
+        # Load configuration from the file named like the current and extension '.yaml'
+        current_filename = self.get_current_filename()
+        self.config = LoadConfig(current_filename).data
 
-    # Exclude tickers with stop words in their names
-    NAME_STOP_WORDS = ['Notes', 'Subordinated', 'Fixed', '%', 'Convertible']
+        # ----------------------------------------------------------------------------------
+        # Filters for downloading tickers data
+        # ----------------------------------------------------------------------------------
 
-    # Web downloader params
-    DOWNLOAD_BATCH_SIZE = 30
-    DOWNLOAD_PARAMS = (('letter', '0'), ('download', 'true'))
-    DOWNLOAD_HEADERS = {
-        'authority': 'api.nasdaq.com',
-        'accept': 'application/json, text/plain, */*',
-        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
-        'origin': 'https://www.nasdaq.com',
-        'sec-fetch-site': 'same-site',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-dest': 'empty',
-        'referer': 'https://www.nasdaq.com/',
-        'accept-language': 'en-US,en;q=0.9',
-    }
+        # Not download data if company IPO date was less than 3 years ago
+        self.MAX_IPO_YEAR = self.TODAY.year - self.config['filter']['years_from_ipo']
 
-    def __init__(self, tickers_file='data/tickers.csv', quotes_dir='data/quotes/'):
+        # Expiration date of tickers info. Update ticker info every {x} days
+        self.EXPIRATION = self.TODAY - timedelta(days=self.config['filter']['expiration_days'])
 
-        # CSV file with the list of all tickers
-        self.tickers_file = tickers_file
+        # Minimum/maximum price of one share, USD
+        self.MIN_PRICE = self.config['filter']['min_price']
+        self.MAX_PRICE = self.config['filter']['max_price']
 
-        # Directory of files with tickers quotes
-        self.quotes_dir = quotes_dir
+        # Exclude tickers with stop words in their names
+        self.STOP_WORDS = self.config['filter']['stop_words']
 
-        # Session with requests rate limiter (to protect to be blocked)
-        self.session = self.initialize_session()
+        # ----------------------------------------------------------------------------------
+        # Dataframe columns updating parameters
+        # ----------------------------------------------------------------------------------
 
-    print(os.path.splitext(os.path.basename(__file__))[0])
+        self.COLS_DELETE = self.config['columns']['delete']         # Delete columns from the downloaded dataframe
+        self.COLS_RENAME = self.config['columns']['rename']         # Rename columns using standard rules
+        self.COLS_ADD = self.config['columns']['add']               # Add new columns with default value None
+        self.COLS_DT_ADD = self.config['columns']['add_datetype']   # Add new datetime columns with default value NaT
+        self.COLS_TYPES = self.config['columns']['apply_types']     # Columns types
+        self.COLS_ORDER = self.config['columns']['new_order']       # Reorder columns before saving to the file
 
-    def load_config(file_path='tickers_downloader.yaml'):
-        with open(file_path, 'r') as file:
-            config = yaml.safe_load(file)
-        return config
+        # ----------------------------------------------------------------------------------
+        # NASDAQ and Yahoo API configuration, filepath to save the result of downloading
+        # ----------------------------------------------------------------------------------
 
-    # Пример использования
-    config = load_config()
+        # NASDAQ download parameters
+        self.DOWNLOAD_BATCH_SIZE = self.config['download']['batch_size']  # Batch size for downloading data at one time
+        self.DOWNLOAD_PARAMS = self.config['download']['params']          # API params for downloading
+        self.DOWNLOAD_HEADERS = self.config['download']['headers']        # Request headers for downloading
+
+        # Yahoo cached session with the limit for requests frequency
+        self.SESSION = CachedLimiterSession.initialize_session()
+
+        # File path to save the result of downloading
+        self.PATH = self.config['path']
+
+
+    @staticmethod
+    def get_current_filename():
+        """
+        Returns:
+            str: The current module filename.
+        """
+        return os.path.splitext(os.path.basename(__file__))[0]
 
     def create_ticker_list(self):
 
@@ -185,7 +187,7 @@ class TickersDownloader:
         df = df.astype(self.COLS_TYPES)
 
         # Exclude tickers with stop words in their names
-        df = df[~df['name'].str.contains('|'.join(self.NAME_STOP_WORDS), case=False)]
+        df = df[~df['name'].str.contains('|'.join(self.STOP_WORDS), case=False)]
 
         # Filter the data by using predefined values
         df = df[
@@ -198,7 +200,7 @@ class TickersDownloader:
         """
         try:
             # Read the existing DataFrame from the CSV file
-            ex_df = pd.read_csv(self.tickers_file)
+            ex_df = pd.read_csv(self.PATH)
         except FileNotFoundError:
             # If the file is not found, create an empty DataFrame
             ex_df = pd.DataFrame(columns=df.columns)
@@ -211,10 +213,10 @@ class TickersDownloader:
             ex_df = pd.concat([ex_df, new_rows], ignore_index=True)
 
             # Create a folder (if not exist) to store DataFrame to the file
-            os.makedirs(os.path.dirname(self.tickers_file), exist_ok=True)
+            os.makedirs(os.path.dirname(self.PATH), exist_ok=True)
 
             # Save the updated DataFrame to the same file
-            ex_df.to_csv(self.tickers_file, index=False)
+            ex_df.to_csv(self.PATH, index=False)
 
             # Display information about the added rows
             added_rows_count = len(new_rows)
@@ -233,9 +235,9 @@ class TickersDownloader:
             # Read the list of tickers which is not updated or updated long time ago
             # DataFrame from the CSV file
             try:
-                df = pd.read_csv(self.tickers_file)
+                df = pd.read_csv(self.PATH)
             except FileNotFoundError:
-                print(f'File \'{self.tickers_file}\' not found.')
+                print(f'File \'{self.PATH}\' not found.')
                 return None
 
             # Change type of date columns
@@ -244,7 +246,7 @@ class TickersDownloader:
             # Выбор строк, где 'rowUpdated' не было, либо старше чем 2 месяца назад
             mask = (
                     (pd.isna(df['rowUpdated'])) |
-                    (df['rowUpdated'] < pd.to_datetime(self.TICKER_EXPIRATION))
+                    (df['rowUpdated'] < pd.to_datetime(self.EXPIRATION))
             )
 
             subset = df[mask].head(self.DOWNLOAD_BATCH_SIZE)
@@ -253,7 +255,7 @@ class TickersDownloader:
             if subset.empty: break
 
             symbol_list = subset['symbol'].to_list()
-            tickers = yf.Tickers(symbol_list, session=self.session)
+            tickers = yf.Tickers(symbol_list, session=self.SESSION)
 
             for index, row in subset.iterrows():
                 symbol = row['symbol']
@@ -291,5 +293,5 @@ class TickersDownloader:
             print(f'Tickers: {symbol_list} were updated')
 
             # Save the updated DataFrame to the same CSV file
-            df.to_csv(self.tickers_file, index=False)
+            df.to_csv(self.PATH, index=False)
             time.sleep(3)
