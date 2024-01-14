@@ -39,7 +39,6 @@ import yfinance as yf  # price datasets
 from utils.load_config import LoadConfig
 from utils.cached_limiter_session import CachedLimiterSession
 
-
 # ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
 
 class TickersDownloader:
@@ -60,7 +59,7 @@ class TickersDownloader:
         self.logger = logging.getLogger(__name__)
 
         # Load configuration from the '.yaml' file
-        self.config = LoadConfig('tickers_downloader.yaml').data
+        self.config = LoadConfig('config/tickers_downloader.yaml').data
 
         # Date format to show in the date columns of dataframes
         self.DATE_FORMAT = '%Y-%m-%d'
@@ -298,7 +297,7 @@ class TickersDownloader:
             # Read the file with tickers data
             try:
                 df = pd.read_csv(self.PATH)
-            except FileNotFoundError:
+            except FileNotFoundError as e:
                 # Log any exceptions
                 self.logger.error(f'File \'{self.PATH}\' not found. Error: {e}', exc_info=True)
                 return None

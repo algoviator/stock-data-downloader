@@ -2,3 +2,7 @@
 2024-01-14 12:45:18,536 - INFO - Step 2: 3971 tickers passed through the filter.
 2024-01-14 12:45:18,544 - INFO - Step 3: 0 new rows inserted into Tickers file.
 2024-01-14 12:45:18,552 - INFO - Step 4: All tickers are up to date.
+2024-01-14 12:55:00,894 - INFO - Step 1: Downloaded 7274 tickers from NASDAQ.
+2024-01-14 12:55:00,931 - INFO - Step 2: 3971 tickers passed through the filter.
+2024-01-14 12:55:00,939 - INFO - Step 3: 0 new rows inserted into Tickers file.
+2024-01-14 12:55:00,947 - INFO - Step 4: All tickers are up to date.
