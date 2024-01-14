@@ -278,6 +278,31 @@ class TickersDownloader:
             # Else - return an empty DataFrame
             return pd.DataFrame(columns=df.columns)
 
+    def get_subset_expired_tickers_to_update(self):
+
+        # Read the file with tickers data
+        try:
+            df = pd.read_csv(self.PATH)
+        except FileNotFoundError as e:
+            # Log any exceptions
+            self.logger.error(f'File \'{self.PATH}\' not found. Error: {e}', exc_info=True)
+            return None
+
+        # Update data type for datetime columns to ensure correct operation
+        df[self.COLS_DT_ADD] = df[self.COLS_DT_ADD].astype("datetime64[ns]")
+
+        # Create filter to read the list of tickers which is never updated
+        # or updated a long time ago
+        mask = (
+                (pd.isna(df['rowUpdated'])) |
+                (df['rowUpdated'] < pd.to_datetime(self.EXPIRATION))
+        )
+
+        # Apply filter mask and the batch size to limit count of tickers for one download
+        subset = df[mask].head(self.DOWNLOAD_BATCH_SIZE)
+
+        return subset
+
     def update_tickers_data_using_yahoo(self):
         """
         Update ticker data using Yahoo Finance API.
@@ -293,26 +318,8 @@ class TickersDownloader:
         # Infinite loop while will not execute condition of no rows to update
         while True:
 
-            # Read the file with tickers data
-            try:
-                df = pd.read_csv(self.PATH)
-            except FileNotFoundError as e:
-                # Log any exceptions
-                self.logger.error(f'File \'{self.PATH}\' not found. Error: {e}', exc_info=True)
-                return None
-
-            # Update data type for datetime columns to ensure correct operation
-            df[self.COLS_DT_ADD] = df[self.COLS_DT_ADD].astype("datetime64[ns]")
-
-            # Create filter to read the list of tickers which is never updated
-            # or updated a long time ago
-            mask = (
-                    (pd.isna(df['rowUpdated'])) |
-                    (df['rowUpdated'] < pd.to_datetime(self.EXPIRATION))
-            )
-
-            # Apply filter mask and the batch size to limit count of tickers for one download
-            subset = df[mask].head(self.DOWNLOAD_BATCH_SIZE)
+            # Get the limited subset of tickers with expiration condition
+            subset = self.get_subset_expired_tickers_to_update()
 
             # If no rows to update then break from the infinite loop (from the 'while True')
             if subset.empty:
