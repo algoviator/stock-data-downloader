@@ -54,5 +54,5 @@ install/
 db.sqlite3
 
 # Logs
-*.log
+#*.log
 *.log.*

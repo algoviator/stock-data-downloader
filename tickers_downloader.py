@@ -53,7 +53,7 @@ class TickersDownloader:
         """
         # Initialize logger. Use it to reports about work status into log file
         logging.basicConfig(
-            filename='tickers_downloader.log',
+            filename='logs/tickers_downloader.log',
             level=logging.INFO,
             format='%(asctime)s - %(levelname)s - %(message)s'
         )
