@@ -19,7 +19,6 @@
 
 # Prevent warning messages
 import warnings
-
 warnings.filterwarnings('ignore')
 
 # Loggin reports
