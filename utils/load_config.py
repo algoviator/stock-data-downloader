@@ -36,7 +36,7 @@ class LoadConfig(object):
     def __init__(self, module_name=''):
 
         # Initialize the class by loading the configuration data
-        self.data = self.load_config(file_path=f'{module_name}.yaml')
+        self.data = self.load_config(file_path=f'{module_name}')
 
     @staticmethod
     def load_config(file_path=''):

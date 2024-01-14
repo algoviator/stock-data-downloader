@@ -34,7 +34,7 @@ columns:
         - beta
         - shortRatio
         - isin
-    add_datetype:               # Add datetime columns with default value NaT (will be updated later)
+    add_dt:               # Add datetime columns with default value NaT (will be updated later)
         - quotesStarted
         - quotesUpdated
         - rowUpdated

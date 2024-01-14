@@ -26,7 +26,6 @@ import os
 import time
 from datetime import datetime, timedelta
 
-
 # Import custom classes from the current dir
 from tickers_downloader import TickersDownloader
 #from quotes_downloader import QuotesDownloader
@@ -36,10 +35,12 @@ from tickers_downloader import TickersDownloader
 
 def main():
 
-    # Set up any configuration or initialization code here
+    # Download and update list of tickers traded on NYSE, NASDAQ, and AMEX exchanges
+    # using the NASDAQ Stock Screener and Yahoo API.
+    ts = TickersDownloader()
+    ts.run()
 
 
-    pass
     """
     # quotes_downloader = QuotesDownloader()
     # Create or update the list of tickers
@@ -56,8 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Create an instance of QuotesDownloader
-tickers = TickersDownloader()
-
-print(tickers.get_tickers_from_nasdaq())
