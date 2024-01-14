@@ -278,7 +278,7 @@ class TickersDownloader:
             # Else - return an empty DataFrame
             return pd.DataFrame(columns=df.columns)
 
-    def get_tickers_subset_to_update(self):
+    def get_subset_to_update_tickers(self):
 
         # Read the file with tickers data
         try:
@@ -319,7 +319,7 @@ class TickersDownloader:
         while True:
 
             # Get the limited subset of tickers with expiration condition
-            subset = self.get_tickers_subset_to_update()
+            subset = self.get_subset_to_update_tickers()
 
             # If no rows to update then break from the infinite loop (from the 'while True')
             if subset.empty:
