@@ -17,20 +17,13 @@
 #
 # --------------------------------------- IMPORT LIBRARIES -------------------------------------------
 
-# Prevent warning messages
-import warnings
-
-warnings.filterwarnings('ignore')
-
-# Standard library imports
-import os
-import time
-from datetime import datetime, timedelta
-
 # Import custom classes from the current dir
 from tickers_downloader import TickersDownloader
 from quotes_downloader import QuotesDownloader
 
+# Prevent warning messages
+import warnings
+warnings.filterwarnings('ignore')
 
 # --------------------------------------- MAIN SCRIPT -----------------------------------------------
 
