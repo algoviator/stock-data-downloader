@@ -7,7 +7,7 @@ min_history_years: 3            # Minimum years of quotes history to approve sav
 date_format: '%Y-%m-%d'         # Date format to show in the date columns of dataframes
 expiration_days: 30             # Update quotes every {x} days
 
-trade_value_threshold: 100      # Minimum average trade value in millions USD to start saving quotes history
+trade_value_threshold: 50       # Minimum average trade value in millions USD to start saving quotes history
 
 # Update quotes dataframe columns
 columns:
