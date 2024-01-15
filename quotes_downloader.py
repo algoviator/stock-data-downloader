@@ -252,19 +252,10 @@ class QuotesDownloader:
             df = df.astype(self.COLS_TYPES)
         except Exception as e:
             # sometimes there are no columns 'dividends' and 'splits' in 'df' DataFrame
-
-            # remove missed columns from current types to apply
-            new_cols_types = self.COLS_TYPES.copy()
-            keys_to_remove = ['dividends', 'splits']
-            for key in keys_to_remove:
-                del new_cols_types[key]
-
-            # and try again
-            try:
-                df = df.astype(new_cols_types)
-            except Exception as e:
-                # Log any exceptions
-                self.logger.error(f'refactor_dataframe_columns() - df.astype(), Error: {e}', exc_info=True)
+            # Log any exceptions
+            self.logger.error(f'refactor_dataframe_columns(). Error: {e}', exc_info=True)
+            # Return empty DataFrame
+            return pd.DataFrame(columns=df.columns)
 
         return df
 
