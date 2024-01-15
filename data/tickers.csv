@@ -1,13 +1,13 @@
 symbol,isin,name,price,volume,marketCap,ipoYear,pe,beta,shortRatio,country,sector,industry,quotesStarted,quotesUpdated,rowUpdated
 A,US00846U1016,Agilent Technologies Inc. Common Stock,123.58,2064854,39080873984,1999,31.8,1.1,2.24,United States,Healthcare,Diagnostics & Research,,,2024-01-09
-AA,,Alcoa Corporation Common Stock ,27.65,5909000,5662916608,1962,,2.5,2.12,United States,Basic Materials,Aluminum,,,2024-01-09
+AA,,Alcoa Corporation Common Stock ,27.65,5909000,5662916608,1962,,2.5,2.12,United States,Basic Materials,Aluminum,1991-09-18,2024-01-15,2024-01-09
 AAL,,American Airlines Group Inc. Common Stock,12.86,36313177,9471442944,2005,6.1,1.6,1.77,United States,Industrials,Airlines,,,2024-01-09
 AAMC,VI02153X1080,Altisource Asset Management Corp Com,3.9,82629,11402036,2022,,1.4,0.23,United States,Financial Services,Mortgage Finance,,,2024-01-09
 AAN,,Aarons Holdings Company Inc. Common Stock ,9.44,440264,332105824,2020,36.5,1.5,1.52,United States,Industrials,Rental & Leasing Services,,,2024-01-09
 AAOI,US03823U1025,Applied Optoelectronics Inc. Common Stock,15.45,2608390,825448832,2013,,2.0,2.68,United States,Technology,Communication Equipment,,,2024-01-09
 AAON,US0003602069,AAON Inc. Common Stock,64.94,391280,5904879104,1992,35.5,0.9,7.56,United States,Industrials,Building Products & Equipment,,,2024-01-09
 AAP,US00751Y1064,Advance Auto Parts Inc.,56.51,1991990,3652827648,2001,17.8,1.1,2.36,United States,Consumer Cyclical,Specialty Retail,,,2024-01-09
-AAPL,US0378331005,Apple Inc. Common Stock,187.69,54297359,2879445270528,1980,30.3,1.3,2.29,United States,Technology,Consumer Electronics,,,2024-01-09
+AAPL,US0378331005,Apple Inc. Common Stock,187.69,54297359,2879445270528,1980,30.3,1.3,2.29,United States,Technology,Consumer Electronics,1980-12-12,2024-01-15,2024-01-09
 AAT,US0240131047,American Assets Trust Inc. Common Stock,20.63,379598,1780378496,2011,28.2,1.3,3.28,United States,Real Estate,REIT - Diversified,,,2024-01-09
 AB,US01881G1067,AllianceBernstein Holding L.P.  Units,29.39,427917,3527195392,1988,14.3,1.3,1.91,United States,Financial Services,Asset Management,,,2024-01-09
 ABAT,US02451V3096,American Battery Technology Company Common Stock,4.49,487441,201032912,2016,,1.7,4.52,United States,Basic Materials,Other Industrial Metals & Mining,,,2024-01-09
@@ -20,7 +20,7 @@ ABL,US00258Y1047,Abacus Life Inc. Class A Common Stock,7.54,27212,675308864,2020
 ABM,,ABM Industries Incorporated Common Stock,42.55,479525,2648338176,1980,11.1,1.1,3.29,United States,Industrials,Specialty Business Services,,,2024-01-09
 ABNB,,Airbnb Inc. Class A Common Stock,130.97,5171756,89428402176,2020,17.0,1.2,4.0,United States,Consumer Cyclical,Travel Services,,,2024-01-09
 ABR,US0389231087,Arbor Realty Trust Common Stock,13.75,4908693,2787944448,2004,8.4,2.0,10.66,United States,Real Estate,REIT - Mortgage,,,2024-01-09
-ABT,US0028241000,Abbott Laboratories Common Stock,102.87,6038595,195706060800,1980,38.3,0.7,1.99,United States,Healthcare,Medical Devices,,,2024-01-09
+ABT,US0028241000,Abbott Laboratories Common Stock,102.87,6038595,195706060800,1980,38.3,0.7,1.99,United States,Healthcare,Medical Devices,1983-04-06,2024-01-15,2024-01-09
 AC,US0455281065,Associated Capital Group Inc. Common Stock,34.21,6088,731725760,2015,21.3,1.0,1.2,United States,Financial Services,Asset Management,,,2024-01-09
 ACA,US0396531008,Arcosa Inc. Common Stock ,75.27,242174,3814494976,2018,13.3,0.7,3.19,United States,Industrials,Engineering & Construction,,,2024-01-09
 ACAD,US0042251084,ACADIA Pharmaceuticals Inc. Common Stock,25.01,1747988,5033758720,2004,,0.6,3.73,United States,Healthcare,Biotechnology,,,2024-01-09
@@ -48,18 +48,18 @@ ACR,,ACRES Commercial Realty Corp. Common Stock,8.42,31311,82014760,2006,,1.9,0.
 ACRE,US04013V1089,Ares Commercial Real Estate Corporation Common Stock,10.1,490900,547902848,2012,168.7,1.5,3.78,United States,Real Estate,REIT - Mortgage,,,2024-01-09
 ACTG,,Acacia Research Corporation (Acacia Tech) Common Stock,3.77,225498,388557728,2002,,0.4,2.58,United States,Industrials,Business Equipment & Supplies,,,2024-01-09
 ACU,US0048161048,Acme United Corporation. Common Stock,38.09,12088,150859760,1980,25.0,0.8,2.18,United States,Consumer Defensive,Household & Personal Products,,,2024-01-09
-ADBE,US00724F1012,Adobe Inc. Common Stock,590.46,2890806,266896867328,1986,49.5,1.3,1.44,United States,Technology,Software - Infrastructure,,,2024-01-09
+ADBE,US00724F1012,Adobe Inc. Common Stock,590.46,2890806,266896867328,1986,49.5,1.3,1.44,United States,Technology,Software - Infrastructure,1987-03-12,2024-01-15,2024-01-09
 ADC,,Agree Realty Corporation Common Stock,59.6,949080,6410097664,1994,37.4,0.5,2.94,United States,Real Estate,REIT - Retail,,,2024-01-09
 ADEA,,Adeia Inc. Common Stock,10.41,529186,1264641408,2003,10.2,1.2,6.47,United States,Technology,Software - Application,,,2024-01-09
-ADI,US0326541051,Analog Devices Inc. Common Stock,182.37,3215987,94170677248,1980,28.9,1.2,1.95,United States,Technology,Semiconductors,,,2024-01-09
-ADM,,Archer-Daniels-Midland Company Common Stock,73.03,3221445,37694033920,1980,9.8,0.8,2.3,United States,Consumer Defensive,Farm Products,,,2024-01-09
+ADI,US0326541051,Analog Devices Inc. Common Stock,182.37,3215987,94170677248,1980,28.9,1.2,1.95,United States,Technology,Semiconductors,1994-05-18,2024-01-15,2024-01-09
+ADM,,Archer-Daniels-Midland Company Common Stock,73.03,3221445,37694033920,1980,9.8,0.8,2.3,United States,Consumer Defensive,Farm Products,1994-07-13,2024-01-15,2024-01-09
 ADMA,US0008991046,ADMA Biologics Inc Common Stock,3.93,1897127,1145657856,2013,,0.5,4.85,United States,Healthcare,Biotechnology,,,2024-01-09
 ADNT,IE00BD845X29,Adient plc Ordinary Shares ,33.93,1007337,3187595776,2016,15.8,2.6,2.93,Ireland,Consumer Cyclical,Auto Parts,,,2024-01-09
 ADOC,KYG4000A1022,Edoc Acquisition Corp. Class A Ordinary Share,11.57,1006,41958236,2020,,0.0,136.13,United States,Financial Services,Shell Companies,,,2024-01-09
-ADP,US0530151036,Automatic Data Processing Inc. Common Stock,229.16,1768917,96747159552,1980,27.9,0.8,1.92,United States,Industrials,Staffing & Employment Services,,,2024-01-09
+ADP,US0530151036,Automatic Data Processing Inc. Common Stock,229.16,1768917,96747159552,1980,27.9,0.8,1.92,United States,Industrials,Staffing & Employment Services,1985-05-14,2024-01-15,2024-01-09
 ADPT,US00650F1093,Adaptive Biotechnologies Corporation Common Stock,4.58,1513812,673194432,2019,,1.2,7.5,United States,Healthcare,Biotechnology,,,2024-01-09
 ADSE,IE000DU292E6,ADS-TEC ENERGY PLC Ordinary Shares,6.73,50682,360388640,2021,,0.3,1.44,Ireland,Industrials,Electrical Equipment & Parts,,,2024-01-09
-ADSK,US0527691069,Autodesk Inc. Common Stock,220.36,1398424,50475384832,1985,55.7,1.5,1.66,United States,Technology,Software - Application,,,2024-01-09
+ADSK,US0527691069,Autodesk Inc. Common Stock,220.36,1398424,50475384832,1985,55.7,1.5,1.66,United States,Technology,Software - Application,1989-09-20,2024-01-15,2024-01-09
 ADT,US00090Q1031,ADT Inc. Common Stock,6.25,2377101,6001054720,2018,93.0,1.6,5.15,United States,Industrials,Security & Protection Services,,,2024-01-09
 ADTN,US00486H1059,ADTRAN Holdings Inc. Common Stock,6.32,1018045,574502720,1994,,1.3,2.48,United States,Technology,Communication Equipment,,,2024-01-09
 ADTX,US0070255056,Aditxt Inc. Common Stock,4.8,1345869,2332973,2020,,1.1,0.09,United States,Healthcare,Biotechnology,,,2024-01-09
@@ -77,7 +77,7 @@ AEL,US0256762065,American Equity Investment Life Holding Company Common Stock,54
 AEM,,Agnico Eagle Mines Limited Common Stock,51.25,2765288,25582020608,1973,10.0,1.0,2.8,Canada,Basic Materials,Gold,,,2024-01-09
 AEO,US02553E1064,American Eagle Outfitters Inc. Common Stock,19.36,5154319,4201633280,1994,19.2,1.5,2.99,United States,Consumer Cyclical,Apparel Retail,,,2024-01-09
 AEON,US00791X1000,AEON Biopharma Inc. Class A Common Stock,5.6,12967,263833152,2023,,0.1,3.58,United States,Healthcare,Biotechnology,,,2024-01-09
-AEP,,American Electric Power Company Inc. Common Stock,79.56,3471888,44241944576,1962,19.3,0.5,2.04,United States,Utilities,Utilities - Regulated Electric,,,2024-01-09
+AEP,,American Electric Power Company Inc. Common Stock,79.56,3471888,44241944576,1962,19.3,0.5,2.04,United States,Utilities,Utilities - Regulated Electric,2007-01-08,2024-01-15,2024-01-09
 AER,NL0000687663,AerCap Holdings N.V. Ordinary Shares,69.01,1966216,14791346176,2006,6.8,1.9,1.38,Ireland,Industrials,Rental & Leasing Services,,,2024-01-09
 AES,,The AES Corporation Common Stock,17.53,7366319,12629202944,1991,,1.1,2.87,United States,Utilities,Utilities - Diversified,,,2024-01-09
 AESC,,The AES Corporation Corporate Units,69.47,99322,50014659587,2021,,1.1,2.95,United States,Utilities,Utilities - Diversified,,,2024-01-09
@@ -85,7 +85,7 @@ AEYE,US0507342014,AudioEye Inc. Common Stock,4.38,33322,54926716,2013,,1.3,2.33,
 AFB,US01864U1060,AllianceBernstein National Municipal Income Fund Inc,10.28,80480,312457056,2002,,0.5,0.13,United States,Financial Services,Asset Management,,,2024-01-09
 AFBI,US00832E1038,Affinity Bancshares Inc. Common Stock (MD),14.85,3835,99720240,2017,15.5,0.4,1.2,United States,Financial Services,Banks - Regional,,,2024-01-09
 AFG,US0259321042,American Financial Group Inc. Common Stock,114.36,367779,9981287424,1980,11.7,0.8,1.8,United States,Financial Services,Insurance - Property & Casualty,,,2024-01-09
-AFL,,AFLAC Incorporated Common Stock,81.58,2371779,47071813632,1980,11.0,0.9,4.31,United States,Financial Services,Insurance - Life,,,2024-01-09
+AFL,,AFLAC Incorporated Common Stock,81.58,2371779,47071813632,1980,11.0,0.9,4.31,United States,Financial Services,Insurance - Life,1990-11-19,2024-01-15,2024-01-09
 AFRI,GI000A3DNK69,Forafric Global PLC Ordinary Shares,11.04,22400,283844352,2021,,0.4,15.6,Gibraltar,Consumer Defensive,Farm Products,,,2024-01-09
 AFT,US0376361079,Apollo Senior Floating Rate Fund Inc. Common Stock,13.17,115898,211178016,2011,8.2,0.5,0.08,United States,Financial Services,Asset Management,,,2024-01-09
 AFYA,,Afya Limited Class A Common Shares,19.74,192022,1950371456,2019,26.0,1.0,3.21,Brazil,Consumer Defensive,Education & Training Services,,,2024-01-09
@@ -106,7 +106,7 @@ AHCO,US00653Q1022,AdaptHealth Corp. Common Stock,7.85,1262243,930179840,2018,,1.
 AHH,US04208T1088,Armada Hoffler Properties Inc. Common Stock,11.4,345272,1101475456,2013,35.3,1.1,3.07,United States,Real Estate,REIT - Diversified,,,2024-01-09
 AI,US12468P1049,C3.ai Inc. Class A Common Stock,28.43,8982316,3392179456,2020,,1.6,3.11,United States,Technology,Software - Application,,,2024-01-09
 AIF,US0376381036,Apollo Tactical Income Fund Inc. Common Stock,13.35,147500,206256640,2013,8.4,0.6,0.41,United States,Financial Services,Asset Management,,,2024-01-09
-AIG,US0268747849,American International Group Inc. New Common Stock,65.27,3407977,47619375104,1973,11.8,1.0,1.72,United States,Financial Services,Insurance - Diversified,,,2024-01-09
+AIG,US0268747849,American International Group Inc. New Common Stock,65.27,3407977,47619375104,1973,11.8,1.0,1.72,United States,Financial Services,Insurance - Diversified,2009-03-16,2024-01-15,2024-01-09
 AIN,,Albany International Corporation Common Stock,88.82,141851,2838887936,1987,28.8,1.3,1.99,United States,Consumer Cyclical,Textile Manufacturing,,,2024-01-09
 AINC,,Ashford Inc. (Holding Company) Common Stock,4.85,3027,11950114,2014,,1.7,0.43,United States,Financial Services,Asset Management,,,2024-01-09
 AIO,,Virtus Artificial Intelligence & Technology Opportunities Fund Common Shares of Beneficial Interest,16.88,123969,616077568,2019,,,0.22,United States,Finance,Finance/Investors Services,,,2024-01-09
@@ -119,7 +119,7 @@ AIRTP,,Air T Inc. Air T Funding Alpha Income Trust Preferred Securities,17.55,18
 AIT,US03820C1053,Applied Industrial Technologies Inc. Common Stock,164.26,207141,6432609792,1980,17.9,1.1,2.59,United States,Industrials,Industrial Distribution,,,2024-01-09
 AIV,,Apartment Investment and Management Company Common Stock,6.97,1291653,1138385536,1994,,1.6,3.64,United States,Real Estate,REIT - Residential,,,2024-01-09
 AIZ,US04621X1081,Assurant Inc. Common Stock,164.16,402212,8632220672,2004,16.7,0.5,1.81,United States,Financial Services,Insurance - Specialty,,,2024-01-09
-AJG,US3635761097,Arthur J. Gallagher & Co. Common Stock,237.74,911888,48826114048,1984,43.6,0.7,2.01,United States,Financial Services,Insurance Brokers,,,2024-01-09
+AJG,US3635761097,Arthur J. Gallagher & Co. Common Stock,237.74,911888,48826114048,1984,43.6,0.7,2.01,United States,Financial Services,Insurance Brokers,2011-07-19,2024-01-15,2024-01-09
 AJX,US38983D3008,Great Ajax Corp. Common Stock,4.79,221580,145862512,2015,,1.9,1.51,United States,Real Estate,REIT - Mortgage,,,2024-01-09
 AKAM,,Akamai Technologies Inc. Common Stock,113.52,1381475,17451261952,1999,35.0,0.8,6.63,United States,Technology,Software - Infrastructure,,,2024-01-09
 AKO-A,,Embotelladora Andina S.A.,11.62,1738,2204419584,1994,12.1,0.4,5.16,Chile,Consumer Defensive,Beverages - Non-Alcoholic,,,2024-01-09
@@ -141,7 +141,7 @@ ALGM,US01749D1054,Allegro MicroSystems Inc. Common Stock,27.97,1319893,521412044
 ALGN,US0162551016,Align Technology Inc. Common Stock,225.69,1267100,21255008256,2001,58.9,1.7,2.01,United States,Healthcare,Medical Devices,,,2024-01-09
 ALGT,,Allegiant Travel Company Common Stock,72.23,265140,1449094528,2006,8.4,1.7,2.9,United States,Industrials,Airlines,,,2024-01-09
 ALIM,US0162592028,Alimera Sciences Inc. Common Stock,3.56,75729,207046368,2019,,1.3,1.12,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-09
-ALK,US0116591092,Alaska Air Group Inc. Common Stock,36.44,3756490,4785340416,1980,18.6,1.6,0.77,United States,Industrials,Airlines,,,2024-01-09
+ALK,US0116591092,Alaska Air Group Inc. Common Stock,36.44,3756490,4785340416,1980,18.6,1.6,0.77,United States,Industrials,Airlines,2012-11-01,2024-01-15,2024-01-09
 ALKS,IE00B56GVS15,Alkermes plc Ordinary Shares,25.79,2680966,4836211200,1991,23.4,0.6,2.52,Ireland,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
 ALL,,Allstate Corporation (The) Common Stock,136.32,1668385,39509504000,1993,,0.5,1.86,United States,Financial Services,Insurance - Property & Casualty,,,2024-01-10
 ALLE,IE00BFRT3W74,Allegion plc Ordinary Shares,110.12,821790,10890051584,2013,19.6,1.1,2.47,Ireland,Industrials,Security & Protection Services,,,2024-01-10
@@ -167,7 +167,7 @@ ALXO,US00166B1052,ALX Oncology Holdings Inc. Common Stock,10.54,572511,720878080
 AM,US03676B1026,Antero Midstream Corporation Common Stock,12.74,2233722,5876484096,2017,16.8,2.1,6.02,United States,Energy,Oil & Gas Midstream,,,2024-01-10
 AMAL,US0226711010,Amalgamated Financial Corp. Common Stock (DE),22.52,132633,779899776,2018,8.8,0.9,1.85,United States,Financial Services,Banks - Regional,,,2024-01-10
 AMAM,US6418711080,Ambrx Biopharma Inc. Common Stock,12.05,1751541,1740862464,2023,65.6,,4.63,United States,Healthcare,Biotechnology,,,2024-01-10
-AMAT,US0382221051,Applied Materials Inc. Common Stock,150.28,5684003,125516046336,1980,18.6,1.6,3.46,United States,Technology,Semiconductor Equipment & Materials,,,2024-01-10
+AMAT,US0382221051,Applied Materials Inc. Common Stock,150.28,5684003,125516046336,1980,18.6,1.6,3.46,United States,Technology,Semiconductor Equipment & Materials,1987-01-07,2024-01-15,2024-01-10
 AMBA,KYG037AX1015,Ambarella Inc. Ordinary Shares,55.77,547798,2329560064,2012,,1.7,2.07,United States,Technology,Semiconductor Equipment & Materials,,,2024-01-10
 AMBC,US0231398845,Ambac Financial Group Inc. Common Stock,14.86,460940,706390016,2013,3.7,1.3,3.57,United States,Financial Services,Insurance - Specialty,,,2024-01-10
 AMBI,KYG025321020,Ambipar Emergency Response Class A Ordinary Shares,6.45,7885,418495744,2020,75.5,0.6,0.21,Brazil,Industrials,Waste Management,,,2024-01-10
@@ -175,12 +175,12 @@ AMBP,LU2369833749,Ardagh Metal Packaging S.A. Ordinary Shares,3.75,1829995,21453
 AMC,US00165C3025,AMC Entertainment Holdings Inc. Class A Common Stock,7.43,20099933,1249698176,2013,,1.8,0.92,United States,Communication Services,Entertainment,,,2024-01-10
 AMCR,JE00BJ1F3079,Amcor plc Ordinary Shares,9.38,8357364,14120972288,2012,14.8,0.9,2.99,Switzerland,Consumer Cyclical,Packaging & Containers,,,2024-01-10
 AMCX,US00164V1035,AMC Networks Inc. Class A Common Stock,16.23,446980,828461760,2011,,1.3,1.89,United States,Communication Services,Entertainment,,,2024-01-10
-AMD,US0079031078,Advanced Micro Devices Inc. Common Stock,124.96,57797846,241129521152,1980,1243.8,1.7,0.93,United States,Technology,Semiconductors,,,2024-01-10
-AME,US0311001004,AMETEK Inc.,155.22,961674,37620236288,1984,29.5,1.2,2.07,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
+AMD,US0079031078,Advanced Micro Devices Inc. Common Stock,124.96,57797846,241129521152,1980,1243.8,1.7,0.93,United States,Technology,Semiconductors,1996-09-19,2024-01-15,2024-01-10
+AME,US0311001004,AMETEK Inc.,155.22,961674,37620236288,1984,29.5,1.2,2.07,United States,Industrials,Specialty Industrial Machinery,2005-06-14,2024-01-15,2024-01-10
 AMED,US0234361089,Amedisys Inc Common Stock,93.73,311287,3054803200,1994,1170.1,0.9,7.33,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 AMEH,US03763A2078,Apollo Medical Holdings Inc. Common Stock,34.3,187996,1696353664,2009,36.4,1.0,11.43,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 AMG,US0082521081,Affiliated Managers Group Inc. Common Stock,138.37,253656,5027338752,1997,5.2,1.3,2.29,United States,Financial Services,Asset Management,,,2024-01-10
-AMGN,US0311621009,Amgen Inc. Common Stock,274.48,2524867,164438786048,1983,21.9,0.6,3.56,United States,Healthcare,Drug Manufacturers - General,,,2024-01-10
+AMGN,US0311621009,Amgen Inc. Common Stock,274.48,2524867,164438786048,1983,21.9,0.6,3.56,United States,Healthcare,Drug Manufacturers - General,1988-11-08,2024-01-15,2024-01-10
 AMH,US02665T3068,American Homes 4 Rent Common Shares of Beneficial Interest,35.37,2673695,14875319296,2013,34.6,0.7,2.89,United States,Real Estate,REIT - Residential,,,2024-01-10
 AMK,US04546L1061,AssetMark Financial Holdings Inc. Common Stock,26.55,105753,2202711808,2019,19.3,1.1,2.59,United States,Financial Services,Asset Management,,,2024-01-10
 AMKR,US0316521006,Amkor Technology Inc. Common Stock,28.07,1040725,7554908160,1998,18.7,2.0,1.98,United States,Technology,Semiconductor Equipment & Materials,,,2024-01-10
@@ -216,14 +216,14 @@ ANNX,US03589W1027,Annexon Inc. Common Stock,2.92,708040,363974112,2020,,1.0,6.08
 ANSS,US03662Q1058,ANSYS Inc. Common Stock,303.04,726220,30748628992,1996,63.9,1.2,1.94,United States,Technology,Software - Application,,,2024-01-10
 ANVS,US03615A1088,Annovis Bio Inc. Common Stock,9.77,246996,133615152,2020,,1.7,2.43,United States,Healthcare,Biotechnology,,,2024-01-10
 AOD,,abrdn Total Dynamic Dividend Fund Common Shares of Beneficial Interest,7.76,321233,846610880,2007,20.1,,0.16,United Kingdom,Financial Services,Asset Management,,,2024-01-10
-AON,IE00BLP1HW54,Aon plc Class A Ordinary Shares (Ireland),316.11,1030538,58859503616,1980,22.3,0.9,1.72,Ireland,Financial Services,Insurance Brokers,,,2024-01-10
+AON,IE00BLP1HW54,Aon plc Class A Ordinary Shares (Ireland),316.11,1030538,58859503616,1980,22.3,0.9,1.72,Ireland,Financial Services,Insurance Brokers,1999-09-15,2024-01-15,2024-01-10
 AORT,,Artivion Inc. Common Stock,16.29,231170,730665024,1993,,1.6,10.96,United States,Healthcare,Medical Devices,,,2024-01-10
 AOS,,A.O. Smith Corporation Common Stock,76.39,989988,11873804288,1983,39.7,1.3,2.58,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
 AOSL,,Alpha and Omega Semiconductor Limited Common Shares,23.74,160340,735733568,2010,,2.4,4.47,United States,Technology,Semiconductors,,,2024-01-10
 AOUT,US02875D1090,American Outdoor Brands Inc. Common Stock ,8.3,38658,107892080,2020,,0.3,1.62,United States,Consumer Cyclical,Leisure,,,2024-01-10
-APA,US03743Q1085,APA Corporation Common Stock,36.55,4222870,9991724032,1979,6.6,3.3,3.15,United States,Energy,Oil & Gas E&P,,,2024-01-10
+APA,US03743Q1085,APA Corporation Common Stock,36.55,4222870,9991724032,1979,6.6,3.3,3.15,United States,Energy,Oil & Gas E&P,1999-03-11,2024-01-15,2024-01-10
 APAM,US04316A1088,Artisan Partners Asset Management Inc. Class A Common Stock,39.22,601975,2925440000,2013,14.1,1.9,5.3,United States,Financial Services,Asset Management,,,2024-01-10
-APD,US0091581068,Air Products and Chemicals Inc. Common Stock,271.8,1184022,59577102336,1980,26.0,0.8,1.47,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
+APD,US0091581068,Air Products and Chemicals Inc. Common Stock,271.8,1184022,59577102336,1980,26.0,0.8,1.47,United States,Basic Materials,Specialty Chemicals,1997-05-12,2024-01-15,2024-01-10
 APEI,US02913V1035,American Public Education Inc. Common Stock,7.35,78830,197931472,2007,,1.3,1.09,United States,Consumer Defensive,Education & Training Services,,,2024-01-10
 APG,US00187Y1001,APi Group Corporation Common Stock,30.28,1434803,7524242944,2020,85.8,1.7,3.04,United States,Industrials,Engineering & Construction,,,2024-01-10
 APH,,Amphenol Corporation Common Stock,91.29,2768251,57348014080,1991,30.9,1.3,2.24,United States,Technology,Electronic Components,,,2024-01-10
@@ -303,7 +303,7 @@ ATLO,,Ames National Corporation Common Stock,19.42,22517,181641840,2000,13.7,0.6
 ATLX,US1058613068,Atlas Lithium Corporation Common Stock,26.32,79009,343484416,2022,,-3.3,2.78,Brazil,Basic Materials,Other Precious Metals & Mining,,,2024-01-10
 ATNI,,ATN International Inc. Common Stock,33.5,59824,584783232,1991,,0.4,2.5,United States,Communication Services,Telecom Services,,,2024-01-10
 ATNM,US00507W2061,Actinium Pharmaceuticals Inc. (Delaware) Common Stock,4.92,209203,141727280,2012,,0.1,9.25,United States,Healthcare,Biotechnology,,,2024-01-10
-ATO,,Atmos Energy Corporation Common Stock,113.28,1092562,17852712960,1983,19.4,0.7,2.43,United States,Utilities,Utilities - Regulated Gas,,,2024-01-10
+ATO,,Atmos Energy Corporation Common Stock,113.28,1092562,17852712960,1983,19.4,0.7,2.43,United States,Utilities,Utilities - Regulated Gas,2018-09-25,2024-01-15,2024-01-10
 ATOM,,Atomera Incorporated Common Stock,6.62,185401,170660384,2016,,1.4,22.33,United States,Technology,Semiconductor Equipment & Materials,,,2024-01-10
 ATR,,AptarGroup Inc. Common Stock,125.81,307801,8198323200,1993,29.5,0.6,1.81,United States,Healthcare,Medical Instruments & Supplies,,,2024-01-10
 ATRC,US04963C2098,AtriCure Inc. Common Stock,36.52,520416,1618068736,2005,,1.4,2.72,United States,Healthcare,Medical Instruments & Supplies,,,2024-01-10
@@ -349,7 +349,7 @@ AXGN,US05463X1063,Axogen Inc. Common Stock,6.2,549898,364579296,1986,,0.9,3.63,U
 AXL,US0240611030,American Axle & Manufacturing Holdings Inc. Common Stock,7.6,1734754,962241472,1999,,2.3,1.64,United States,Consumer Cyclical,Auto Parts,,,2024-01-10
 AXNX,US05465P1012,Axonics Inc. Common Stock,56.85,772493,3498211328,2018,,0.6,5.68,United States,Healthcare,Medical Devices,,,2024-01-10
 AXON,,Axon Enterprise Inc. Common Stock,233.34,442179,18666010624,2001,127.1,0.9,5.44,United States,Industrials,Aerospace & Defense,,,2024-01-10
-AXP,,American Express Company Common Stock,168.15,3090153,136107892736,1972,17.5,1.2,2.05,United States,Financial Services,Credit Services,,,2024-01-10
+AXP,,American Express Company Common Stock,168.15,3090153,136107892736,1972,17.5,1.2,2.05,United States,Financial Services,Credit Services,1982-03-01,2024-01-15,2024-01-10
 AXR,,AMREP Corporation Common Stock,18.58,7279,113596728,1973,6.1,1.0,2.52,United States,Real Estate,Real Estate - Development,,,2024-01-10
 AXS,,Axis Capital Holdings Limited Common Stock,55.24,541953,4725799424,2003,8.9,0.8,2.09,Bermuda,Financial Services,Insurance - Specialty,,,2024-01-10
 AXSM,US05464T1043,Axsome Therapeutics Inc. Common Stock,68.54,679935,4279102464,2015,,1.9,13.1,United States,Healthcare,Biotechnology,,,2024-01-10
@@ -365,14 +365,14 @@ AZTA,,Azenta Inc.,56.73,528867,3605537536,1995,,1.6,8.04,United States,Healthcar
 AZUL,US05501U1060,Azul S.A. American Depositary Shares (each representing three preferred shares),9.56,1335345,1040216192,2017,,1.7,2.56,Brazil,Industrials,Airlines,,,2024-01-10
 AZZ,US0024741045,AZZ Inc.,51.17,130996,1431138688,1980,21.1,1.2,2.48,United States,Industrials,Specialty Business Services,,,2024-01-10
 B,US0678061096,Barnes Group Inc. Common Stock,27.27,504669,1527341440,1980,64.1,1.4,2.32,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
-BA,,Boeing Company (The) Common Stock,226.81,6465190,136579612672,1962,,1.6,1.58,United States,Industrials,Aerospace & Defense,,,2024-01-10
+BA,,Boeing Company (The) Common Stock,226.81,6465190,136579612672,1962,,1.6,1.58,United States,Industrials,Aerospace & Defense,1977-12-14,2024-01-15,2024-01-10
 BABA,,Alibaba Group Holding Limited American Depositary Shares each representing eight Ordinary share,77.62,18260129,180049985536,2014,10.1,0.6,1.57,China,Consumer Cyclical,Internet Retail,,,2024-01-10
-BAC,,Bank of America Corporation Common Stock,30.55,46397533,266138746880,1973,9.4,1.4,1.64,United States,Financial Services,Banks - Diversified,,,2024-01-10
+BAC,,Bank of America Corporation Common Stock,30.55,46397533,266138746880,1973,9.4,1.4,1.64,United States,Financial Services,Banks - Diversified,1991-12-19,2024-01-15,2024-01-10
 BAER,US96812F1021,Bridger Aerospace Group Holdings Inc. Common Stock,5.8,52967,301796288,2021,1.0,-0.1,10.06,United States,Industrials,Security & Protection Services,,,2024-01-10
 BAFN,US07279B1044,BayFirst Financial Corp. Common Stock,11.19,4924,53438448,2021,9.6,1.1,2.02,United States,Financial Services,Banks - Regional,,,2024-01-10
 BAH,US0995021062,Booz Allen Hamilton Holding Corporation Common Stock,125.72,758579,16592286720,2010,57.1,0.5,2.83,United States,Industrials,Consulting Services,,,2024-01-10
 BAK,US1055321053,Braskem SA ADR,7.77,946719,3227720448,1999,,0.9,1.43,Brazil,Basic Materials,Chemicals,,,2024-01-10
-BALL,KR7452260003,Ball Corporation Common Stock,54.12,2181500,17994227712,1973,29.7,0.9,6.39,United States,Consumer Cyclical,Packaging & Containers,,,2024-01-10
+BALL,KR7452260003,Ball Corporation Common Stock,54.12,2181500,17994227712,1973,29.7,0.9,6.39,United States,Consumer Cyclical,Packaging & Containers,1997-07-29,2024-01-15,2024-01-10
 BALY,,Bally's Corporation Common Stock,11.79,644566,534239488,2019,,2.1,4.09,United States,Consumer Cyclical,Resorts & Casinos,,,2024-01-10
 BANC,US05990K1060,Banc of California Inc. Common Stock,12.53,2704751,2043795328,2002,7.4,1.4,3.54,United States,Financial Services,Banks - Regional,,,2024-01-10
 BAND,US05988J1034,Bandwidth Inc. Class A Common Stock,12.31,354687,362317216,2017,,1.4,3.14,United States,Technology,Software - Infrastructure,,,2024-01-10
@@ -384,7 +384,7 @@ BAP,BMG2519Y1084,Credicorp Ltd. Common Stock,132.96,296588,11734298624,1995,8.8,
 BATL,US07134L1070,Battalion Oil Corporation Common Stock,6.83,57148,158312496,2019,,1.2,0.8,United States,Energy,Oil & Gas E&P,,,2024-01-10
 BATRA,US0477261046,Atlanta Braves Holdings Inc. Series A Common Stock,40.43,48927,2485930752,2016,,1.0,7.14,United States,Communication Services,Entertainment,,,2024-01-10
 BATRK,US0477263026,Atlanta Braves Holdings Inc. Series C Common Stock,36.83,228877,2479407360,2016,,1.0,4.29,United States,Communication Services,Entertainment,,,2024-01-10
-BAX,US0718131099,Baxter International Inc. Common Stock,36.21,5130119,20627793920,1981,88.4,0.6,2.4,United States,Healthcare,Medical Instruments & Supplies,,,2024-01-10
+BAX,US0718131099,Baxter International Inc. Common Stock,36.21,5130119,20627793920,1981,88.4,0.6,2.4,United States,Healthcare,Medical Instruments & Supplies,1986-10-14,2024-01-15,2024-01-10
 BB,,BlackBerry Limited Common Stock,3.73,5308993,1937511680,1999,,1.1,4.48,Canada,Technology,Software - Infrastructure,,,2024-01-10
 BBAR,,Banco BBVA Argentina S.A. ADS,4.94,923927,1341309440,1993,15.7,1.7,1.67,Argentina,Financial Services,Banks - Regional,,,2024-01-10
 BBCP,US2067041085,Concrete Pumping Holdings Inc. Common Stock,7.67,78470,432206624,2017,15.2,1.0,7.61,United States,Industrials,Engineering & Construction,,,2024-01-10
@@ -397,8 +397,8 @@ BBSI,US0684631080,Barrett Business Services Inc. Common Stock,108.17,33211,73775
 BBU,BMG162341090,Brookfield Business Partners L.P. Limited Partnership Units ,16.84,13329,1497703168,2016,199.2,1.4,2.87,Bermuda,Industrials,Conglomerates,,,2024-01-10
 BBVA,COB13PA00019,Banco Bilbao Vizcaya Argentaria S.A. Common Stock,8.87,1090522,53475532800,1988,6.9,1.5,1.44,Spain,Financial Services,Banks - Diversified,,,2024-01-10
 BBW,US1200761047,Build-A-Bear Workshop Inc. Common Stock,24.41,251282,315011520,2004,6.3,1.7,6.35,United States,Consumer Cyclical,Specialty Retail,,,2024-01-10
-BBWI,,Bath & Body Works Inc.,35.76,3570053,10167345152,1982,14.3,1.8,2.4,United States,Consumer Cyclical,Specialty Retail,,,2024-01-10
-BBY,US0865161014,Best Buy Co. Inc. Common Stock,71.38,2808109,16189164544,1985,13.0,1.5,3.35,United States,Consumer Cyclical,Specialty Retail,,,2024-01-10
+BBWI,,Bath & Body Works Inc.,35.76,3570053,10167345152,1982,14.3,1.8,2.4,United States,Consumer Cyclical,Specialty Retail,1998-11-20,2024-01-15,2024-01-10
+BBY,US0865161014,Best Buy Co. Inc. Common Stock,71.38,2808109,16189164544,1985,13.0,1.5,3.35,United States,Consumer Cyclical,Specialty Retail,1992-09-18,2024-01-15,2024-01-10
 BC,,Brunswick Corporation Common Stock,82.56,715817,6160103936,1981,12.7,1.5,6.69,United States,Consumer Cyclical,Recreational Vehicles,,,2024-01-10
 BCAL,US84252A1060,Southern California Bancorp Common Stock,15.43,28874,314908768,2005,,0.5,1.39,United States,Financial Services,Banks - Regional,,,2024-01-10
 BCAT,US09260U1097,BlackRock Capital Allocation Term Trust Common Shares of Beneficial Interest,14.7,335824,1627431808,2020,10.5,,0.12,United States,Finance,Finance/Investors Services,,,2024-01-10
@@ -411,7 +411,7 @@ BCO,US1096961040,Brinks Company (The) Common Stock,79.71,265367,3716715776,1996,
 BCOW,US28253R1059,1895 Bancorp of Wisconsin Inc. (MD) Common Stock,6.51,6411,43072964,2019,,0.4,0.52,United States,Financial Services,Banks - Regional,,,2024-01-10
 BCPC,,Balchem Corporation Common Stock,130.53,104530,4551153664,1986,44.4,0.7,2.2,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
 BCRX,,BioCryst Pharmaceuticals Inc. Common Stock,5.76,4150353,1523778944,1994,,1.9,5.92,United States,Healthcare,Biotechnology,,,2024-01-10
-BCS,US06738E2046,Barclays PLC Common Stock,7.22,14276796,29930256384,1986,4.6,1.4,0.22,United Kingdom,Financial Services,Banks - Diversified,,,2024-01-10
+BCS,US06738E2046,Barclays PLC Common Stock,7.22,14276796,29930256384,1986,4.6,1.4,0.22,United Kingdom,Financial Services,Banks - Diversified,2020-10-28,2024-01-15,2024-01-10
 BCSF,,Bain Capital Specialty Finance Inc. Common Stock,15.27,243885,1000070016,2018,7.4,1.2,1.19,United States,Financial Services,Asset Management,,,2024-01-10
 BCTX,CA1079301091,BriaCell Therapeutics Corp. Common Shares,4.59,108880,77407576,2012,,1.7,12.33,Canada,Healthcare,Biotechnology,,,2024-01-10
 BCV,,Bancroft Fund Ltd.,15.25,19779,91674912,1980,,1.0,0.42,United States,Financial Services,Asset Management,,,2024-01-10
@@ -422,7 +422,7 @@ BDJ,US09251A1043,Blackrock Enhanced Equity Dividend Trust,7.61,609988,1469572736
 BDL,US3385171059,Flanigan's Enterprises Inc. Common Stock,26.46,3258,49644540,1973,12.4,0.8,0.2,United States,Consumer Cyclical,Restaurants,,,2024-01-10
 BDN,US1053682035,Brandywine Realty Trust Common Stock,4.62,2225712,959733824,1986,,1.3,5.25,United States,Real Estate,REIT - Office,,,2024-01-10
 BDTX,US09203E1055,Black Diamond Therapeutics Inc. Common Stock,2.38,504948,156971008,2020,,2.6,9.43,United States,Healthcare,Biotechnology,,,2024-01-10
-BDX,,Becton Dickinson and Company Common Stock,241.43,1603940,69069922304,1973,46.6,0.5,1.24,United States,Healthcare,Medical Instruments & Supplies,,,2024-01-10
+BDX,,Becton Dickinson and Company Common Stock,241.43,1603940,69069922304,1973,46.6,0.5,1.24,United States,Healthcare,Medical Instruments & Supplies,1994-11-09,2024-01-15,2024-01-10
 BE,,Bloom Energy Corporation Class A Common Stock,13.01,5349519,2984332544,2018,,2.8,6.17,United States,Industrials,Electrical Equipment & Parts,,,2024-01-10
 BEAM,US07373V1052,Beam Therapeutics Inc. Common Stock,26.39,1448898,2278854400,2020,,1.7,9.4,United States,Healthcare,Biotechnology,,,2024-01-10
 BECN,US0736851090,Beacon Roofing Supply Inc. Common Stock,80.78,505093,5593628672,2004,,1.6,2.66,United States,Industrials,Industrial Distribution,,,2024-01-10
@@ -464,7 +464,7 @@ BHE,US08160H1014,Benchmark Electronics Inc. Common Stock,25.82,152645,958059008,
 BHF,US10922N1037,Brighthouse Financial Inc. Common Stock,50.79,347230,3319388160,2017,,1.2,3.31,United States,Financial Services,Insurance - Life,,,2024-01-10
 BHK,US09249E1010,Blackrock Core Bond Trust,10.3,206546,589256704,2001,,0.7,2.43,United States,Financial Services,Asset Management,,,2024-01-10
 BHLB,US0846801076,Berkshire Hills Bancorp Inc. Common Stock,22.39,190859,1041534272,2000,10.3,0.9,6.32,United States,Financial Services,Banks - Regional,,,2024-01-10
-BHP,,BHP Group Limited American Depositary Shares (Each representing two Ordinary Shares),62.44,2303496,163580116992,1980,12.7,0.8,3.33,Australia,Basic Materials,Other Industrial Metals & Mining,,,2024-01-10
+BHP,,BHP Group Limited American Depositary Shares (Each representing two Ordinary Shares),62.44,2303496,163580116992,1980,12.7,0.8,3.33,Australia,Basic Materials,Other Industrial Metals & Mining,2005-01-18,2024-01-15,2024-01-10
 BHRB,US12135Y1082,Burke & Herbert Financial Services Corp. Common Stock,52.09,24175,434133792,2003,14.0,0.1,5.25,United States,Financial Services,Banks - Regional,,,2024-01-10
 BHV,US0924811005,BlackRock Virginia Municipal Bond Trust,10.25,7782,17603450,2002,,0.7,0.49,United States,Financial Services,Asset Management,,,2024-01-10
 BIDU,US0567521085,Baidu Inc. ADS,113.11,2779311,40623169536,2005,19.3,0.7,1.6,China,Communication Services,Internet Content & Information,,,2024-01-10
@@ -481,14 +481,14 @@ BIPC,CA11275Q1072,Brookfield Infrastructure Corporation ,32.26,916969,4651632640
 BIT,US09258A1079,BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest,14.87,95491,567014272,2013,,,7.96,United States,Financial Services,Asset Management,,,2024-01-10
 BJ,US05550J1016,BJ's Wholesale Club Holdings Inc. Common Stock,66.82,1456953,8912518144,2018,17.9,0.3,4.68,United States,Consumer Defensive,Discount Stores,,,2024-01-10
 BJRI,US09180C1062,BJ's Restaurants Inc. Common Stock,30.78,417856,766588672,1996,50.8,2.1,4.31,United States,Consumer Cyclical,Restaurants,,,2024-01-10
-BK,,The Bank of New York Mellon Corporation Common Stock,48.16,4572156,40722415616,1973,12.4,1.1,1.72,United States,Financial Services,Asset Management,,,2024-01-10
+BK,,The Bank of New York Mellon Corporation Common Stock,48.16,4572156,40722415616,1973,12.4,1.1,1.72,United States,Financial Services,Asset Management,1991-12-12,2024-01-15,2024-01-10
 BKCC,,BlackRock Capital Investment Corporation Common Stock,3.74,197354,290287616,2007,18.2,1.5,1.95,United States,Financial Services,Asset Management,,,2024-01-10
 BKD,US1124631045,Brookdale Senior Living Inc. Common Stock,5.08,1996627,1044720960,2005,,1.3,5.01,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 BKE,US1184401065,Buckle Inc. (The) Common Stock,40.13,391108,2178736640,1992,9.5,1.1,6.27,United States,Consumer Cyclical,Apparel Retail,,,2024-01-10
 BKH,,Black Hills Corporation Common Stock,52.38,523961,3770813952,1973,14.4,0.7,5.26,United States,Utilities,Utilities - Diversified,,,2024-01-10
 BKN,US09247D1054,BlackRock Investment Quality Municipal Trust Inc. (The),11.17,72248,208397248,1993,,0.5,0.13,United States,Financial Services,Asset Management,,,2024-01-10
 BKNG,,Booking Holdings Inc. Common Stock,3209.15,264677,121738887168,1999,24.7,1.4,2.85,United States,Consumer Cyclical,Travel Services,,,2024-01-10
-BKR,,Baker Hughes Company Class A Common Stock,33.84,6800329,32038334464,1987,18.9,1.4,2.53,United States,Energy,Oil & Gas Equipment & Services,,,2024-01-10
+BKR,,Baker Hughes Company Class A Common Stock,33.84,6800329,32038334464,1987,18.9,1.4,2.53,United States,Energy,Oil & Gas Equipment & Services,2021-01-14,2024-01-15,2024-01-10
 BKT,,BlackRock Income Trust Inc. (The),11.65,79566,261658544,1988,,0.4,0.94,United States,Financial Services,Asset Management,,,2024-01-10
 BKTI,US05587G1040,BK Technologies Corporation Common Stock,12.76,7266,42589384,1980,,1.2,0.3,United States,Technology,Communication Equipment,,,2024-01-10
 BKU,US06652K1034,BankUnited Inc. Common Stock,27.94,836270,2281298944,2011,10.4,1.4,6.59,United States,Financial Services,Banks - Regional,,,2024-01-10
@@ -512,7 +512,7 @@ BMI,US0565251081,Badger Meter Inc. Common Stock,148.54,157422,4412306432,1973,51
 BMO,CA0636711016,Bank Of Montreal Common Stock,86.12,767579,69856083968,1994,22.8,1.2,5.62,Canada,Financial Services,Banks - Diversified,,,2024-01-10
 BMRC,US0634251021,Bank of Marin Bancorp Common Stock,19.94,54996,334083520,1999,10.3,0.9,9.87,United States,Financial Services,Banks - Regional,,,2024-01-10
 BMRN,US09061G1013,BioMarin Pharmaceutical Inc. Common Stock,90.41,1746577,18107815936,1999,124.8,0.4,2.12,United States,Healthcare,Biotechnology,,,2024-01-10
-BMY,,Bristol-Myers Squibb Company Common Stock,50.96,14835943,104342487040,1972,13.0,0.3,1.51,United States,Healthcare,Drug Manufacturers - General,,,2024-01-10
+BMY,,Bristol-Myers Squibb Company Common Stock,50.96,14835943,104342487040,1972,13.0,0.3,1.51,United States,Healthcare,Drug Manufacturers - General,1981-09-18,2024-01-15,2024-01-10
 BN,,Brookfield Corporation Class A Limited Voting Shares,35.5,2773191,60875227136,1983,,1.7,6.57,Canada,Financial Services,Asset Management,,,2024-01-10
 BNL,US11135E2037,Broadstone Net Lease Inc. Common Stock,15.97,1132127,3364764928,2020,17.1,1.2,2.64,United States,Real Estate,REIT - Diversified,,,2024-01-10
 BNRG,IL0012008152,Brenmiller Energy Ltd Ordinary Shares,6.06,4587,11963674,2022,,0.3,0.43,Israel,Utilities,Utilities - Renewable,,,2024-01-10
@@ -528,7 +528,7 @@ BOOT,US0994061002,Boot Barn Holdings Inc. Common Stock,73.92,918262,2179525120,2
 BORR,,Borr Drilling Limited Common Shares,6.51,1614569,1647334016,2019,650.0,2.5,4.57,Bermuda,Energy,Oil & Gas Drilling,,,2024-01-10
 BOTJ,US4702991088,Bank of the James Financial Group Inc. Common Stock,10.71,3191,55065280,2000,6.5,0.8,0.9,United States,Financial Services,Banks - Regional,,,2024-01-10
 BOX,US5616584513,Box Inc. Class A Common Stock,25.4,1712351,3598390528,2015,119.3,0.9,3.91,United States,Technology,Software - Infrastructure,,,2024-01-10
-BP,,BP p.l.c. Common Stock,35.74,8496311,101516984320,1962,4.2,0.5,0.56,United Kingdom,Energy,Oil & Gas Integrated,,,2024-01-10
+BP,,BP p.l.c. Common Stock,35.74,8496311,101516984320,1962,4.2,0.5,0.56,United Kingdom,Energy,Oil & Gas Integrated,1978-12-06,2024-01-15,2024-01-10
 BPMC,,Blueprint Medicines Corporation Common Stock,73.0,886087,5044329472,2015,,0.7,4.55,United States,Healthcare,Biotechnology,,,2024-01-10
 BPOP,PR7331747001,Popular Inc. Common Stock,74.69,367398,5901508608,1980,8.4,0.9,2.79,United States,Financial Services,Banks - Regional,,,2024-01-10
 BPRN,US74179A1079,Princeton Bancorp Inc. Common Stock (PA),33.86,12387,214961328,2017,7.9,0.6,7.56,United States,Financial Services,Banks - Regional,,,2024-01-10
@@ -541,7 +541,7 @@ BRID,,Bridgford Foods Corporation Common Stock,10.67,1975,104173872,1980,2.3,-0.
 BRK-B,,Berkshire Hathaway Inc.,355.21,3272588,798414798848,1996,10.5,0.9,2.18,United States,Financial Services,Insurance - Diversified,,,2024-01-10
 BRKL,US11373M1071,Brookline Bancorp Inc. Common Stock,9.83,448137,928651776,1998,10.8,0.8,2.21,United States,Financial Services,Banks - Regional,,,2024-01-10
 BRKR,,Bruker Corporation Common Stock,65.68,811964,9910227968,2000,33.1,1.2,4.65,United States,Healthcare,Medical Devices,,,2024-01-10
-BRO,US1152361010,Brown & Brown Inc. Common Stock,72.04,1408693,20454060032,1981,27.3,0.7,2.07,United States,Financial Services,Insurance Brokers,,,2024-01-10
+BRO,US1152361010,Brown & Brown Inc. Common Stock,72.04,1408693,20454060032,1981,27.3,0.7,2.07,United States,Financial Services,Insurance Brokers,2001-06-29,2024-01-15,2024-01-10
 BRP,US05589G1022,BRP Group Inc. (Insurance Company) Class A Common Stock,21.08,536809,1552638848,2019,,1.5,5.26,United States,Financial Services,Insurance Brokers,,,2024-01-10
 BRSP,,BrightSpire Capital Inc. Class A Common Stock,6.84,841079,963188800,2018,185.2,1.9,2.25,United States,Real Estate,REIT - Mortgage,,,2024-01-10
 BRT,,BRT Apartments Corp. (MD) Common Stock,18.0,36024,344033408,1973,462.5,1.2,3.55,United States,Real Estate,REIT - Residential,,,2024-01-10
@@ -567,7 +567,7 @@ BTCM,US0554742090,BIT Mining Limited ADS,3.87,194843,55672624,2013,,2.9,2.15,Uni
 BTCT,,BTC Digital Ltd. Ordinary Shares,3.76,40530,6880860,2018,0.1,-0.1,0.8,China,Consumer Defensive,Education & Training Services,,,2024-01-10
 BTDR,KYG114481008,Bitdeer Technologies Group Class A Ordinary Shares,6.0,1255787,877596800,2021,,1.9,0.86,Singapore,Technology,Software - Application,,,2024-01-10
 BTG,CA11777Q2099,B2Gold Corp Common shares (Canada),3.16,9097793,3992596224,2008,12.3,1.1,1.93,Canada,Basic Materials,Gold,,,2024-01-10
-BTI,,British American Tobacco  Industries p.l.c. Common Stock ADR,30.44,4845635,67785588736,1980,6.2,0.3,0.73,United Kingdom,Consumer Defensive,Tobacco,,,2024-01-10
+BTI,,British American Tobacco  Industries p.l.c. Common Stock ADR,30.44,4845635,67785588736,1980,6.2,0.3,0.73,United Kingdom,Consumer Defensive,Tobacco,2016-10-06,2024-01-15,2024-01-10
 BTMD,US0906831039,Biote Corp. Class A Common Stock,5.08,88901,342696768,2021,157.0,0.6,4.71,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 BTO,US4097352060,John Hancock Financial Opportunities Fund Common Stock,28.06,58454,594888512,1994,,1.5,0.43,United States,Financial Services,Asset Management,,,2024-01-10
 BTOG,KYG216211188,Bit Origin Limited Ordinary Shares,3.44,88412,19918440,2019,,1.5,0.25,Singapore,Financial Services,Capital Markets,,,2024-01-10
@@ -602,7 +602,7 @@ BYND,,Beyond Meat Inc. Common Stock,7.88,3007029,524717536,2019,,2.3,6.45,United
 BYON,,Beyond Inc. Common Stock,20.7,2035283,1152556672,2002,,3.7,2.68,United States,Consumer Cyclical,Internet Retail,,,2024-01-10
 BYRN,US12448X2018,Byrna Technologies Inc. Common Stock,5.56,83788,126731528,2006,,1.5,11.03,United States,Industrials,Aerospace & Defense,,,2024-01-10
 BZH,US07556Q8814,Beazer Homes USA Inc. Common Stock,29.18,425596,992971008,1994,6.1,2.3,2.2,United States,Consumer Cyclical,Residential Construction,,,2024-01-10
-C,US1729674242,Citigroup Inc. Common Stock,46.64,18912138,102354305024,1977,8.5,1.6,1.5,United States,Financial Services,Banks - Diversified,,,2024-01-10
+C,US1729674242,Citigroup Inc. Common Stock,46.64,18912138,102354305024,1977,8.5,1.6,1.5,United States,Financial Services,Banks - Diversified,1996-10-01,2024-01-15,2024-01-10
 CAAP,LU1756447840,Corporacion America Airports SA Common Shares,13.87,117790,3976301568,2018,16.0,2.1,9.74,Luxembourg,Industrials,Airports & Air Services,,,2024-01-10
 CAAS,US16936R1059,China Automotive Systems Inc. Common Stock,3.41,46443,92368240,2003,3.0,2.5,0.25,China,Consumer Cyclical,Auto Parts,,,2024-01-10
 CABA,US12674W1099,Cabaletta Bio Inc. Common Stock,18.21,1200912,1025814656,2019,,2.5,2.72,United States,Healthcare,Biotechnology,,,2024-01-10
@@ -613,8 +613,8 @@ CACI,US1271903049,CACI International Inc. Class A Common Stock,323.17,111922,722
 CADE,US12740C1036,Cadence Bank Common Stock,26.12,1461061,5286324736,1985,14.3,1.1,5.74,United States,Financial Services,Banks - Regional,,,2024-01-10
 CAE,CA1247651088,CAE Inc. Ordinary Shares,20.97,330062,6699666944,2002,30.1,1.9,5.21,Canada,Industrials,Aerospace & Defense,,,2024-01-10
 CAF,US6174681030,Morgan Stanley China A Share Fund Inc. Common Stock,12.15,45538,270140192,2006,,,0.46,United States,Financial Services,Asset Management,,,2024-01-10
-CAG,,ConAgra Brands Inc. Common Stock,28.45,4419872,14015106048,1980,14.3,0.4,3.28,United States,Consumer Defensive,Packaged Foods,,,2024-01-10
-CAH,US14149Y1082,Cardinal Health Inc. Common Stock,102.6,2100022,25477398528,1983,169.5,0.7,3.37,United States,Healthcare,Medical Distribution,,,2024-01-10
+CAG,,ConAgra Brands Inc. Common Stock,28.45,4419872,14015106048,1980,14.3,0.4,3.28,United States,Consumer Defensive,Packaged Foods,1989-04-13,2024-01-15,2024-01-10
+CAH,US14149Y1082,Cardinal Health Inc. Common Stock,102.6,2100022,25477398528,1983,169.5,0.7,3.37,United States,Healthcare,Medical Distribution,1996-08-22,2024-01-15,2024-01-10
 CAKE,,Cheesecake Factory Incorporated (The) Common Stock,32.8,867659,1730855040,1992,19.6,1.5,8.12,United States,Consumer Cyclical,Restaurants,,,2024-01-10
 CAL,,Caleres Inc. Common Stock,28.74,389017,1070746368,1980,6.9,1.9,7.69,United States,Consumer Cyclical,Apparel Retail,,,2024-01-10
 CALB,US13005U1016,California BanCorp Common Stock,23.17,12040,203997520,2018,8.6,1.0,2.05,United States,Financial Services,Banks - Regional,,,2024-01-10
@@ -635,7 +635,7 @@ CASH,,Pathward Financial Inc. Common Stock,50.34,177690,1309070976,1993,8.4,0.8,
 CASI,US14757U2087,CASI Pharmaceuticals Inc. Ordinary Shares,5.67,55091,86589752,1996,,0.4,0.48,China,Healthcare,Biotechnology,,,2024-01-10
 CASS,US14808P1093,Cass Information Systems Inc Common Stock,42.02,40712,590360000,1996,19.5,0.7,2.74,United States,Industrials,Specialty Business Services,,,2024-01-10
 CASY,US1475281036,Casey's General Stores Inc. Common Stock,275.73,253554,10502503424,1983,21.9,0.8,1.91,United States,Consumer Cyclical,Specialty Retail,,,2024-01-10
-CAT,US1491231015,Caterpillar Inc. Common Stock,261.06,3191075,148800454656,1962,16.6,1.1,3.28,United States,Industrials,Farm & Heavy Construction Machinery,,,2024-01-10
+CAT,US1491231015,Caterpillar Inc. Common Stock,261.06,3191075,148800454656,1962,16.6,1.1,3.28,United States,Industrials,Farm & Heavy Construction Machinery,1982-08-18,2024-01-15,2024-01-10
 CATC,US1321521098,Cambridge Bancorp Common Stock,62.51,40772,545402560,1999,9.9,0.6,2.37,United States,Financial Services,Banks - Regional,,,2024-01-10
 CATO,,Cato Corporation (The) Class A Common Stock,7.0,84985,147801728,1987,,1.1,10.19,United States,Consumer Cyclical,Apparel Retail,,,2024-01-10
 CATY,US1491501045,Cathay General Bancorp Common Stock,39.25,325837,3152235520,1990,8.6,1.2,9.39,United States,Financial Services,Banks - Regional,,,2024-01-10
@@ -658,13 +658,13 @@ CCB,US19046P2092,Coastal Financial Corporation Common Stock,41.39,43922,56282457
 CCBG,US1396741050,Capital City Bank Group Common Stock,28.78,33619,474148448,1994,8.4,0.5,1.17,United States,Financial Services,Banks - Regional,,,2024-01-10
 CCCC,US12529R1077,C4 Therapeutics Inc. Common Stock,2.88,13388783,358765696,2020,,3.0,0.27,United States,Healthcare,Biotechnology,,,2024-01-10
 CCCS,US12510Q1004,CCC Intelligent Solutions Holdings Inc. Common Stock,11.31,2592956,6543899648,2020,,0.6,2.47,United States,Technology,Software - Infrastructure,,,2024-01-10
-CCEP,,Coca-Cola Europacific Partners plc Ordinary Shares,62.52,1964835,29898575872,1986,16.1,0.7,1.39,United Kingdom,Consumer Defensive,Beverages - Non-Alcoholic,,,2024-01-10
+CCEP,,Coca-Cola Europacific Partners plc Ordinary Shares,62.52,1964835,29898575872,1986,16.1,0.7,1.39,United Kingdom,Consumer Defensive,Beverages - Non-Alcoholic,2021-11-08,2024-01-15,2024-01-10
 CCG,KYG207071088,Cheche Group Inc. Class A Ordinary Shares,6.24,39087,456891584,2023,,0.4,4.4,China,Communication Services,Internet Content & Information,,,2024-01-10
 CCI,,Crown Castle Inc. Common Stock,107.86,3747701,49336459264,1998,31.8,0.8,1.04,United States,Real Estate,REIT - Specialty,,,2024-01-10
 CCIF,US92535C1045,Carlyle Credit Income Fund Shares of Beneficial Interest,7.72,66841,0,2019,268.0,,0.11,United States,Financial Services,Asset Management,,,2024-01-10
 CCJ,,Cameco Corporation Common Stock,43.45,4862403,19406780416,1996,97.2,0.9,4.0,Canada,Energy,Uranium,,,2024-01-10
-CCK,US2283681060,Crown Holdings Inc.,86.3,1237062,11072889856,1980,21.6,1.0,2.62,United States,Consumer Cyclical,Packaging & Containers,,,2024-01-10
-CCL,,Carnival Corporation Common Stock,15.55,30454714,22702796800,1987,,2.6,3.32,United States,Consumer Cyclical,Travel Services,,,2024-01-10
+CCK,US2283681060,Crown Holdings Inc.,86.3,1237062,11072889856,1980,21.6,1.0,2.62,United States,Consumer Cyclical,Packaging & Containers,2007-01-17,2024-01-15,2024-01-10
+CCL,,Carnival Corporation Common Stock,15.55,30454714,22702796800,1987,,2.6,3.32,United States,Consumer Cyclical,Travel Services,2000-12-06,2024-01-15,2024-01-10
 CCNE,,CNB Financial Corporation Common Stock,20.96,51708,453900192,1994,8.3,0.8,1.43,United States,Financial Services,Banks - Regional,,,2024-01-10
 CCOI,US19239V3024,Cogent Communications Holdings Inc.,68.88,309391,3529115392,2002,3.2,0.4,5.27,United States,Communication Services,Telecom Services,,,2024-01-10
 CCRD,,CoreCard Corporation Common Stock,15.14,39411,103394408,1987,26.6,0.6,7.91,United States,Technology,Software - Application,,,2024-01-10
@@ -677,7 +677,7 @@ CDAY,US15677J1088,Ceridian HCM Holding Inc. Common Stock,66.84,1334741,102840862
 CDLX,,Cardlytics Inc. Common Stock,9.07,764074,275956320,2018,,1.6,7.24,United States,Communication Services,Advertising Agencies,,,2024-01-10
 CDMO,US05368M1062,Avid Bioservices Inc. Common Stock,5.75,1407472,397774560,1994,,1.6,3.17,United States,Healthcare,Biotechnology,,,2024-01-10
 CDNA,US14167L1035,CareDx Inc. Common Stock,9.33,1199406,669197184,2014,,1.4,2.31,United States,Healthcare,Diagnostics & Research,,,2024-01-10
-CDNS,US1273871087,Cadence Design Systems Inc. Common Stock,263.04,1436817,71212228608,1987,74.6,1.1,1.89,United States,Technology,Software - Application,,,2024-01-10
+CDNS,US1273871087,Cadence Design Systems Inc. Common Stock,263.04,1436817,71212228608,1987,74.6,1.1,1.89,United States,Technology,Software - Application,2012-12-17,2024-01-15,2024-01-10
 CDP,,COPT Defense Properties Common Shares of Beneficial Interest,24.53,873319,2909293824,1991,,1.0,3.45,United States,Real Estate,REIT - Office,,,2024-01-10
 CDRO,LU2405144788,Codere Online Luxembourg S.A. Ordinary Shares,3.13,15693,140423488,2021,,0.1,16.22,Luxembourg,Consumer Cyclical,Gambling,,,2024-01-10
 CDW,,CDW Corporation Common Stock,214.87,872787,29227390976,2013,27.2,1.1,1.91,United States,Technology,Information Technology Services,,,2024-01-10
@@ -718,7 +718,7 @@ CGO,US1281181065,Calamos Global Total Return Fund Common Stock,8.86,25329,888747
 CHCI,US2056842022,Comstock Holding Companies Inc. Class A Common Stock,4.31,6580,44639392,2004,6.5,1.0,0.14,United States,Real Estate,Real Estate - Diversified,,,2024-01-10
 CHCO,,City Holding Company Common Stock,101.45,61745,1579141760,1987,13.6,0.5,15.76,United States,Financial Services,Banks - Regional,,,2024-01-10
 CHCT,,Community Healthcare Trust Incorporated Common Stock,27.06,165122,697696000,2015,106.6,0.7,1.49,United States,Real Estate,REIT - Healthcare Facilities,,,2024-01-10
-CHD,,Church & Dwight Company Inc. Common Stock,92.54,1569033,23647746048,1980,54.5,0.5,4.03,United States,Consumer Defensive,Household & Personal Products,,,2024-01-10
+CHD,,Church & Dwight Company Inc. Common Stock,92.54,1569033,23647746048,1980,54.5,0.5,4.03,United States,Consumer Defensive,Household & Personal Products,1998-12-17,2024-01-15,2024-01-10
 CHDN,,Churchill Downs Incorporated Common Stock,122.21,320696,9334046720,1993,26.5,1.1,7.88,United States,Consumer Cyclical,Gambling,,,2024-01-10
 CHE,US16359R1032,Chemed Corp,577.85,77482,8621808640,1973,35.6,0.4,5.85,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 CHEF,US1630861011,The Chefs' Warehouse Inc. Common Stock,26.44,474859,1183212928,2011,57.4,2.1,6.5,United States,Consumer Defensive,Food Distribution,,,2024-01-10
@@ -741,7 +741,7 @@ CHUY,US1716041017,Chuy's Holdings Inc. Common Stock,35.59,102532,595367744,2012,
 CHW,US12811L1070,Calamos Global Dynamic Income Fund Common Stock,5.6,169100,367858944,2007,12.3,1.3,0.02,United States,Financial Services,Asset Management,,,2024-01-10
 CHWY,US16679L1098,Chewy Inc. Class A Common Stock,20.55,9154288,9124237312,2019,705.0,0.9,1.52,United States,Consumer Cyclical,Internet Retail,,,2024-01-10
 CHX,,ChampionX Corporation Common Stock ,29.62,1499082,5234276352,2018,17.8,2.5,6.41,United States,Energy,Oil & Gas Equipment & Services,,,2024-01-10
-CI,US1255231003,The Cigna Group Common Stock,291.78,2093066,91552014336,1982,17.7,0.5,1.13,United States,Healthcare,Healthcare Plans,,,2024-01-10
+CI,US1255231003,The Cigna Group Common Stock,291.78,2093066,91552014336,1982,17.7,0.5,1.13,United States,Healthcare,Healthcare Plans,1994-12-21,2024-01-15,2024-01-10
 CIB,COB07PA00078,BanColombia S.A. Common Stock,28.39,237069,7884584960,1995,4.9,1.1,2.27,Colombia,Financial Services,Banks - Regional,,,2024-01-10
 CIEN,,Ciena Corporation Common Stock,44.45,1532343,6937357312,1997,28.0,1.0,1.93,United States,Technology,Communication Equipment,,,2024-01-10
 CIFR,US17253J1060,Cipher Mining Inc. Common Stock,3.29,6201943,981961536,2020,,2.2,2.76,United States,Financial Services,Capital Markets,,,2024-01-10
@@ -755,13 +755,13 @@ CIVB,US1788671071,Civista Bancshares Inc. Common Stock,16.45,31720,273424320,199
 CIVI,,Civitas Resources Inc. Common Stock,69.78,1216853,6617600512,2011,7.3,1.5,6.84,United States,Energy,Oil & Gas E&P,,,2024-01-10
 CIX,US20563P1012,CompX International Inc. Common Stock,21.99,6954,294792384,1998,14.3,0.8,2.63,United States,Industrials,Security & Protection Services,,,2024-01-10
 CKX,US12562N1046,CKX Lands Inc. Common Stock,12.66,1033,25667590,1999,,0.1,3.98,United States,Energy,Oil & Gas E&P,,,2024-01-10
-CL,,Colgate-Palmolive Company Common Stock,77.15,4716335,66544926720,1973,42.3,0.4,2.51,United States,Consumer Defensive,Household & Personal Products,,,2024-01-10
+CL,,Colgate-Palmolive Company Common Stock,77.15,4716335,66544926720,1973,42.3,0.4,2.51,United States,Consumer Defensive,Household & Personal Products,1985-09-09,2024-01-15,2024-01-10
 CLAR,US18270P1093,Clarus Corporation Common Stock,5.84,398438,229277904,1998,,0.9,5.22,United States,Consumer Cyclical,Leisure,,,2024-01-10
 CLBK,US1976411033,Columbia Financial Inc. Common Stock,17.81,82301,1970303744,2018,38.3,0.2,32.6,United States,Financial Services,Banks - Regional,,,2024-01-10
 CLBT,IL0011794802,Cellebrite DI Ltd. Ordinary Shares,8.02,788900,1689470208,2020,,1.4,2.23,Israel,Technology,Software - Infrastructure,,,2024-01-10
 CLDT,,Chatham Lodging Trust (REIT) Common Shares of Beneficial Interest,10.18,227609,540295232,2010,359.7,1.8,2.97,United States,Real Estate,REIT - Hotel & Motel,,,2024-01-10
 CLDX,US15117B2025,Celldex Therapeutics Inc.,31.69,782130,2203974656,1986,,2.0,9.92,United States,Healthcare,Biotechnology,,,2024-01-10
-CLF,US1858991011,Cleveland-Cliffs Inc. Common Stock,18.02,9551833,9430803456,1973,27.9,2.1,5.1,United States,Basic Materials,Steel,,,2024-01-10
+CLF,US1858991011,Cleveland-Cliffs Inc. Common Stock,18.02,9551833,9430803456,1973,27.9,2.1,5.1,United States,Basic Materials,Steel,2003-11-06,2024-01-15,2024-01-10
 CLFD,US18482P1030,Clearfield Inc. Common Stock,26.88,303250,429871808,1986,13.0,1.4,5.87,United States,Technology,Communication Equipment,,,2024-01-10
 CLGN,,CollPlant Biotechnologies Ltd Ordinary Shares,5.58,16053,68372616,2018,,0.6,0.87,Israel,Healthcare,Biotechnology,,,2024-01-10
 CLH,US1844961078,Clean Harbors Inc. Common Stock,165.5,326809,9012940800,1987,25.0,1.3,3.08,United States,Industrials,Waste Management,,,2024-01-10
@@ -777,18 +777,18 @@ CLSK,US18452B2097,CleanSpark Inc. Common Stock,7.51,22856317,1949112576,2016,,3.
 CLVR,CA1867601041,Clever Leaves Holdings Inc. Common Shares,2.18,12474,6108025,2020,,1.4,1.01,Colombia,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
 CLVT,JE00BJJN4441,Clarivate Plc Ordinary Shares,7.8,6022714,5988585984,2018,37.6,1.3,4.33,United Kingdom,Technology,Information Technology Services,,,2024-01-10
 CLW,,Clearwater Paper Corporation Common Stock,35.78,107241,590647296,2008,7.2,0.6,1.86,United States,Basic Materials,Paper & Paper Products,,,2024-01-10
-CLX,,Clorox Company (The) Common Stock,137.42,1449650,17533257728,1973,201.9,0.4,3.55,United States,Consumer Defensive,Household & Personal Products,,,2024-01-10
+CLX,,Clorox Company (The) Common Stock,137.42,1449650,17533257728,1973,201.9,0.4,3.55,United States,Consumer Defensive,Household & Personal Products,1997-04-15,2024-01-15,2024-01-10
 CM,CA1360691010,Canadian Imperial Bank of Commerce Common Stock,41.81,1540385,44289966080,1997,12.3,1.1,8.93,Canada,Financial Services,Banks - Diversified,,,2024-01-10
 CMA,,Comerica Incorporated Common Stock,48.01,2015445,7405987840,1980,6.4,1.3,2.6,United States,Financial Services,Banks - Regional,,,2024-01-10
 CMBM,,Cambium Networks Corporation Ordinary Shares,4.78,213759,133484104,2019,,1.0,1.54,United States,Technology,Communication Equipment,,,2024-01-10
 CMC,,Commercial Metals Company Common Stock,46.33,1122819,5742583808,1980,6.8,,3.66,United States,Basic Materials,Steel,,,2024-01-10
 CMCL,JE00BF0XVB15,Caledonia Mining Corporation Plc Common Shares,11.99,43670,224500768,1984,,0.7,5.72,Jersey,Basic Materials,Gold,,,2024-01-10
 CMCO,,Columbus McKinnon Corporation Common Stock,35.77,113493,1067907776,1996,21.0,1.3,2.76,United States,Industrials,Farm & Heavy Construction Machinery,,,2024-01-10
-CMCSA,,Comcast Corporation Class A Common Stock,42.61,18771600,174205452288,1980,12.1,1.0,2.65,United States,Communication Services,Telecom Services,,,2024-01-10
+CMCSA,,Comcast Corporation Class A Common Stock,42.61,18771600,174205452288,1980,12.1,1.0,2.65,United States,Communication Services,Telecom Services,1988-07-07,2024-01-15,2024-01-10
 CMCT,,Creative Media & Community Trust Corporation Common stock,3.84,16179,85447848,1993,,0.5,0.53,United States,Real Estate,REIT - Office,,,2024-01-10
 CME,US12572Q1058,CME Group Inc. Class A Common Stock,212.44,1753708,70951018496,2002,23.5,0.5,2.09,United States,Financial Services,Financial Data & Stock Exchanges,,,2024-01-10
 CMG,US1696561059,Chipotle Mexican Grill Inc. Common Stock,2184.61,220617,61256568832,2006,53.1,1.3,3.8,United States,Consumer Cyclical,Restaurants,,,2024-01-10
-CMI,US2310211063,Cummins Inc. Common Stock,229.35,754930,33935169536,1973,12.2,1.0,2.38,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
+CMI,US2310211063,Cummins Inc. Common Stock,229.35,754930,33935169536,1973,12.2,1.0,2.38,United States,Industrials,Specialty Industrial Machinery,2003-03-19,2024-01-15,2024-01-10
 CMLS,US2310828015,Cumulus Media Inc. Class A Common Stock,5.02,50954,86007720,2018,,1.6,2.4,United States,Communication Services,Broadcasting,,,2024-01-10
 CMP,US20451N1019,Compass Minerals Intl Inc Common Stock,24.83,419946,846865472,2003,55.5,1.6,3.66,United States,Basic Materials,Other Industrial Metals & Mining,,,2024-01-10
 CMPO,,CompoSecure Inc. Class A Common Stock,5.37,101620,398162304,2020,5.3,0.7,38.6,United States,Industrials,Metal Fabrication,,,2024-01-10
@@ -809,7 +809,7 @@ CNMD,,CONMED Corporation Common Stock,106.7,379254,3451934464,1987,59.1,1.4,14.0
 CNNE,US13765N1072,Cannae Holdings Inc. Common Stock,18.48,465659,1468688256,2017,,0.9,5.11,United States,Consumer Cyclical,Restaurants,,,2024-01-10
 CNO,US12621E1038,CNO Financial Group Inc. Common Stock,26.01,779240,2981505280,2003,61.8,1.1,2.67,United States,Financial Services,Insurance - Life,,,2024-01-10
 CNOB,US20786W1071,ConnectOne Bancorp Inc. Common Stock,20.31,125370,894124224,1994,9.7,1.3,2.32,United States,Financial Services,Banks - Regional,,,2024-01-10
-CNP,,CenterPoint Energy Inc (Holding Co) Common Stock,28.16,4554641,18450677760,1962,23.2,0.9,3.15,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+CNP,,CenterPoint Energy Inc (Holding Co) Common Stock,28.16,4554641,18450677760,1962,23.2,0.9,3.15,United States,Utilities,Utilities - Regulated Electric,2003-04-29,2024-01-15,2024-01-10
 CNQ,,Canadian Natural Resources Limited Common Stock,64.98,3221238,70806937600,2000,13.5,1.9,21.38,Canada,Energy,Oil & Gas E&P,,,2024-01-10
 CNS,US19247A1007,Cohen & Steers Inc Common Stock,62.67,196153,3390563328,2004,25.9,1.4,6.71,United States,Financial Services,Asset Management,,,2024-01-10
 CNSL,US2090341072,Consolidated Communications Holdings Inc. Common Stock,4.29,728475,505435200,2005,,1.1,2.98,United States,Communication Services,Telecom Services,,,2024-01-10
@@ -836,15 +836,15 @@ CONN,US2082421072,Conn's Inc. Common Stock,3.41,134901,122996008,2003,,2.5,12.99
 CONX,US2128731039,CONX Corp. Class A Common Stock,10.63,3833,223312208,2020,,0.0,10.77,United States,Financial Services,Shell Companies,,,2024-01-10
 COO,,The Cooper Companies Inc. Common Stock,344.98,278150,18390489088,1983,62.9,1.0,1.8,United States,Healthcare,Medical Instruments & Supplies,,,2024-01-10
 COOP,,Mr. Cooper Group Inc. Common Stock,61.21,565679,4141295616,2012,9.4,1.4,2.79,United States,Financial Services,Mortgage Finance,,,2024-01-10
-COP,US20825C1045,ConocoPhillips Common Stock,115.61,5886690,133892358144,1981,12.3,1.2,1.58,United States,Energy,Oil & Gas E&P,,,2024-01-10
+COP,US20825C1045,ConocoPhillips Common Stock,115.61,5886690,133892358144,1981,12.3,1.2,1.58,United States,Energy,Oil & Gas E&P,1995-12-11,2024-01-15,2024-01-10
 COR,,Cencora Inc. Common Stock,199.75,1412627,42906431488,1995,25.1,0.5,4.87,United States,Healthcare,Medical Distribution,,,2024-01-10
 CORT,,Corcept Therapeutics Incorporated Common Stock,27.3,884617,2587333120,2004,31.4,0.4,24.22,United States,Healthcare,Biotechnology,,,2024-01-10
-COST,,Costco Wholesale Corporation Common Stock,609.09,2059653,296046428160,1986,45.4,0.8,2.63,United States,Consumer Defensive,Discount Stores,,,2024-01-10
+COST,,Costco Wholesale Corporation Common Stock,609.09,2059653,296046428160,1986,45.4,0.8,2.63,United States,Consumer Defensive,Discount Stores,1996-10-30,2024-01-15,2024-01-10
 COTY,US2220702037,Coty Inc. Class A Common Stock,11.2,4932496,10762468352,2013,28.7,1.9,3.98,United States,Consumer Defensive,Household & Personal Products,,,2024-01-10
-CP,CA13646K1084,Canadian Pacific Kansas City Limited Common Shares,74.19,2510293,73126961152,1983,23.4,0.8,5.0,Canada,Industrials,Railroads,,,2024-01-10
+CP,CA13646K1084,Canadian Pacific Kansas City Limited Common Shares,74.19,2510293,73126961152,1983,23.4,0.8,5.0,Canada,Industrials,Railroads,2004-10-19,2024-01-15,2024-01-10
 CPA,PAP310761054,Copa Holdings S.A. Class A Common Stock,95.29,280861,4309832704,2005,10.6,1.4,2.24,Panama,Industrials,Airlines,,,2024-01-10
 CPAC,,Cementos Pacasmayo S.A.A. American Depositary Shares (Each representing five Common Shares),5.03,16911,437525376,2012,9.6,0.3,1.71,Peru,Basic Materials,Building Materials,,,2024-01-10
-CPB,,Campbell Soup Company Common Stock,41.95,2864216,13354880000,1973,17.0,0.3,3.79,United States,Consumer Defensive,Packaged Foods,,,2024-01-10
+CPB,,Campbell Soup Company Common Stock,41.95,2864216,13354880000,1973,17.0,0.3,3.79,United States,Consumer Defensive,Packaged Foods,1994-10-31,2024-01-15,2024-01-10
 CPE,,Callon Petroleum Company Common Stock,33.13,2019693,2238196224,1990,3.3,2.5,6.99,United States,Energy,Oil & Gas E&P,,,2024-01-10
 CPF,US1547604090,Central Pacific Financial Corp New,18.16,176462,513550368,1987,8.0,1.2,4.26,United States,Financial Services,Banks - Regional,,,2024-01-10
 CPG,,Crescent Point Energy Corporation Ordinary Shares (Canada),7.1,4377000,4185334016,2003,17.1,2.7,4.8,Canada,Energy,Oil & Gas E&P,,,2024-01-10
@@ -906,8 +906,8 @@ CSTR,US14070T1025,CapStar Financial Holdings Inc. Common Stock,17.14,158490,3864
 CSV,US1439051079,Carriage Services Inc. Common Stock,23.37,127001,366896928,1996,12.7,0.9,2.55,United States,Consumer Cyclical,Personal Services,,,2024-01-10
 CSWC,,Capital Southwest Corporation Common Stock,22.73,369766,1002373120,1980,13.6,1.3,3.27,United States,Financial Services,Asset Management,,,2024-01-10
 CSWI,US1264021064,CSW Industrials Inc. Common Stock,185.82,67145,3184938752,2015,30.8,0.7,2.66,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
-CSX,,CSX Corporation Common Stock,32.52,12105208,68393861120,1980,18.3,1.2,1.61,United States,Industrials,Railroads,,,2024-01-10
-CTAS,,Cintas Corporation Common Stock,553.28,371529,59238920192,1983,42.4,1.3,3.89,United States,Industrials,Specialty Business Services,,,2024-01-10
+CSX,,CSX Corporation Common Stock,32.52,12105208,68393861120,1980,18.3,1.2,1.61,United States,Industrials,Railroads,1980-11-03,2024-01-15,2024-01-10
+CTAS,,Cintas Corporation Common Stock,553.28,371529,59238920192,1983,42.4,1.3,3.89,United States,Industrials,Specialty Business Services,1998-04-27,2024-01-15,2024-01-10
 CTBI,US2041491083,Community Trust Bancorp Inc. Common Stock,41.27,44362,747711680,1987,9.1,0.7,2.15,United States,Financial Services,Banks - Regional,,,2024-01-10
 CTLP,US1381031061,Cantaloupe Inc. Common Stock,6.97,265177,520000928,1999,47.7,1.7,4.73,United States,Technology,Information Technology Services,,,2024-01-10
 CTLT,US1488061029,Catalent Inc. Common Stock,39.58,2360000,8925471744,2014,,1.2,4.71,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10

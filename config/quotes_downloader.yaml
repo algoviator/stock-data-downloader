@@ -3,9 +3,11 @@
 # File paths to save downloaded files
 path: data/quotes/        # Directory to save files with quotes of shares. Filename format: {SYMBOL}.csv
 
-# Date format to show in the date columns of dataframes
-date_format: '%Y-%m-%d'
-expiration_days: 30           # Update quotes every {x} days
+min_history_years: 3            # Minimum years of quotes history to approve saving quotes file.
+date_format: '%Y-%m-%d'         # Date format to show in the date columns of dataframes
+expiration_days: 30             # Update quotes every {x} days
+
+trade_value_threshold: 100      # Minimum average trade value in millions USD to start saving quotes history
 
 # Update quotes dataframe columns
 columns:

@@ -15,12 +15,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# --------------------------------------- IMPORT LIBRARIES -------------------------------------------
+# ------------------------------------ IMPORT LIBRARIES ------------------------------------
 
 # Prevent warning messages
 import warnings
 
 warnings.filterwarnings('ignore')
+
+# Loggin reports
+import logging
 
 # Standard library imports
 import os
@@ -28,265 +31,313 @@ import time
 from datetime import datetime, timedelta
 
 # Related third-party imports
-import requests
-import numpy as np
 import pandas as pd
 import yfinance as yf  # price datasets
 
-# Requests rate limiter
-from requests import Session
-from requests_cache import CacheMixin, SQLiteCache
-from requests_ratelimiter import LimiterMixin, MemoryQueueBucket
-from pyrate_limiter import Duration, RequestRate, Limiter
+# Import custom class from utils
+from utils.load_config import LoadConfig
+from utils.cached_limiter_session import CachedLimiterSession
 
 
-# ----------------------------------------- CLASSES & FUNCTIONS --------------------------------------
-
-class CachedLimiterSession(CacheMixin, LimiterMixin, Session):
-    # Requests rate limiter libs (needed to protect to be blocked)
-    pass
-
+# ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
 
 class QuotesDownloader:
-    TODAY = datetime.now()
-    DATE_FORMAT = '%Y-%m-%d'
 
-    MAX_IPO_YEAR = TODAY.year - 3  # Don't use quotes first 3 years after company's IPO
-    TICKER_EXPIRATION = TODAY - timedelta(days=90)  # Expiration date of tickers info. Update needed.
-    QUOTES_EXPIRATION = TODAY - timedelta(days=30)  # Expiration date of quotes files. Update needed.
+    def __init__(self):
 
-    START_DATE = '1980-01-01'  # The earliest date to start quotes downloading  #datetime(2000, 1, 1)
-    MIN_CAP = 500 * 10 ** 6  # minimum of company capitalisation, USD
-    MIN_PRICE = 3  # minimum price of one share, USD
-    MAX_PRICE = 10 * 10 ** 3  # maximum price of one share, USD
-
-    # Improve columns in the new dataframe made from downloading data
-    COLS_DELETE = ['netchange', 'pctchange', 'url']
-    COLS_RENAME = {'lastsale': 'price', 'ipoyear': 'ipoYear'}
-    COLS_ADD = ['pe', 'beta', 'shortRatio', 'isin']
-    COLS_DT_ADD = ['quotesStarted', 'quotesUpdated', 'rowUpdated']
-    COLS_TYPES = {'symbol': 'string', 'isin': 'string', 'name': 'string', 'price': 'float', 'volume': 'int',
-                  'marketCap': 'int', 'ipoYear': 'int', 'pe': 'float', 'beta': 'float', 'shortRatio': 'float',
-                  'country': 'string', 'sector': 'string', 'industry': 'string', 'quotesStarted': 'datetime64[ns]',
-                  'quotesUpdated': 'datetime64[ns]', 'rowUpdated': 'datetime64[ns]'}
-    COLS_ORDER = ['symbol', 'isin', 'name', 'price', 'volume', 'marketCap', 'ipoYear', 'pe', 'beta',
-                  'shortRatio', 'country', 'sector', 'industry', 'quotesStarted', 'quotesUpdated', 'rowUpdated']
-
-    # Web downloader params
-    DOWNLOAD_BATCH_SIZE = 30
-    DOWNLOAD_PARAMS = (('letter', '0'), ('download', 'true'))
-    DOWNLOAD_HEADERS = {
-        'authority': 'api.nasdaq.com',
-        'accept': 'application/json, text/plain, */*',
-        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36',
-        'origin': 'https://www.nasdaq.com',
-        'sec-fetch-site': 'same-site',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-dest': 'empty',
-        'referer': 'https://www.nasdaq.com/',
-        'accept-language': 'en-US,en;q=0.9',
-    }
-
-    def __init__(self, quotes_dir='data/quotes/'):
-
-        # Directory of files with tickers quotes
-        self.quotes_dir = quotes_dir
-
-        # Session with requests rate limiter (to protect to be blocked)
-        self.session = self.initialize_session()
-
-
-    def create_ticker_list(self, tickers_file='data/tickers.csv'):
-
-        # CSV file with the list of all tickers
-        self.tickers_file = tickers_file
-
-        # Download from NASDAQ all tickers traded at NYSE, NASDAQ, and AMEX exchanges
-        tickers = self.download_ticker_list()
-
-        # Clean and save base ticker list into file
-        cleaned_tickers = self.clean_ticker_list(tickers)
-        self.added_tickers = self.save_ticker_list(cleaned_tickers)
-
-        # Download necessary info for every ticker from Yahoo
-        self.update_ticker_data()
-
-    @staticmethod
-    def initialize_session():
-        """
-        Session with requests rate limiter (to protect to be blocked)
-        """
-        return CachedLimiterSession(
-            limiter=Limiter(RequestRate(1, Duration.SECOND * 2)),
-            bucket_class=MemoryQueueBucket,
-            backend=SQLiteCache("yfinance.cache"),
+        # Initialize logger. Use it to reports about work status into log file
+        logging.basicConfig(
+            filename='logs/quotes_downloader.log',
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
         )
+        self.logger = logging.getLogger(__name__)
 
-    def download_ticker_list(self):
-        """
-        Download list of shares from NASDAQ Stock Screener.
+        # Load Quotes configuration from the '.yaml' file
+        self.config = LoadConfig('config/quotes_downloader.yaml').data
 
-        Note:
-            Get DataFrame of all tickers traded at NYSE, NASDAQ, and AMEX exchanges.
+        # Load Tickers configuration from the '.yaml' file
+        self.tickers_config = LoadConfig('config/tickers_downloader.yaml').data
 
-        :return: DataFrame with headers:
-            symbol, name, lastsale, netchange, pctchange, marketCap, country, ipoyear, volume, sector, industry, url
-        """
-        r = requests.get(
-            'https://api.nasdaq.com/api/screener/stocks',
-            headers=self.DOWNLOAD_HEADERS,
-            params=self.DOWNLOAD_PARAMS)
-        data = r.json()['data']
+        # ----------------------------------------------------------------------------------
+        # Declare constants
 
-        return pd.DataFrame(data['rows'], columns=data['headers'])
+        self.DATE_FORMAT = '%Y-%m-%d'  # Date format to show in the date columns of dataframes
+        self.TODAY = datetime.now()  # Current day date
+        self.MIN_HISTORY_YEARS = self.config['min_history_years']
 
-    def refactor_df_columns(self, df):
+        # Expiration date. Must update quotes file every {x} days
+        self.EXPIRATION = self.TODAY - timedelta(days=self.config['expiration_days'])
 
-        # Delete unused and rename other columns
-        df = df.drop(columns=self.COLS_DELETE).rename(columns=self.COLS_RENAME)
+        # Get list of types for Ticker DataFrame columns
+        self.TICKER_COLS_TYPES = self.tickers_config['columns'][
+            'apply_types']  # All columns types to apply to DataFrame
+        self.TICKER_COLS_DT_TYPES = self.tickers_config['columns']['add_dt']  # Datetime-type columns list
 
-        # Insert columns for date labels
-        df[self.COLS_ADD] = None
+        # Quotes Dataframe columns
+        self.COLS_DELETE = self.config['columns']['delete']  # Delete columns from the downloaded dataframe
+        self.COLS_RENAME = self.config['columns']['rename']  # Rename columns using standard rules
+        self.COLS_TYPES = self.config['columns']['apply_types']  # All columns types to apply to DataFrame
 
-        # Insert columns for date labels
-        df[self.COLS_DT_ADD] = pd.NaT
-        df[self.COLS_DT_ADD] = pd.to_datetime(self.COLS_DT_ADD, format=self.DATE_FORMAT, errors='coerce')
+        # Batch size for downloading data at one time
+        self.DOWNLOAD_BATCH_SIZE = self.config['batch_size']
 
-        df = df[self.COLS_ORDER]
+        # Minimum average trade value in millions USD to start saving quotes history
+        self.TRADE_VALUE_THRESHOLD = self.config['trade_value_threshold']
 
-        return df
+        # Yahoo cached session with the limit for requests frequency
+        self.SESSION = CachedLimiterSession.initialize_session()
 
-    def clean_ticker_list(self, df):
-        """
-        Clean and filter the DataFrame of downloaded tickers list
-        Note:
-            Delete unused columns, change name of other columns. Filter the data by minimum parameters.
-        :return: clean DataFrame with headers:
-        """
+        # File with all tickers (all symbols) of shares
+        self.TICKERS_FILE = self.tickers_config['path']
 
-        df = self.refactor_df_columns(df)
+        # Directory to save files with quotes of shares. Filename format: {SYMBOL}.csv
+        self.QUOTES_DIR = self.config['path']
 
-        # Remove all Notes/Bonds (not Shares)
-        df = df[~df['symbol'].str.contains(r"\.|\^")]
+    def run_old(self):
 
-        # Change '/' in Symbol to '-',
-        # because on Yahoo finance Simbols looks like "BF-A", not "BF/A"
-        df['symbol'] = df['symbol'].apply(lambda x: x.strip().replace('/', '-'))
-
-        # Remove '$' from price before converting to float
-        df['price'] = df['price'].str.replace('$', '')
-
-        # Remove decimal from price before converting to int
-        df['marketCap'] = df['marketCap'].str.replace('.00', '')
-
-        # Change default values before converting to int
-        df['marketCap'] = df['marketCap'].str.strip().replace('', '-1')
-        df['ipoYear'] = df['ipoYear'].str.strip().replace('', '-1')
-
-        # Change type of columns
-        df = df.astype(self.COLS_TYPES)
-
-        # Filter the data by using predefined values
-        df = df[
-            ~(df['price'] < self.MIN_PRICE) & ~(df['price'] > self.MAX_PRICE) & ~(df['ipoYear'] >= self.MAX_IPO_YEAR)]
-
-        return df
-
-    def save_ticker_list(self, df):
-        """
-        """
+        # Step 1: Download tickers using NASDAQ API.
+        # ----------------------------------------------------------------------------------
         try:
-            # Read the existing DataFrame from the CSV file
-            ex_df = pd.read_csv(self.tickers_file)
-        except FileNotFoundError:
-            # If the file is not found, create an empty DataFrame
-            ex_df = pd.DataFrame(columns=df.columns)
+            nasdaq_tickers = self.download_tickers_from_nasdaq()
+            # Report on the successful download
+            self.logger.info(f'Step 1: Downloaded {len(nasdaq_tickers)} tickers from NASDAQ.')
+        except Exception as e:
+            # Log any exceptions
+            self.logger.error(f'Step 1 failed: {e}', exc_info=True)
 
-        # Exclude the rows presented in the existing DataFrame
-        new_rows = df[~df['symbol'].isin(ex_df['symbol'])]
+        # Step 2: Preprocess downloaded data (restructure, clean, filter)
+        # ----------------------------------------------------------------------------------
+        try:
+            clean_tickers = self.preprocess_downloaded_data(nasdaq_tickers)
+            # Report on the successful update
+            self.logger.info(f'Step 2: {len(clean_tickers)} tickers passed through the filter.')
 
-        # If there are new rows, append them to the end of the old DataFrame
-        if not new_rows.empty:
-            ex_df = pd.concat([ex_df, new_rows], ignore_index=True)
+        except Exception as e:
+            # Log any exceptions
+            self.logger.error(f'Step 2 failed: {e}', exc_info=True)
 
-            # Save the updated DataFrame to the same CSV file
-            ex_df.to_csv(self.tickers_file, index=False)
+        # Step 3: Add new data to an existing CSV file
+        # ----------------------------------------------------------------------------------
+        try:
+            new_rows = self.add_new_data_to_file(clean_tickers)
+            # Report on the successful insert
+            self.logger.info(f'Step 3: {len(new_rows)} new rows inserted into Tickers file.')
 
-            # Display information about the added rows
-            added_rows_count = len(new_rows)
-            print(f"Added {added_rows_count} rows to the DataFrame.")
-            return new_rows
-        else:
-            return None
+        except Exception as e:
+            # Log any exceptions
+            self.logger.error(f'Step 3 failed: {e}', exc_info=True)
 
-    def update_ticker_data(self):
+        # Step 4: Update ticker data using Yahoo Finance API
+        # ----------------------------------------------------------------------------------
+        try:
+            self.update_tickers_data_using_yahoo()
+            # Report on the successful update
+            self.logger.info(f'Step 4: All tickers are up to date.')
 
-        # Infinity cycle to download and save tickers
-        # until it will be interrapted by condition in string:
-        # "if subset.empty: break"
-        while True:
+        except Exception as e:
+            # Log any exceptions
+            self.logger.error(f'Step 4 failed: {e}', exc_info=True)
 
-            # Read the list of tickers which is not updated or updated long time ago
-            # DataFrame from the CSV file
+    def run(self):
+
+        # Infinite loop while will not execute condition of no rows to update
+        counter = 0
+        while True and counter < 1:
+            counter += 1
+            # Read the file with tickers data
             try:
-                df = pd.read_csv(self.tickers_file)
-            except FileNotFoundError:
-                print(f'File \'{self.tickers_file}\' not found.')
+                tickers_df = pd.read_csv(self.TICKERS_FILE)
+            except Exception as e:
+                # Log any exceptions
+                self.logger.error(f'File \'{self.TICKERS_FILE}\' not found. Error: {e}', exc_info=True)
                 return None
 
-            # Change type of date columns
-            df[self.COLS_DT_ADD] = df[self.COLS_DT_ADD].astype("datetime64[ns]")
+            # Get tickers subset for downloading their quotes. Limited by the batch size.
+            subset = self.get_subset_to_update_quotes(tickers_df)
 
-            # Выбор строк, где 'rowUpdated' не было, либо старше чем 2 месяца назад
-            mask = (
-                    (pd.isna(df['rowUpdated'])) |
-                    (df['rowUpdated'] < pd.to_datetime(self.TICKER_EXPIRATION))
-            )
-
-            subset = df[mask].head(self.DOWNLOAD_BATCH_SIZE)
-
-            # If no rows to update than break from infinity cycle
+            # Break from infinity cycle if quotes subset for downloading is empty
             if subset.empty:
-                break
+                # Report on the successful check condition for update
+                self.logger.info('All quotes are up to date.')
+                return None
 
-            symbol_list = subset['symbol'].to_list()
-            tickers = yf.Tickers(symbol_list, session=self.session)
+            # Download quotes array (all tickers in one) using Yahoo API
+            all_quotes = self.download_quotes_from_yahoo(subset)
 
-            for index, row in subset.iterrows():
-                symbol = row['symbol']
+            # For each ticker update it's quotes file
+            for _, current in subset.iterrows():
 
-                # """
-                isin_get = str(tickers.tickers[symbol].isin).strip()
-                isin = isin_get if len(isin_get) > 1 else row['isin']
+                # Current ticker ID (symbol)
+                current_symbol = current['symbol']
 
-                info = tickers.tickers[symbol].info
+                # Get quotes DataFrame for the current symbol
+                current_quotes = self.get_current_quotes_df(all_quotes, current_symbol)
 
-                price = round(float(info.get('fiftyDayAverage', row['price'])), 2)
-                volume = info.get('averageVolume', row['volume'])
-                marketCap = info.get('marketCap', row['marketCap'])
+                # Refactoring columns and adjusting column formats
+                current_quotes = self.refactor_dataframe_columns(current_quotes)
 
-                # Convert date in timestamp format to '%Y-%m-%d'
-                timestamp = info.get('firstTradeDateEpochUtc', None)
-                ipoYear = pd.to_datetime(timestamp, unit='s').strftime('%Y') if timestamp is not None else \
-                row['ipoYear']
+                # Trim DataFrame. Start data from the date when
+                # the average daily trading volume exceeded $100M and no errors found inside.
+                current_quotes = self.get_filtered_subset(current_quotes, self.TRADE_VALUE_THRESHOLD)
 
-                pe = round(float(info.get('trailingPE', row['pe'])), 1)
-                beta = round(float(info.get('beta', row['beta'])), 1)
-                shortRatio = round(float(info.get('shortRatio', row['shortRatio'])), 2)
-                country = info.get('country', row['country'])
-                sector = info.get('sector', row['sector'])
-                industry = info.get('industry', row['industry'])
-                rowUpdated = pd.to_datetime(self.TODAY, format=self.DATE_FORMAT).strftime(self.DATE_FORMAT)
+                # If no quotes pass the filter update status and switch to the next ticker
+                if current_quotes.empty:
+                    # Update current ticker date label of quotes status
+                    tickers_df.loc[tickers_df['symbol'] == current_symbol, ['quotesUpdated']] = [
+                        pd.to_datetime(self.TODAY,
+                                       format=self.DATE_FORMAT).strftime(self.DATE_FORMAT)]
+                    continue
 
-                df.loc[df['symbol'] == symbol, [
-                    'isin', 'price', 'volume', 'marketCap', 'ipoYear', 'pe',
-                    'beta', 'shortRatio', 'country', 'sector', 'industry', 'rowUpdated']] = [
-                    isin, price, volume, marketCap, ipoYear, pe,
-                    beta, shortRatio, country, sector, industry, rowUpdated]
-                # """
+                # Start date of the current quotes subset
+                quotesStarted = current_quotes.index[0]
 
-            print(f'Tickers: {symbol_list} were updated')
+                # If quotes history less than {x} years  switch to the next ticker
+                if (self.TODAY.year - quotesStarted.year) < self.MIN_HISTORY_YEARS:
+                    continue
+
+                # Save quotes into file
+                self.save_quotes_to_file(current_symbol, current_quotes)
+
+                # Update current ticker date label of quotes status
+                tickers_df.loc[tickers_df['symbol'] == current_symbol, ['quotesStarted', 'quotesUpdated']] = [
+                    quotesStarted,
+                    pd.to_datetime(self.TODAY, format=self.DATE_FORMAT).strftime(self.DATE_FORMAT)]
+
+                # Last date of update the row
+                # quotesUpdated = pd.to_datetime(self.TODAY, format=self.DATE_FORMAT).strftime(self.DATE_FORMAT)
 
             # Save the updated DataFrame to the same CSV file
-            df.to_csv(self.tickers_file, index=False)
+            tickers_df.to_csv(self.TICKERS_FILE, index=False)
+
+            # Report on the successful update of the next batch of tickers
+            self.logger.info(
+                f'Quotes files of the batch of tickers {subset['symbol'].to_list()} is successfully downloaded.')
+
+            # Pause for 3 seconds before the next data download cycle
             time.sleep(3)
+
+        # return tickers_df
+
+    def get_subset_to_update_quotes(self, df):
+
+        # Update data type for datetime columns to ensure correct operation
+        df[self.TICKER_COLS_DT_TYPES] = df[self.TICKER_COLS_DT_TYPES].astype("datetime64[ns]")
+
+        # Create filter to read the list of tickers which is never updated
+        # or updated a long time ago
+        # !!!!!!!!!!!!!!
+        # Mask - оставить только первый фильтр после закачки основных
+
+        mask = ((
+                        (pd.isna(df['quotesUpdated'])) |
+                        (df['quotesUpdated'] < pd.to_datetime(self.EXPIRATION))
+                ) &
+                (
+                        (df['ipoYear'] < 1990) &
+                        (df['price'] > 3) &
+                        (df['price'] < 5000) &
+                        (df['volume'] * df['price'] > (self.TRADE_VALUE_THRESHOLD * 10 ** 6))
+                # Daily average trade volume > $100M
+                )
+                )
+
+        # Apply filter mask and the batch size to limit count of tickers for one download
+        subset = df[mask].head(self.DOWNLOAD_BATCH_SIZE)
+
+        return subset
+
+    def download_quotes_from_yahoo(self, subset):
+
+        try:
+            #
+            all_quotes = yf.download(
+                subset['symbol'].to_list(),
+                period="max",
+                interval="1d",
+                auto_adjust=False,
+                rounding=False,
+                actions=True,
+                group_by='ticker',
+                threads=True,
+                session=self.SESSION
+            )
+        except Exception as e:
+            # Log any exceptions
+            self.logger.error(f'Yfinance download of {subset['symbol'].to_list()} is failed. Error: {e}', exc_info=True)
+            return None
+
+        return all_quotes
+
+    @staticmethod
+    def get_current_quotes_df(all_quotes, symbol):
+        # Если в all_quotes была всего одна акция, то структура массива возвращаемого
+        # функцией библиотеки yfinance меняется. Отлавливаем это как ошибку и меняем
+        # структуру запроса
+        try:
+            current_quotes = pd.DataFrame(all_quotes[symbol].dropna())
+
+        except Exception:
+            current_quotes = pd.DataFrame(all_quotes.dropna())
+
+        return current_quotes
+
+    def refactor_dataframe_columns(self, df):
+        """
+        Update columns in the provided DataFrame by removing unused columns, renaming columns,
+        and adjusting column formats.
+
+        :param df: DataFrame to be updated.
+        :return: Updated DataFrame.
+        """
+        # Delete unused columns and rename others
+        df = df.drop(columns=self.COLS_DELETE).rename(columns=self.COLS_RENAME)
+
+        # Update types of columns
+        df = df.astype(self.COLS_TYPES)
+
+        return df
+
+    @staticmethod
+    def get_filtered_subset(subset, trade_threshold):
+
+        """
+        Returns filtered stock quotes.
+
+        Returns will be started from the date when all prices are greater than 0
+        and average daily trading volume is more than $10M.
+
+        :param subset:
+        :return:
+        """
+        # Find the las index (last date) of the rows where one of OHLC <= 0 or
+        # daily trading volume < 1,000,000
+
+        # Factor of splits influence to price in past
+        splits_factor = subset.loc[subset['splits'] > 0, 'splits'].prod()
+
+        mask = (
+                (subset['open'] <= 0) | (subset['high'] <= 0) | (subset['low'] <= 0) | (subset['close'] <= 0) |
+                ((subset['volume'] * subset['low'] * splits_factor).rolling(window=14).mean() < (
+                            trade_threshold * 10 ** 6))
+        )
+
+        not_condition_subset = subset[mask]
+
+        # If all data in condition return full subset back
+        if not_condition_subset.empty:
+            return subset
+
+        threshold_date = not_condition_subset.index[-1]
+
+        # Exclude from _subset all rows older or equal the last date of excluded rows
+        return subset.loc[subset.index > threshold_date]
+
+    def save_quotes_to_file(self, current_symbol, current_quotes):
+
+        # Create a folder (if not exist) to store DataFrame to the file
+        os.makedirs(os.path.dirname(self.QUOTES_DIR), exist_ok=True)
+
+        # Save the quotes DataFrame to the file
+        current_quotes.to_csv(f'{self.QUOTES_DIR}{current_symbol}.csv')
+
