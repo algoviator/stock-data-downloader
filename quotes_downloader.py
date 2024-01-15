@@ -118,6 +118,10 @@ class QuotesDownloader:
             # Download quotes array (all tickers in one) using Yahoo API
             all_quotes = self.download_quotes_from_yahoo(subset)
 
+            if all_quotes is None:
+                print(f'Yahoo API error using subset \'{subset}\' No quotes available.')
+                return None
+
             # For each ticker update it's quotes file
             for _, current in subset.iterrows():
 
@@ -193,7 +197,7 @@ class QuotesDownloader:
                         (df['price'] > 3) &
                         (df['price'] < 5000) &
                         (df['volume'] * df['price'] > (self.TRADE_VALUE_THRESHOLD * 10 ** 6))
-                # Daily average trade volume > $100M
+                # Daily average trade volume > $50M
                 )
                 )
 

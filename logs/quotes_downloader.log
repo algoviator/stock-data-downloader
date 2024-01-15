@@ -1,0 +1,192 @@
+2024-01-15 19:53:15,749 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 19:53:16,310 - INFO - Quotes files of the batch of tickers ['AA', 'AAPL', 'ABT', 'ADBE', 'ADI', 'ADM', 'ADP', 'ADSK', 'AEM', 'AEP', 'AFL', 'AIG', 'AJG', 'ALK', 'AMAT', 'AMD', 'AME', 'AMGN', 'AON', 'AOS', 'APA', 'APD', 'ARW', 'ATO', 'AVY', 'AXP', 'BA', 'BAC', 'BALL', 'BAX'] is successfully downloaded.
+2024-01-15 19:54:20,738 - INFO - Quotes files of the batch of tickers ['BBWI', 'BBY', 'BC', 'BCE', 'BCS', 'BDX', 'BEN', 'BF-B', 'BHP', 'BIO', 'BK', 'BKR', 'BMY', 'BN', 'BP', 'BRO', 'BTI', 'BXMT', 'C', 'CAG', 'CAH', 'CAR', 'CASY', 'CAT', 'CCEP', 'CCK', 'CCL', 'CDNS', 'CGNX', 'CHD'] is successfully downloaded.
+2024-01-15 19:55:23,291 - INFO - Quotes files of the batch of tickers ['CI', 'CINF', 'CL', 'CLF', 'CLH', 'CLX', 'CMA', 'CMC', 'CMCSA', 'CMI', 'CMS', 'CNP', 'COHR', 'COO', 'COP', 'COST', 'CP', 'CPB', 'CRH', 'CSL', 'CSX', 'CTAS', 'CVS', 'CVX', 'D', 'DD', 'DE', 'DHR', 'DINO', 'DIS'] is successfully downloaded.
+2024-01-15 19:56:25,774 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'DOV', 'DTE', 'DUK', 'DVN', 'DXC', 'EA', 'ECL', 'ED', 'EFX', 'EGP', 'EIX', 'EMR', 'ENB', 'EOG', 'EQT', 'ERIC', 'ES', 'ETN', 'ETR', 'EVRG', 'EXC', 'EXPD', 'F', 'FAST', 'FCNCA', 'FDX', 'FHN', 'FI'] is successfully downloaded.
+2024-01-15 19:57:28,218 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'FICO', 'FITB', 'FL', 'FMC', 'FRT', 'GD', 'GE', 'GEN', 'GFI', 'GGG', 'GIS', 'GL', 'GLW', 'GOLD', 'GPC', 'GPS', 'GWW', 'HAL', 'HAS', 'HBAN', 'HD', 'HEI', 'HES', 'HON', 'HPQ', 'HRB'] is successfully downloaded.
+2024-01-15 19:58:26,828 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 19:58:26,847 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 19:58:27,323 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'HRL', 'HST', 'HSY', 'HUBB', 'HUM', 'IBM', 'IEX', 'IFF', 'IMGN', 'INTC', 'IP', 'IPG', 'ITW', 'JBHT', 'JCI', 'JKHY', 'JNJ', 'JPM', 'JWN', 'K', 'KBH', 'KEY', 'KGC', 'KLAC', 'KMB', 'KO'] is successfully downloaded.
+2024-01-15 19:59:29,593 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'KR', 'L', 'LEN', 'LHX', 'LLY', 'LMT', 'LNC', 'LNT', 'LNW', 'LOW', 'LRCX', 'LSCC', 'LUV', 'MAS', 'MAT', 'MCD', 'MDT', 'MGA', 'MGM', 'MIDD', 'MKC', 'MKL', 'MMC', 'MMM', 'MNST'] is successfully downloaded.
+2024-01-15 20:00:32,072 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MO', 'MOS', 'MRK', 'MRO', 'MSFT', 'MSI', 'MTB', 'MTH', 'MTZ', 'MU', 'MUR', 'NEE', 'NEM', 'NI', 'NKE', 'NNN', 'NOC', 'NSC', 'NTRS', 'NUE', 'NVO', 'NYT', 'OGE', 'OKE'] is successfully downloaded.
+2024-01-15 20:01:34,401 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'OLN', 'OMC', 'ORCL', 'OSK', 'OXY', 'PAYX', 'PCAR', 'PCG', 'PEAK', 'PEG', 'PEP', 'PFE', 'PG', 'PGR', 'PH', 'PHM', 'PII', 'PNC', 'PNR', 'PNW', 'PPG', 'PPL'] is successfully downloaded.
+2024-01-15 20:02:36,657 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'PSA', 'PTC', 'PVH', 'RF', 'RGEN', 'RHI', 'RJF', 'ROK', 'ROL', 'ROST', 'RPM', 'RRC', 'RRX', 'RTX', 'RVTY', 'SCHW', 'SCI', 'SEE', 'SHW', 'SIG', 'SLB'] is successfully downloaded.
+2024-01-15 20:03:38,990 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'SNA', 'SO', 'SONY', 'SPB', 'SPGI', 'STT', 'SU', 'SWK', 'SWKS', 'SWN', 'SYK', 'SYY', 'T', 'TAP', 'TDW', 'TECH', 'TER', 'TEVA', 'TFC', 'TFX', 'TGT'] is successfully downloaded.
+2024-01-15 20:04:41,204 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'THC', 'THO', 'TJX', 'TM', 'TMO', 'TOL', 'TPL', 'TROW', 'TRP', 'TRV', 'TSN', 'TT', 'TTC', 'TXN', 'TXT', 'TYL', 'UDR', 'UHS', 'UL', 'UNH', 'UNM'] is successfully downloaded.
+2024-01-15 20:05:43,597 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'THC', 'UNP', 'USB', 'VFC', 'VLO', 'VMC', 'VNO', 'VOD', 'VTRS', 'VZ', 'WBA', 'WBS', 'WDC', 'WEC', 'WELL', 'WEN', 'WFC', 'WHR', 'WM', 'WMB', 'WMT'] is successfully downloaded.
+2024-01-15 20:06:25,646 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'THC', 'WRB', 'WSM', 'WSO', 'WST', 'WTRG', 'WY', 'XEL', 'XOM', 'XRAY', 'ZION'] is successfully downloaded.
+2024-01-15 20:06:47,534 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:07:07,227 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:07:07,250 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'MTH', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:07:24,989 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:07:25,021 - INFO - Quotes files of the batch of tickers ['CLH', 'COO', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:07:42,630 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:08:00,172 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:08:17,831 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:08:35,494 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:08:51,212 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:08:51,235 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'IMGN', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:09:06,835 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:09:20,500 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:09:20,530 - INFO - Quotes files of the batch of tickers ['CLH', 'EGP', 'FCNCA', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:09:32,112 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:09:32,132 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'NNN', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:09:43,817 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:09:55,398 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:10:06,929 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:10:18,541 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:10:30,282 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:10:42,025 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:10:53,688 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:11:05,219 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:11:16,759 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:11:28,485 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:11:40,230 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:11:51,843 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:12:03,601 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:12:15,191 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:12:26,949 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:12:38,658 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:12:50,156 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:13:01,671 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:13:13,371 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:13:25,048 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:13:36,727 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:13:48,561 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:00,249 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:11,812 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:23,557 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:35,167 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:46,819 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:14:58,450 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:08,290 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:15:08,312 - INFO - Quotes files of the batch of tickers ['EGP', 'FCNCA', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:18,002 - INFO - Quotes files of the batch of tickers ['EGP', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:27,637 - INFO - Quotes files of the batch of tickers ['EGP', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:35,428 - ERROR - refactor_dataframe_columns(). Error: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/quotes_downloader.py", line 256, in refactor_dataframe_columns
+    df = df.astype(self.COLS_TYPES)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/venv/lib/python3.12/site-packages/pandas/core/generic.py", line 6498, in astype
+    raise KeyError(
+KeyError: "Only a column name can be used for the key in a dtype mappings argument. 'dividends' not found in columns."
+2024-01-15 20:15:35,449 - INFO - Quotes files of the batch of tickers ['EGP', 'MKL', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:43,156 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:50,822 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:15:58,633 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:06,319 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:13,942 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:21,653 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:29,368 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:37,031 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:44,832 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:16:52,491 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:00,158 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:07,916 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:15,593 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:23,318 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:31,026 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:38,652 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:46,350 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:17:54,028 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:01,734 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:09,429 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:17,110 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:24,747 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:32,422 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:40,200 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:47,833 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:18:55,492 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:03,167 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:10,893 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:18,513 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:26,253 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:33,911 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:41,902 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:49,582 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:19:57,260 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:04,957 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:12,713 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:20,413 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:28,167 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:35,796 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:43,656 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:51,553 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:20:59,480 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:07,142 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:14,859 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:22,577 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:30,318 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:38,030 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:45,760 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:21:53,339 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:22:00,978 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:22:08,751 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:22:16,381 - INFO - Quotes files of the batch of tickers ['EGP', 'PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:27:44,628 - INFO - Quotes files of the batch of tickers ['PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:27:50,257 - INFO - Quotes files of the batch of tickers ['PNW', 'THC'] is successfully downloaded.
+2024-01-15 20:30:21,365 - INFO - All quotes are up to date.
