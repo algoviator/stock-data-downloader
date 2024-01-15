@@ -19,6 +19,7 @@
 
 # Prevent warning messages
 import warnings
+
 warnings.filterwarnings('ignore')
 
 # Standard library imports
@@ -28,31 +29,21 @@ from datetime import datetime, timedelta
 
 # Import custom classes from the current dir
 from tickers_downloader import TickersDownloader
-#from quotes_downloader import QuotesDownloader
+from quotes_downloader import QuotesDownloader
+
 
 # --------------------------------------- MAIN SCRIPT -----------------------------------------------
 
 
 def main():
-
     # Download and update list of tickers traded on NYSE, NASDAQ, and AMEX exchanges
     # using the NASDAQ Stock Screener and Yahoo API.
-    ts = TickersDownloader()
-    ts.run()
+    td = TickersDownloader()
+    td.run()
 
-
-    """
-    # quotes_downloader = QuotesDownloader()
-    # Create or update the list of tickers
-    downloader.create_ticker_list()
-
-    # Download and update stock quotes
-    quotes_df = downloader.download_quotes()
-
-    if quotes_df is not None:
-        # Process the downloaded quotes DataFrame as needed
-        print(quotes_df)
-    #"""
+    # Download history of quotes into files with name of ticker symbol to data folder.
+    qd = QuotesDownloader()
+    qd.run()
 
 
 if __name__ == "__main__":

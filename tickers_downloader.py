@@ -17,10 +17,6 @@
 #
 # ------------------------------------ IMPORT LIBRARIES ------------------------------------
 
-# Prevent warning messages
-import warnings
-warnings.filterwarnings('ignore')
-
 # Loggin reports
 import logging
 
@@ -38,7 +34,12 @@ import yfinance as yf  # price datasets
 from utils.load_config import LoadConfig
 from utils.cached_limiter_session import CachedLimiterSession
 
+# Prevent warning messages
+import warnings
+warnings.filterwarnings('ignore')
+
 # ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
+
 
 class TickersDownloader:
 
@@ -113,8 +114,14 @@ class TickersDownloader:
         # ----------------------------------------------------------------------------------
         try:
             nasdaq_tickers = self.download_tickers_from_nasdaq()
-            # Report on the successful download
-            self.logger.info(f'Step 1: Downloaded {len(nasdaq_tickers)} tickers from NASDAQ.')
+            if nasdaq_tickers.empty:
+                # Log any exceptions
+                self.logger.error('Step 1 failed: nasdaq_tickers are empty.', exc_info=True)
+                return None
+            else:
+                # Report on the successful download
+                self.logger.info(f'Step 1: Downloaded {len(nasdaq_tickers)} tickers from NASDAQ.')
+
         except Exception as e:
             # Log any exceptions
             self.logger.error(f'Step 1 failed: {e}', exc_info=True)
@@ -159,6 +166,7 @@ class TickersDownloader:
 
         :return: DataFrame
         """
+
         r = requests.get(self.URL, headers=self.DOWNLOAD_HEADERS, params=self.DOWNLOAD_PARAMS)
         data = r.json()['data']
 
@@ -278,18 +286,7 @@ class TickersDownloader:
             # Else - return an empty DataFrame
             return pd.DataFrame(columns=df.columns)
 
-    def get_subset_to_update_tickers(self):
-
-        # Read the file with tickers data
-        try:
-            df = pd.read_csv(self.PATH)
-        except FileNotFoundError as e:
-            # Log any exceptions
-            self.logger.error(f'File \'{self.PATH}\' not found. Error: {e}', exc_info=True)
-            return None
-
-        # Update data type for datetime columns to ensure correct operation
-        df[self.COLS_DT_ADD] = df[self.COLS_DT_ADD].astype("datetime64[ns]")
+    def get_subset_to_update_tickers(self, df):
 
         # Create filter to read the list of tickers which is never updated
         # or updated a long time ago
@@ -318,8 +315,19 @@ class TickersDownloader:
         # Infinite loop while will not execute condition of no rows to update
         while True:
 
+            # Read the file with tickers data
+            try:
+                df = pd.read_csv(self.PATH)
+            except FileNotFoundError as e:
+                # Log any exceptions
+                self.logger.error(f'File \'{self.PATH}\' not found. Error: {e}', exc_info=True)
+                break
+
+            # Update data type for datetime columns to ensure correct operation
+            df[self.COLS_DT_ADD] = df[self.COLS_DT_ADD].astype("datetime64[ns]")
+
             # Get the limited subset of tickers with expiration condition
-            subset = self.get_subset_to_update_tickers()
+            subset = self.get_subset_to_update_tickers(df)
 
             # If no rows to update then break from the infinite loop (from the 'while True')
             if subset.empty:

@@ -17,11 +17,6 @@
 #
 # ------------------------------------ IMPORT LIBRARIES ------------------------------------
 
-# Prevent warning messages
-import warnings
-
-warnings.filterwarnings('ignore')
-
 # Loggin reports
 import logging
 
@@ -38,8 +33,12 @@ import yfinance as yf  # price datasets
 from utils.load_config import LoadConfig
 from utils.cached_limiter_session import CachedLimiterSession
 
+# Prevent warning messages
+import warnings
+warnings.filterwarnings('ignore')
 
 # ---------------------------------- CLASSES & FUNCTIONS -----------------------------------
+
 
 class QuotesDownloader:
 
@@ -94,57 +93,11 @@ class QuotesDownloader:
         # Directory to save files with quotes of shares. Filename format: {SYMBOL}.csv
         self.QUOTES_DIR = self.config['path']
 
-    def run_old(self):
-
-        # Step 1: Download tickers using NASDAQ API.
-        # ----------------------------------------------------------------------------------
-        try:
-            nasdaq_tickers = self.download_tickers_from_nasdaq()
-            # Report on the successful download
-            self.logger.info(f'Step 1: Downloaded {len(nasdaq_tickers)} tickers from NASDAQ.')
-        except Exception as e:
-            # Log any exceptions
-            self.logger.error(f'Step 1 failed: {e}', exc_info=True)
-
-        # Step 2: Preprocess downloaded data (restructure, clean, filter)
-        # ----------------------------------------------------------------------------------
-        try:
-            clean_tickers = self.preprocess_downloaded_data(nasdaq_tickers)
-            # Report on the successful update
-            self.logger.info(f'Step 2: {len(clean_tickers)} tickers passed through the filter.')
-
-        except Exception as e:
-            # Log any exceptions
-            self.logger.error(f'Step 2 failed: {e}', exc_info=True)
-
-        # Step 3: Add new data to an existing CSV file
-        # ----------------------------------------------------------------------------------
-        try:
-            new_rows = self.add_new_data_to_file(clean_tickers)
-            # Report on the successful insert
-            self.logger.info(f'Step 3: {len(new_rows)} new rows inserted into Tickers file.')
-
-        except Exception as e:
-            # Log any exceptions
-            self.logger.error(f'Step 3 failed: {e}', exc_info=True)
-
-        # Step 4: Update ticker data using Yahoo Finance API
-        # ----------------------------------------------------------------------------------
-        try:
-            self.update_tickers_data_using_yahoo()
-            # Report on the successful update
-            self.logger.info(f'Step 4: All tickers are up to date.')
-
-        except Exception as e:
-            # Log any exceptions
-            self.logger.error(f'Step 4 failed: {e}', exc_info=True)
-
     def run(self):
 
-        # Infinite loop while will not execute condition of no rows to update
-        counter = 0
-        while True and counter < 1:
-            counter += 1
+        # Run infinite loop. Stop only if no rows to update found.
+        # ----------------------------------------------------------------------------------
+        while True:
             # Read the file with tickers data
             try:
                 tickers_df = pd.read_csv(self.TICKERS_FILE)
@@ -189,7 +142,7 @@ class QuotesDownloader:
                                        format=self.DATE_FORMAT).strftime(self.DATE_FORMAT)]
                     continue
 
-                # Start date of the current quotes subset
+                # Start date of the current quotes subset (for update tickers DataFrame)
                 quotesStarted = current_quotes.index[0]
 
                 # If quotes history less than {x} years  switch to the next ticker
@@ -217,7 +170,9 @@ class QuotesDownloader:
             # Pause for 3 seconds before the next data download cycle
             time.sleep(3)
 
-        # return tickers_df
+        # Report on the successful download status
+        self.logger.info('Download complete.')
+        print('Download complete.')
 
     def get_subset_to_update_quotes(self, df):
 
@@ -301,15 +256,6 @@ class QuotesDownloader:
     @staticmethod
     def get_filtered_subset(subset, trade_threshold):
 
-        """
-        Returns filtered stock quotes.
-
-        Returns will be started from the date when all prices are greater than 0
-        and average daily trading volume is more than $10M.
-
-        :param subset:
-        :return:
-        """
         # Find the las index (last date) of the rows where one of OHLC <= 0 or
         # daily trading volume < 1,000,000
 
@@ -340,4 +286,3 @@ class QuotesDownloader:
 
         # Save the quotes DataFrame to the file
         current_quotes.to_csv(f'{self.QUOTES_DIR}{current_symbol}.csv')
-

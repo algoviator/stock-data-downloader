@@ -940,9 +940,9 @@ CVLT,US2041661024,Commvault Systems Inc. Common Stock,73.31,280590,3305895680,20
 CVLY,US1920251048,Codorus Valley Bancorp Inc Common Stock,21.94,23837,239872912,1994,8.7,0.6,1.4,United States,Financial Services,Banks - Regional,,,2024-01-10
 CVNA,US1468691027,Carvana Co. Class A Common Stock,39.36,8827503,8375616000,2017,,3.1,3.61,United States,Consumer Cyclical,Auto & Truck Dealerships,,,2024-01-10
 CVR,US1680881026,Chicago Rivet & Machine Co. Common Stock,16.84,2516,15716842,1973,,0.1,0.67,United States,Industrials,Tools & Accessories,,,2024-01-10
-CVS,,CVS Health Corporation Common Stock,72.45,8317303,103415283712,1973,12.3,0.5,1.76,United States,Healthcare,Healthcare Plans,,,2024-01-10
+CVS,,CVS Health Corporation Common Stock,72.45,8317303,103415283712,1973,12.3,0.5,1.76,United States,Healthcare,Healthcare Plans,1996-01-18,2024-01-15,2024-01-10
 CVV,,CVD Equipment Corporation Common Stock,5.09,22204,32211686,1999,,1.4,1.42,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
-CVX,ARDEUT110087,Chevron Corporation Common Stock,146.55,10856725,275045187584,1962,10.8,1.1,3.05,United States,Energy,Oil & Gas Integrated,,,2024-01-10
+CVX,ARDEUT110087,Chevron Corporation Common Stock,146.55,10856725,275045187584,1962,10.8,1.1,3.05,United States,Energy,Oil & Gas Integrated,1982-10-11,2024-01-15,2024-01-10
 CW,,Curtiss-Wright Corporation Common Stock,213.34,179520,8199677952,1980,24.0,1.2,1.76,United States,Industrials,Aerospace & Defense,,,2024-01-10
 CWBC,US2041571017,Community West Bancshares Common Stock,14.77,19611,150012768,1996,14.9,0.7,0.48,United States,Financial Services,Banks - Regional,,,2024-01-10
 CWCO,,Consolidated Water Co. Ltd. Ordinary Shares,34.19,155651,516675488,1995,22.8,0.2,2.61,Cayman Islands,Utilities,Utilities - Regulated Water,,,2024-01-10
@@ -970,7 +970,7 @@ CZNC,US1729221069,Citizens & Northern Corp Common Stock,20.63,22327,319701568,19
 CZOO,,Cazoo Group Ltd Class A Ordinary Shares,27.89,12727,33845720,2020,,2.0,0.33,United Kingdom,Consumer Cyclical,Auto & Truck Dealerships,,,2024-01-10
 CZR,,Caesars Entertainment Inc. Common Stock,44.87,3341711,9870935040,2014,14.0,2.9,1.82,United States,Consumer Cyclical,Resorts & Casinos,,,2024-01-10
 CZWI,,Citizens Community Bancorp Inc. Common Stock,10.64,11114,120383152,2004,8.6,1.0,0.9,United States,Financial Services,Banks - Regional,,,2024-01-10
-D,US25746U1097,Dominion Energy Inc. Common Stock,46.18,6047440,40400556032,1980,16.0,0.6,2.12,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+D,US25746U1097,Dominion Energy Inc. Common Stock,46.18,6047440,40400556032,1980,16.0,0.6,2.12,United States,Utilities,Utilities - Regulated Electric,2001-09-04,2024-01-15,2024-01-10
 DAC,,Danaos Corporation Common Stock,69.52,111520,1488629632,2006,2.7,1.4,4.91,Greece,Industrials,Marine Shipping,,,2024-01-10
 DAKT,US2342641097,Daktronics Inc. Common Stock,9.55,599882,364361760,1994,7.8,1.0,3.47,United States,Technology,Electronic Components,,,2024-01-10
 DAL,US2473617023,Delta Air Lines Inc. Common Stock,37.3,10118016,27231352832,2007,8.0,1.4,1.84,United States,Industrials,Airlines,,,2024-01-10
@@ -994,12 +994,12 @@ DCO,,Ducommun Incorporated Common Stock,50.25,85775,709093120,1973,33.7,1.3,1.64
 DCOM,US25432X1028,Dime Community Bancshares Inc. Common Stock,22.59,142191,994203264,1999,8.8,1.2,8.66,United States,Financial Services,Banks - Regional,,,2024-01-10
 DCPH,US24344T1016,Deciphera Pharmaceuticals Inc. Common Stock,13.64,696179,1241106816,2017,,0.5,8.01,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
 DCTH,US24661P8077,Delcath Systems Inc. Common Stock,3.24,360166,96561920,2018,,0.5,1.71,United States,Healthcare,Medical Devices,,,2024-01-10
-DD,,DuPont de Nemours Inc. Common Stock,72.22,2917524,32816502784,1972,38.7,1.2,2.14,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
+DD,,DuPont de Nemours Inc. Common Stock,72.22,2917524,32816502784,1972,38.7,1.2,2.14,United States,Basic Materials,Specialty Chemicals,1985-04-18,2024-01-15,2024-01-10
 DDD,,3D Systems Corporation Common Stock,5.26,2149353,768579840,1988,,1.9,4.2,United States,Technology,Computer Hardware,,,2024-01-10
 DDOG,US23804L1035,Datadog Inc. Class A Common Stock,109.35,4216190,39814172672,2019,,1.2,3.21,United States,Technology,Software - Application,,,2024-01-10
 DDS,US2540671011,Dillard's Inc. Common Stock,354.38,106891,6456276480,1980,8.6,1.0,10.33,United States,Consumer Cyclical,Department Stores,,,2024-01-10
 DDT,US25406P2002,Dillard's Capital Trust I,25.77,7943,419812694,1998,,,,United States,Consumer Discretionary,Department/Specialty Retail Stores,,,2024-01-10
-DE,,Deere & Company Common Stock,377.83,1653608,110201872384,1972,11.4,1.1,0.98,United States,Industrials,Farm & Heavy Construction Machinery,,,2024-01-10
+DE,,Deere & Company Common Stock,377.83,1653608,110201872384,1972,11.4,1.1,0.98,United States,Industrials,Farm & Heavy Construction Machinery,1987-03-12,2024-01-15,2024-01-10
 DEA,US27616P1030,Easterly Government Properties Inc. Common Stock,12.28,985248,1289020160,2015,41.0,0.7,3.25,United States,Real Estate,REIT - Office,,,2024-01-10
 DEC,,Diversified Energy Company plc Ordinary Shares,15.22,46792,712617024,2023,,0.1,,United States,Energy,Oil & Gas E&P,,,2024-01-10
 DECK,,Deckers Outdoor Corporation Common Stock,654.51,389904,17932378112,1993,30.1,1.0,3.58,United States,Consumer Cyclical,Footwear & Accessories,,,2024-01-10
@@ -1019,13 +1019,13 @@ DGX,,Quest Diagnostics Incorporated Common Stock,135.5,945356,15978137600,1996,2
 DHC,,Diversified Healthcare Trust Common Shares of Beneficial Interest,2.62,1371630,733372480,2000,,2.1,4.05,United States,Real Estate,REIT - Healthcare Facilities,,,2024-01-10
 DHI,US23331A1097,D.R. Horton Inc. Common Stock,132.71,2581408,50536079360,1992,11.0,1.6,2.36,United States,Consumer Cyclical,Residential Construction,,,2024-01-10
 DHIL,US25264R2076,Diamond Hill Investment Group Inc. Class A Common Stock,161.84,14717,459397440,1996,11.0,0.9,3.75,United States,Financial Services,Asset Management,,,2024-01-10
-DHR,,Danaher Corporation Common Stock,215.71,3077462,170596073472,1978,29.1,0.9,2.06,United States,Healthcare,Diagnostics & Research,,,2024-01-10
+DHR,,Danaher Corporation Common Stock,215.71,3077462,170596073472,1978,29.1,0.9,2.06,United States,Healthcare,Diagnostics & Research,1997-10-28,2024-01-15,2024-01-10
 DHT,MHY2065G1219,DHT Holdings Inc.,10.28,2629622,1721089920,2005,9.4,-0.3,1.63,Bermuda,Energy,Oil & Gas Midstream,,,2024-01-10
 DIAX,,Nuveen Dow 30SM Dynamic Overwrite Fund Common Shares of Beneficial Interest,13.74,110487,521865024,2014,12.8,0.9,0.09,United States,Financial Services,Asset Management,,,2024-01-10
 DIN,,Dine Brands Global Inc. Common Stock,46.83,239148,720570368,1991,9.7,1.7,4.32,United States,Consumer Cyclical,Restaurants,,,2024-01-10
-DINO,,HF Sinclair Corporation Common Stock,54.57,1947117,10571841536,1980,4.6,1.3,2.52,United States,Energy,Oil & Gas Refining & Marketing,,,2024-01-10
+DINO,,HF Sinclair Corporation Common Stock,54.57,1947117,10571841536,1980,4.6,1.3,2.52,United States,Energy,Oil & Gas Refining & Marketing,2004-06-01,2024-01-15,2024-01-10
 DIOD,,Diodes Incorporated Common Stock,71.72,343141,3433880576,1973,11.8,1.5,4.14,United States,Technology,Semiconductors,,,2024-01-10
-DIS,,Walt Disney Company (The) Common Stock,90.26,12359045,164124786688,1962,69.5,1.4,1.81,United States,Communication Services,Entertainment,,,2024-01-10
+DIS,,Walt Disney Company (The) Common Stock,90.26,12359045,164124786688,1962,69.5,1.4,1.81,United States,Communication Services,Entertainment,1969-06-03,2024-01-15,2024-01-10
 DIT,US02341Q2057,AMCON Distributing Company Common Stock,186.18,314,124149792,1995,10.1,0.5,2.63,United States,Consumer Defensive,Food Distribution,,,2024-01-10
 DJCO,,Daily Journal Corp. (S.C.) Common Stock,319.13,3470,443679072,1986,20.7,0.9,1.6,United States,Technology,Software - Application,,,2024-01-10
 DK,US24665A1034,Delek US Holdings Inc. Common Stock,26.52,1084469,1610484864,2006,21.7,1.3,8.12,United States,Energy,Oil & Gas Refining & Marketing,,,2024-01-10
@@ -1057,7 +1057,7 @@ DOMO,US2575541055,Domo Inc. Class B Common Stock,9.33,414474,348600512,2018,,2.5
 DOOO,CA05577W2004,BRP Inc. (Recreational Products) Common Subordinate Voting Shares,68.48,119575,5333473280,2013,8.2,2.3,9.38,Canada,Consumer Cyclical,Recreational Vehicles,,,2024-01-10
 DOOR,,Masonite International Corporation Ordinary Shares (Canada),86.91,260009,1936691840,2009,12.4,1.8,2.78,United States,Industrials,Building Products & Equipment,,,2024-01-10
 DORM,US2582781009,Dorman Products Inc. Common Stock,74.93,124850,2526605056,1991,26.2,0.7,3.13,United States,Consumer Cyclical,Auto Parts,,,2024-01-10
-DOV,,Dover Corporation Common Stock,141.89,816859,20644966400,1980,20.3,1.3,2.08,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
+DOV,,Dover Corporation Common Stock,141.89,816859,20644966400,1980,20.3,1.3,2.08,United States,Industrials,Specialty Industrial Machinery,1994-12-16,2024-01-15,2024-01-10
 DOW,US2605571031,Dow Inc. Common Stock ,51.84,4046891,37833351168,2019,29.3,1.3,2.47,United States,Basic Materials,Chemicals,,,2024-01-10
 DOX,,Amdocs Limited Ordinary Shares,84.19,755296,10456430592,1998,19.9,0.7,2.55,United States,Technology,Software - Infrastructure,,,2024-01-10
 DPG,,Duff & Phelps Utility and Infrastructure Fund Inc.,9.11,179570,365780672,2011,,,0.09,United States,Financial Services,Asset Management,,,2024-01-10
@@ -1077,12 +1077,12 @@ DSM,,BNY Mellon Strategic Municipal Bond Fund Inc. Common Stock,5.38,187000,2842
 DSU,US09255R2022,Blackrock Debt Strategies Fund Inc. Common Stock,10.39,153175,500128512,1998,7.7,0.7,2.19,United States,Financial Services,Asset Management,,,2024-01-10
 DSX,MHY2066G1044,Diana Shipping inc. common stock,3.16,667590,345981952,2005,4.9,1.1,1.4,Greece,Industrials,Marine Shipping,,,2024-01-10
 DT,US2681501092,Dynatrace Inc. Common Stock,51.88,2382896,15838396416,2019,92.8,1.1,1.73,United States,Technology,Software - Application,,,2024-01-10
-DTE,,DTE Energy Company Common Stock,105.33,1398011,22884435968,1962,18.3,0.7,1.72,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+DTE,,DTE Energy Company Common Stock,105.33,1398011,22884435968,1962,18.3,0.7,1.72,United States,Utilities,Utilities - Regulated Electric,2013-02-25,2024-01-15,2024-01-10
 DTF,US23334J1079,DTF Tax-Free Income 2028 Term Fund Inc. Common Stock,10.77,48145,75708472,1991,24.5,0.3,0.11,United States,Financial Services,Asset Management,,,2024-01-10
-DUK,,Duke Energy Corporation (Holding Company) Common Stock,92.92,3305487,76369846272,1980,20.9,0.5,2.72,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+DUK,,Duke Energy Corporation (Holding Company) Common Stock,92.92,3305487,76369846272,1980,20.9,0.5,2.72,United States,Utilities,Utilities - Regulated Electric,1999-12-15,2024-01-15,2024-01-10
 DVA,US23918K1088,DaVita Inc. Common Stock,97.25,1356932,9906690048,1995,16.8,1.0,5.42,United States,Healthcare,Medical Care Facilities,,,2024-01-10
 DVAX,,Dynavax Technologies Corporation Common Stock,13.77,1646395,1798020480,2004,33.9,1.3,9.32,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
-DVN,,Devon Energy Corporation Common Stock,45.37,8792967,28684140544,1985,7.6,2.2,1.42,United States,Energy,Oil & Gas E&P,,,2024-01-10
+DVN,,Devon Energy Corporation Common Stock,45.37,8792967,28684140544,1985,7.6,2.2,1.42,United States,Energy,Oil & Gas E&P,2003-12-04,2024-01-15,2024-01-10
 DX,US26817Q8868,Dynex Capital Inc. Common Stock,11.61,978151,721093376,1988,67.0,1.3,2.96,United States,Real Estate,REIT - Mortgage,,,2024-01-10
 DXC,,DXC Technology Company Common Stock ,22.7,2688556,4475112960,1981,,1.9,3.59,United States,Technology,Information Technology Services,,,2024-01-10
 DXCM,US2521311074,DexCom Inc. Common Stock,110.86,4247148,49503113216,2005,142.5,1.2,5.31,United States,Healthcare,Medical Devices,,,2024-01-10
@@ -1092,7 +1092,7 @@ DXR,,Daxor Corporation Common Stock,8.19,2990,46964736,1983,,-0.1,5.15,United St
 DY,US2674751019,Dycom Industries Inc. Common Stock,100.14,295998,3297331456,1984,15.2,1.3,5.56,United States,Industrials,Engineering & Construction,,,2024-01-10
 DYN,US26818M1080,Dyne Therapeutics Inc. Common Stock,11.09,1401496,1152170240,2020,,0.8,12.68,United States,Healthcare,Biotechnology,,,2024-01-10
 E,IT0003404214,ENI S.p.A. Common Stock,32.83,308183,53784129536,1995,9.5,1.1,2.29,Italy,Energy,Oil & Gas Integrated,,,2024-01-10
-EA,US2855121099,Electronic Arts Inc. Common Stock,134.56,1862795,37041999872,1989,37.9,0.8,2.21,United States,Communication Services,Electronic Gaming & Multimedia,,,2024-01-10
+EA,US2855121099,Electronic Arts Inc. Common Stock,134.56,1862795,37041999872,1989,37.9,0.8,2.21,United States,Communication Services,Electronic Gaming & Multimedia,1992-09-03,2024-01-15,2024-01-10
 EAD,,Allspring Income Opportunities Fund Common Shares,6.28,245208,393610496,2003,24.6,0.9,0.7,United States,Financial Services,Asset Management,,,2024-01-10
 EARN,US2885781078,Ellington Residential Mortgage REIT Common Shares of Beneficial Interest,5.98,188116,100094936,2013,17.5,1.9,0.9,United States,Real Estate,REIT - Mortgage,,,2024-01-10
 EAT,US1096411004,Brinker International Inc. Common Stock,38.06,1154804,1815421312,1984,13.1,2.4,4.67,United States,Consumer Cyclical,Restaurants,,,2024-01-10
@@ -1107,12 +1107,12 @@ EBTC,US2936681095,Enterprise Bancorp Inc Common Stock,28.86,15619,370896832,2005
 EC,COC04PA00016,Ecopetrol S.A. American Depositary Shares,12.26,2138561,25000833024,2008,4.9,0.8,5.0,Colombia,Energy,Oil & Gas Integrated,,,2024-01-10
 ECC,,Eagle Point Credit Company Inc. Common Stock,9.49,643848,720625920,2014,9.2,0.8,0.5,United States,Financial Services,Asset Management,,,2024-01-10
 ECF,,Ellsworth Growth and Income Fund Ltd.,7.74,46875,108780408,1986,17.2,1.1,0.35,United States,Financial Services,Asset Management,,,2024-01-10
-ECL,US2788651006,Ecolab Inc. Common Stock,186.82,1048258,55867478016,1973,45.5,1.1,1.5,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
+ECL,US2788651006,Ecolab Inc. Common Stock,186.82,1048258,55867478016,1973,45.5,1.1,1.5,United States,Basic Materials,Specialty Chemicals,1998-12-28,2024-01-15,2024-01-10
 ECO,MHY641771016,Okeanis Eco Tankers Corp. Common Stock,27.96,42733,916566016,2023,,-0.1,0.23,Greece,Industrials,Marine Shipping,,,2024-01-10
 ECOR,US28531P2020,electroCore Inc. Common Stock,5.79,13953,35954496,2018,,1.0,1.25,United States,Healthcare,Medical Devices,,,2024-01-10
 ECPG,US2925541029,Encore Capital Group Inc Common Stock,45.4,176790,1178782848,1999,,1.5,14.68,United States,Financial Services,Mortgage Finance,,,2024-01-10
 ECVT,,Ecovyst Inc. Common Stock,9.52,653035,1057825856,2017,17.9,0.9,2.53,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
-ED,US2091151041,Consolidated Edison Inc. Common Stock,90.62,2152583,32347113472,1962,13.8,0.4,3.54,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+ED,US2091151041,Consolidated Edison Inc. Common Stock,90.62,2152583,32347113472,1962,13.8,0.4,3.54,United States,Utilities,Utilities - Regulated Electric,1999-11-08,2024-01-15,2024-01-10
 EDAP,,EDAP TMS S.A. American Depositary Shares,5.42,184924,199777232,1997,,0.9,1.11,France,Healthcare,Medical Distribution,,,2024-01-10
 EDD,US6174771047,Morgan Stanley Emerging Markets Domestic Debt Fund Inc. Common Stock,4.64,204350,304403520,2007,13.2,,0.56,United States,Financial Services,Asset Management,,,2024-01-10
 EDF,US86164T1079,Virtus Stone Harbor Emerging Markets Income Fund Common Shares of Beneficial Interest,4.19,110322,77883752,2010,,,0.13,United States,Financial Services,Asset Management,,,2024-01-10
@@ -1128,7 +1128,7 @@ EFC,US28852N1090,Ellington Financial Inc. Common Stock ,12.75,1152632,1026214848
 EFR,US27828Q1058,Eaton Vance Senior Floating-Rate Fund Common Shares of Beneficial Interest,12.35,99388,375479680,2003,7.6,0.6,0.87,United States,Financial Services,Asset Management,,,2024-01-10
 EFSC,US2937121059,Enterprise Financial Services Corporation Common Stock,40.48,131346,1648709376,2003,8.0,1.1,3.69,United States,Financial Services,Banks - Regional,,,2024-01-10
 EFT,US2782791048,Eaton Vance Floating Rate Income Trust Common Shares of Beneficial Interest,12.3,112066,333812864,2004,25.0,0.6,0.48,United States,Financial Services,Asset Management,,,2024-01-10
-EFX,US2944291051,Equifax Inc. Common Stock,214.9,951041,29975001088,1980,57.8,1.5,4.11,United States,Industrials,Consulting Services,,,2024-01-10
+EFX,US2944291051,Equifax Inc. Common Stock,214.9,951041,29975001088,1980,57.8,1.5,4.11,United States,Industrials,Consulting Services,1996-09-16,2024-01-15,2024-01-10
 EG,BMG3223R1088,Everest Group Ltd. Common Stock,383.25,418562,15989796864,1995,6.8,0.6,1.04,Bermuda,Financial Services,Insurance - Reinsurance,,,2024-01-10
 EGAN,,eGain Corporation Common Stock,7.43,71729,246529120,1999,55.9,0.7,1.79,United States,Technology,Software - Application,,,2024-01-10
 EGBN,US2689481065,Eagle Bancorp Inc. Common Stock,25.63,237567,867261248,1999,7.3,1.1,10.31,United States,Financial Services,Banks - Regional,,,2024-01-10
@@ -1147,7 +1147,7 @@ EIC,,Eagle Point Income Company Inc. Common Stock,14.38,80980,150485184,2019,18.
 EIG,US2922181043,Employers Holdings Inc Common Stock,38.63,132875,1000020864,2007,8.8,0.2,3.08,United States,Financial Services,Insurance - Specialty,,,2024-01-10
 EIGR,US28249U1051,Eiger BioPharmaceuticals Inc. Common Stock,8.73,10992,10829867,2014,,2.0,3.79,United States,Healthcare,Biotechnology,,,2024-01-10
 EIM,,Eaton Vance Municipal Bond Fund Common Shares of Beneficial Interest $.01 par value,9.65,221109,724339584,2002,113.1,0.4,0.21,United States,Financial Services,Asset Management,,,2024-01-10
-EIX,US2810201077,Edison International Common Stock,67.19,2166572,28008206336,1973,22.7,1.0,1.85,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+EIX,US2810201077,Edison International Common Stock,67.19,2166572,28008206336,1973,22.7,1.0,1.85,United States,Utilities,Utilities - Regulated Electric,2004-04-29,2024-01-15,2024-01-10
 EL,US5184391044,Estee Lauder Companies Inc. (The) Common Stock,130.8,2901885,49837355008,1995,91.0,1.1,1.35,United States,Consumer Defensive,Household & Personal Products,,,2024-01-10
 ELA,,Envela Corporation Common Stock,4.33,34393,123354000,1992,10.5,0.0,7.5,United States,Consumer Cyclical,Luxury Goods,,,2024-01-10
 ELAN,,Elanco Animal Health Incorporated Common Stock,12.3,5525103,7594017280,2018,,1.2,2.11,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
@@ -1169,8 +1169,8 @@ EMF,US8801911012,Templeton Emerging Markets Fund Common Stock,11.53,27269,176796
 EML,,Eastern Company (The) Common Stock,19.53,9200,140988064,1980,26.9,1.1,3.49,United States,Industrials,Tools & Accessories,,,2024-01-10
 EMN,US2774321002,Eastman Chemical Company Common Stock,83.03,904195,10405441536,1993,17.6,1.5,1.41,United States,Basic Materials,Specialty Chemicals,,,2024-01-10
 EMO,US18469P2092,ClearBridge Energy Midstream Opportunity Fund Inc. Common Stock,33.28,40393,442184864,2011,,,0.37,United States,Financial Services,Asset Management,,,2024-01-10
-EMR,,Emerson Electric Company Common Stock,91.02,3023998,54077599744,1972,25.4,1.3,1.86,United States,Industrials,Specialty Industrial Machinery,,,2024-01-10
-ENB,CA29250N1050,Enbridge Inc Common Stock,34.55,5535106,78008418304,1984,32.8,0.9,5.36,Canada,Energy,Oil & Gas Midstream,,,2024-01-10
+EMR,,Emerson Electric Company Common Stock,91.02,3023998,54077599744,1972,25.4,1.3,1.86,United States,Industrials,Specialty Industrial Machinery,1984-09-14,2024-01-15,2024-01-10
+ENB,CA29250N1050,Enbridge Inc Common Stock,34.55,5535106,78008418304,1984,32.8,0.9,5.36,Canada,Energy,Oil & Gas Midstream,2010-04-16,2024-01-15,2024-01-10
 ENGN,CA29286M1059,enGene Holdings Inc. Common Stock,9.88,65862,189295680,2022,,,0.12,Canada,Healthcare,Biotechnology,,,2024-01-10
 ENIC,,Enel Chile S.A. American Depositary Shares (Each representing 50 shares of Common Stock),3.21,776822,4177656832,2016,2.7,0.7,2.71,Chile,Utilities,Utilities - Regulated Electric,,,2024-01-10
 ENLC,US29336T1007,EnLink Midstream LLC Common Units representing Limited Partner Interests,12.62,1980696,5537034240,2004,19.2,2.3,5.17,United States,Energy,Oil & Gas Midstream,,,2024-01-10
@@ -1186,7 +1186,7 @@ ENV,US29404K1060,Envestnet Inc Common Stock,41.8,828508,2801135360,2010,,1.3,7.5
 ENVA,US29357K1034,Enova International Inc. Common Stock,46.3,298783,1655328896,2014,9.4,1.6,3.86,United States,Financial Services,Credit Services,,,2024-01-10
 ENX,,Eaton Vance New York Municipal Bond Fund Common Shares of Beneficial Interest $.01 par value,9.05,55235,174224608,2002,60.6,0.5,0.27,United States,Financial Services,Asset Management,,,2024-01-10
 EOD,,Allspring Global Dividend Opportunity Fund Common Shares of Beneficial Interest,4.17,107598,188661568,2007,,,0.37,United States,Financial Services,Asset Management,,,2024-01-10
-EOG,US26875P1012,EOG Resources Inc. Common Stock,122.66,3195566,67686223872,1989,8.6,1.4,2.31,United States,Energy,Oil & Gas E&P,,,2024-01-10
+EOG,US26875P1012,EOG Resources Inc. Common Stock,122.66,3195566,67686223872,1989,8.6,1.4,2.31,United States,Energy,Oil & Gas E&P,2000-02-29,2024-01-15,2024-01-10
 EOI,US2782741050,Eaton Vance Enhance Equity Income Fund Eaton Vance Enhanced Equity Income Fund Shares of Beneficial Interest,15.82,67319,658510528,2004,,1.1,0.52,United States,Financial Services,Asset Management,,,2024-01-10
 EOLS,,Evolus Inc. Common Stock,9.3,709437,608797760,2018,,1.6,6.55,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
 EOS,US2782771081,Eaton Vance Enhance Equity Income Fund II Common Stock,17.99,84162,970302208,2005,5.3,1.2,0.12,United States,Financial Services,Asset Management,,,2024-01-10
@@ -1206,7 +1206,7 @@ EQH,,Equitable Holdings Inc. Common Stock,30.3,3901251,11041445888,2018,7.0,1.4,
 EQIX,US29444U7000,Equinix Inc. Common Stock REIT,787.14,390135,74983735296,2000,85.7,0.6,3.98,United States,Real Estate,REIT - Specialty,,,2024-01-10
 EQNR,US29446M1027,Equinor ASA,32.01,2455991,90049847296,2001,5.5,0.4,2.88,Norway,Energy,Oil & Gas Integrated,,,2024-01-10
 EQR,US29476L1070,Equity Residential Common Shares of Beneficial Interest,57.9,2259783,23364478976,1993,35.6,0.9,2.47,United States,Real Estate,REIT - Residential,,,2024-01-10
-EQT,,EQT Corporation Common Stock,39.66,5336809,15659409408,1980,5.2,1.1,3.38,United States,Energy,Oil & Gas E&P,,,2024-01-10
+EQT,,EQT Corporation Common Stock,39.66,5336809,15659409408,1980,5.2,1.1,3.38,United States,Energy,Oil & Gas E&P,2000-02-29,2024-01-15,2024-01-10
 EQX,CA29446Y5020,Equinox Gold Corp. Common Shares,4.87,2146170,1411544320,2019,30.1,0.9,5.45,Canada,Basic Materials,Gold,,,2024-01-10
 ERC,,Allspring Multi-Sector Income Fund Common Stock,9.21,54977,267191184,2003,13.2,0.7,0.18,United States,Financial Services,Asset Management,,,2024-01-10
 ERF,,Enerplus Corporation Common Stock,15.78,1224883,3008944640,2000,5.0,2.5,2.4,Canada,Energy,Oil & Gas E&P,,,2024-01-10
@@ -1237,7 +1237,7 @@ ETB,US27828X1000,Eaton Vance Tax-Managed Buy-Write Income Fund Eaton Vance Tax-M
 ETD,US2976021046,Ethan Allen Interiors Inc. Common Stock,28.63,244085,760709056,1993,8.5,1.2,10.39,United States,Consumer Cyclical,"Furnishings, Fixtures & Appliances",,,2024-01-10
 ETG,US27828S1015,Eaton Vance Tax-Advantaged Global Dividend Income Fund Common Shares of Beneficial Interest,16.23,142604,1309742592,2004,31.1,1.3,0.1,United States,Financial Services,Asset Management,,,2024-01-10
 ETJ,US27829G1067,Eaton Vance Risk-Managed Diversified Equity Income Fund Common Shares of Beneficial Interest,7.78,156156,526300096,2007,7.4,,0.21,United States,Financial Services,Asset Management,,,2024-01-10
-ETN,,Eaton Corporation PLC Ordinary Shares,227.32,1808840,95624364032,1972,32.0,1.1,2.46,Ireland,Industrials,Specialty Industrial Machinery,,,2024-01-10
+ETN,,Eaton Corporation PLC Ordinary Shares,227.32,1808840,95624364032,1972,32.0,1.1,2.46,Ireland,Industrials,Specialty Industrial Machinery,1994-07-28,2024-01-15,2024-01-10
 ETNB,US2825591033,89bio Inc. Common Stock,9.12,1770000,1092375424,2019,,0.9,4.11,United States,Healthcare,Biotechnology,,,2024-01-10
 ETO,US27828U1060,Eaton Vance Tax-Advantage Global Dividend Opp Common Stock,22.46,26843,386595296,2004,40.0,1.5,1.05,United States,Financial Services,Asset Management,,,2024-01-10
 ETON,US29772L1089,Eton Pharmaceuticals Inc. Common Stock,4.1,86369,126495904,2018,54.8,1.2,4.86,United States,Healthcare,Drug Manufacturers - Specialty & Generic,,,2024-01-10
@@ -1264,7 +1264,7 @@ EVLV,US30049H1023,Evolv Technologies Holdings Inc. Class A Common Stock,4.34,115
 EVM,,Eaton Vance California Municipal Bond Fund Common Shares of Beneficial Interest $.01 par value,8.7,106519,228964512,2002,46.4,0.5,0.5,United States,Financial Services,Asset Management,,,2024-01-10
 EVN,US27826U1088,Eaton Vance Municipal Income Trust Common Stock,9.55,141240,397465376,1999,,0.5,0.07,United States,Financial Services,Asset Management,,,2024-01-10
 EVR,US29977A1051,Evercore Inc. Class A Common Stock,151.52,251458,6355367424,2006,21.7,1.5,4.74,United States,Financial Services,Capital Markets,,,2024-01-10
-EVRG,US30034W1062,Evergy Inc. Common Stock,51.1,2717924,12453174272,1973,18.3,0.6,2.29,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+EVRG,US30034W1062,Evergy Inc. Common Stock,51.1,2717924,12453174272,1973,18.3,0.6,2.29,United States,Utilities,Utilities - Regulated Electric,2018-06-01,2024-01-15,2024-01-10
 EVRI,US30034T1034,Everi Holdings Inc. Common Stock,10.98,1273837,930108928,2005,9.3,2.1,3.16,United States,Consumer Cyclical,Gambling,,,2024-01-10
 EVT,US27828G1076,Eaton Vance Tax Advantaged Dividend Income Fund Common Shares of Beneficial Interest,20.91,165517,1660813696,2003,,1.3,0.06,United States,Financial Services,Asset Management,,,2024-01-10
 EVTC,PR30040P1032,Evertec Inc. Common Stock,37.17,322600,2565366528,2013,25.8,1.2,4.29,United States,Technology,Software - Infrastructure,,,2024-01-10
@@ -1272,12 +1272,12 @@ EVV,,Eaton Vance Limited Duration Income Fund Common Shares of Beneficial Intere
 EW,,Edwards Lifesciences Corporation Common Stock,69.66,4638620,45990895616,2000,32.4,1.0,2.6,United States,Healthcare,Medical Devices,,,2024-01-10
 EWBC,US27579R1041,East West Bancorp Inc. Common Stock,64.48,1017225,10237155328,1999,8.2,1.4,3.98,United States,Financial Services,Banks - Diversified,,,2024-01-10
 EXAS,,Exact Sciences Corporation Common Stock,66.3,1642700,12583543808,2001,,1.4,4.85,United States,Healthcare,Diagnostics & Research,,,2024-01-10
-EXC,,Exelon Corporation Common Stock,38.17,7681048,36273721344,1973,16.9,0.6,1.03,United States,Utilities,Utilities - Regulated Electric,,,2024-01-10
+EXC,,Exelon Corporation Common Stock,38.17,7681048,36273721344,1973,16.9,0.6,1.03,United States,Utilities,Utilities - Regulated Electric,2002-04-23,2024-01-15,2024-01-10
 EXEL,US30161Q1040,Exelixis Inc. Common Stock,22.08,2282483,7236365312,2000,80.2,0.6,4.84,United States,Healthcare,Biotechnology,,,2024-01-10
 EXG,US27829F1084,Eaton Vance Tax-Managed Global Diversified Equity Income Fund Common Shares of Beneficial Interest,7.51,637651,2376779520,2007,16.9,,0.09,United States,Financial Services,Asset Management,,,2024-01-10
 EXLS,US3020811044,ExlService Holdings Inc. Common Stock,28.58,1122332,4950988800,2006,28.6,1.0,4.72,United States,Technology,Information Technology Services,,,2024-01-10
 EXP,US26969P1084,Eagle Materials Inc Common Stock,182.68,258616,7101926400,1994,14.9,1.4,3.06,United States,Basic Materials,Building Materials,,,2024-01-10
-EXPD,US3021301094,Expeditors International of Washington Inc. Common Stock,119.76,1376840,17861038080,1984,23.0,1.0,3.46,United States,Industrials,Integrated Freight & Logistics,,,2024-01-10
+EXPD,US3021301094,Expeditors International of Washington Inc. Common Stock,119.76,1376840,17861038080,1984,23.0,1.0,3.46,United States,Industrials,Integrated Freight & Logistics,1997-04-21,2024-01-15,2024-01-10
 EXPE,,Expedia Group Inc. Common Stock,133.26,2524477,21206253568,2005,28.0,1.9,2.0,United States,Consumer Cyclical,Travel Services,,,2024-01-10
 EXPI,,eXp World Holdings Inc. Common Stock,13.93,1125535,2202401792,2018,477.3,2.5,16.72,United States,Real Estate,Real Estate Services,,,2024-01-10
 EXPO,US30214U1025,Exponent Inc. Common Stock,80.59,260524,4511974400,1990,45.0,0.7,4.49,United States,Industrials,Engineering & Construction,,,2024-01-10

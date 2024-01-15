@@ -6,3 +6,27 @@
 2024-01-14 12:55:00,931 - INFO - Step 2: 3971 tickers passed through the filter.
 2024-01-14 12:55:00,939 - INFO - Step 3: 0 new rows inserted into Tickers file.
 2024-01-14 12:55:00,947 - INFO - Step 4: All tickers are up to date.
+2024-01-15 11:27:43,350 - ERROR - Step 1 failed: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 115, in run
+    nasdaq_tickers = self.download_tickers_from_nasdaq()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 165, in download_tickers_from_nasdaq
+    return pd.DataFrame(data['rows'], columns=data['headers'])
+                        ~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2024-01-15 11:27:43,355 - ERROR - Step 2 failed: cannot access local variable 'nasdaq_tickers' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 125, in run
+    clean_tickers = self.preprocess_downloaded_data(nasdaq_tickers)
+                                                    ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'nasdaq_tickers' where it is not associated with a value
+2024-01-15 11:27:43,355 - ERROR - Step 3 failed: cannot access local variable 'clean_tickers' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 136, in run
+    new_rows = self.add_new_data_to_file(clean_tickers)
+                                         ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'clean_tickers' where it is not associated with a value
+2024-01-15 11:27:43,376 - INFO - Step 4: All tickers are up to date.
+2024-01-15 11:29:05,980 - INFO - Quotes files of the batch of tickers ['AEM', 'CMS', 'CRH', 'CVS', 'CVX', 'D', 'DD', 'DE', 'DHR', 'DINO', 'DIS', 'DOV', 'DTE', 'DUK', 'DVN', 'EA', 'ECL', 'ED', 'EFX', 'EIX', 'EMR', 'ENB', 'EOG', 'EQT', 'ES', 'ETN', 'ETR', 'EVRG', 'EXC', 'EXPD'] is successfully downloaded.
+2024-01-15 11:29:08,980 - INFO - Download complete.
