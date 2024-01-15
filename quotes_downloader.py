@@ -262,8 +262,12 @@ class QuotesDownloader:
     @staticmethod
     def get_filtered_subset(subset, trade_threshold):
 
+        # Return empty DataFrame back
+        if subset.empty:
+            return subset
+
         # Find the las index (last date) of the rows where one of OHLC <= 0 or
-        # daily trading volume < 1,000,000
+        # daily trading volume < 100,000,000
 
         # Factor of splits influence to price in past
         splits_factor = subset.loc[subset['splits'] > 0, 'splits'].prod()
