@@ -30,3 +30,30 @@ UnboundLocalError: cannot access local variable 'clean_tickers' where it is not 
 2024-01-15 11:27:43,376 - INFO - Step 4: All tickers are up to date.
 2024-01-15 11:29:05,980 - INFO - Quotes files of the batch of tickers ['AEM', 'CMS', 'CRH', 'CVS', 'CVX', 'D', 'DD', 'DE', 'DHR', 'DINO', 'DIS', 'DOV', 'DTE', 'DUK', 'DVN', 'EA', 'ECL', 'ED', 'EFX', 'EIX', 'EMR', 'ENB', 'EOG', 'EQT', 'ES', 'ETN', 'ETR', 'EVRG', 'EXC', 'EXPD'] is successfully downloaded.
 2024-01-15 11:29:08,980 - INFO - Download complete.
+2024-01-15 14:03:34,228 - ERROR - Step 1 failed: 'NoneType' object is not subscriptable
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 116, in run
+    nasdaq_tickers = self.download_tickers_from_nasdaq()
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 173, in download_tickers_from_nasdaq
+    return pd.DataFrame(data['rows'], columns=data['headers'])
+                        ~~~~^^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+2024-01-15 14:03:34,232 - ERROR - Step 2 failed: cannot access local variable 'nasdaq_tickers' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 132, in run
+    clean_tickers = self.preprocess_downloaded_data(nasdaq_tickers)
+                                                    ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'nasdaq_tickers' where it is not associated with a value
+2024-01-15 14:03:34,232 - ERROR - Step 3 failed: cannot access local variable 'clean_tickers' where it is not associated with a value
+Traceback (most recent call last):
+  File "/Users/roman/PycharmProjects/quotes_downloader/tickers_downloader.py", line 143, in run
+    new_rows = self.add_new_data_to_file(clean_tickers)
+                                         ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'clean_tickers' where it is not associated with a value
+2024-01-15 14:03:34,249 - INFO - Step 4: All tickers are up to date.
+2024-01-15 14:04:34,111 - INFO - Quotes files of the batch of tickers ['AEM', 'CMS', 'CRH', 'ES', 'ETR', 'F', 'FAST', 'FDX', 'FHN', 'FI', 'FICO', 'FITB', 'FL', 'FMC', 'GD', 'GE', 'GIS', 'GLW', 'GOLD', 'GPC', 'GPS', 'GWW', 'HAL', 'HBAN', 'HD', 'HES', 'HON', 'HPQ', 'HRL', 'HST'] is successfully downloaded.
+2024-01-15 14:05:36,550 - INFO - Quotes files of the batch of tickers ['AEM', 'CMS', 'CRH', 'ES', 'ETR', 'HSY', 'HUBB', 'HUM', 'IBM', 'IEX', 'IFF', 'IMGN', 'INTC', 'IP', 'IPG', 'ITW', 'JBHT', 'JCI', 'JNJ', 'JPM', 'K', 'KEY', 'KLAC', 'KMB', 'KO', 'KR', 'LEN', 'LHX', 'LLY', 'LMT'] is successfully downloaded.
+2024-01-15 14:06:36,181 - ERROR - 
+1 Failed download:
+2024-01-15 14:06:36,182 - ERROR - ['MKC']: InterfaceError('bad parameter or other API misuse')
