@@ -231,7 +231,6 @@ class QuotesDownloader:
         # структуру запроса
         try:
             current_quotes = pd.DataFrame(all_quotes[symbol].dropna())
-
         except Exception:
             current_quotes = pd.DataFrame(all_quotes.dropna())
 
@@ -249,7 +248,18 @@ class QuotesDownloader:
         df = df.drop(columns=self.COLS_DELETE).rename(columns=self.COLS_RENAME)
 
         # Update types of columns
-        df = df.astype(self.COLS_TYPES)
+        try:
+            df = df.astype(self.COLS_TYPES)
+        except Exception as e:
+            # sometimes there is no column 'dividends' in 'df' DataFrame
+            if 'dividends' in self.COLS_TYPES:
+                new_cols_types = self.COLS_TYPES.copy()
+                del new_cols_types['dividends']
+                try:
+                    df = df.astype(new_cols_types)
+                except Exception as e:
+                    # Log any exceptions
+                    self.logger.error(f'refactor_dataframe_columns() - df.astype(), Error: {e}', exc_info=True)
 
         return df
 
