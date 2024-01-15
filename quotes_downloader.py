@@ -44,13 +44,13 @@ class QuotesDownloader:
 
     def __init__(self):
 
-        # Initialize logger. Use it to reports about work status into log file
-        logging.basicConfig(
-            filename='logs/quotes_downloader.log',
-            level=logging.INFO,
-            format='%(asctime)s - %(levelname)s - %(message)s'
-        )
-        self.logger = logging.getLogger(__name__)
+        # Initialize new logger. Use it to reports about work status into log file
+        self.logger = logging.getLogger('quotes')
+        self.logger.setLevel(logging.INFO)
+        file_handler = logging.FileHandler('logs/quotes_downloader.log')
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        file_handler.setFormatter(formatter)
+        self.logger.addHandler(file_handler)
 
         # Load Quotes configuration from the '.yaml' file
         self.config = LoadConfig('config/quotes_downloader.yaml').data
