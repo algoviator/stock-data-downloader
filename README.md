@@ -46,7 +46,7 @@ This Python project consists of two main components: `TickersDownloader` and `Qu
 ### Installation:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/stock-data-downloader.git
+   git clone https://github.com/algoviator/stock-data-downloader.git
    ```
 
 2. Navigate to the project directory:
@@ -76,3 +76,4 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 Roman Usoltsev - [LinkedIn](https://www.linkedin.com/in/algoviator/)
 
 © 2024 Roman Usoltsev
+
