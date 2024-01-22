@@ -1,4 +1,5 @@
 # Stock Data Downloader
+Downloads and updates the list of tickers traded on NYSE, NASDAQ, and AMEX exchanges utilizing the NASDAQ Stock Screener and Yahoo API. Retrieves historical quotes data dating back to 1962.
 
 This Python project consists of two main components: `TickersDownloader` and `QuotesDownloader`, each serving different purposes. The project uses various libraries such as `pandas`, `yfinance`, and `requests` for data manipulation, downloading, and API requests. Below are the main functionalities and structures of each component:
 
