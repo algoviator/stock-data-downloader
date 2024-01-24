@@ -1,4 +1,5 @@
 # Stock Data Downloader
+Downloads and updates the list of tickers traded on NYSE, NASDAQ, and AMEX exchanges utilizing the NASDAQ Stock Screener and Yahoo API. Retrieves historical quotes data dating back to 1962.
 
 This Python project consists of two main components: `TickersDownloader` and `QuotesDownloader`, each serving different purposes. The project uses various libraries such as `pandas`, `yfinance`, and `requests` for data manipulation, downloading, and API requests. Below are the main functionalities and structures of each component:
 
@@ -46,7 +47,7 @@ This Python project consists of two main components: `TickersDownloader` and `Qu
 ### Installation:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/stock-data-downloader.git
+   git clone https://github.com/algoviator/stock-data-downloader.git
    ```
 
 2. Navigate to the project directory:
@@ -76,3 +77,4 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 Roman Usoltsev - [LinkedIn](https://www.linkedin.com/in/algoviator/)
 
 © 2024 Roman Usoltsev
+
