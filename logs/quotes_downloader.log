@@ -190,3 +190,6 @@ KeyError: "Only a column name can be used for the key in a dtype mappings argume
 2024-01-15 20:27:44,628 - INFO - Quotes files of the batch of tickers ['PNW', 'THC'] is successfully downloaded.
 2024-01-15 20:27:50,257 - INFO - Quotes files of the batch of tickers ['PNW', 'THC'] is successfully downloaded.
 2024-01-15 20:30:21,365 - INFO - All quotes are up to date.
+2024-01-18 09:00:26,499 - INFO - All quotes are up to date.
+2024-01-21 14:07:53,514 - INFO - All quotes are up to date.
+2024-01-24 19:57:42,803 - INFO - All quotes are up to date.
